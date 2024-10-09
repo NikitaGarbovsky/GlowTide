@@ -1,3 +1,16 @@
+/***********************************************************************
+    Bachelor of Software Engineering
+    Media Design School
+    Auckland
+    New Zealand
+
+    (c) 2024 Media Design School
+
+    File Name   :   SlugThrowing.cs
+    Description :   Allows the Player to Throw and Pickup slugs
+    Author      :   Connor Maguigan
+    Mail        :   connor.maguigan@mds.ac.nz
+**************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,21 +38,23 @@ public class SlugThrowing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Calculate Mouse angle from Player
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         float mouseAngle = Mathf.Atan2(mousePos.y - transform.position.y, mousePos.x - transform.position.x);
-        Debug.Log(mouseAngle);
-        //Vector3 pos = new Vector3(Mathf.Cos(mouseAngle) * 3, Mathf.Sin(mouseAngle) * 3, 0);
+        // Create Slugs
         if (Input.GetMouseButtonDown(0) && m_slugCount > 0)
         {
             m_slugCount--;
             GameObject newSlug = Instantiate(m_slugObject, transform.position, transform.rotation);
-            TEST_SlugController slugController = newSlug.GetComponent<TEST_SlugController>();
+            SlugProjectile slugController = newSlug.GetComponent<SlugProjectile>();
             if (slugController != null)
             {
+                // Set Slug Velocity
                 slugController.SetVelocity(Mathf.Cos(mouseAngle), Mathf.Sin(mouseAngle));
             }
         }
 
+        // Picking up Slugs [NOT FINISHED]
         if (m_pickup)
         {
             Collider2D[] slugColliders = Physics2D.OverlapCircleAll(transform.position, m_pickupRadius, m_slugMask);
