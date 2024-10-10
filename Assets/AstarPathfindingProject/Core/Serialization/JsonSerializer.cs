@@ -4,8 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding.Util;
 using Pathfinding.WindowsStore;
-using Unity.VisualScripting.IonicZip;
-
+ 
 #if ASTAR_NO_ZIP
 using Pathfinding.Serialization.Zip;
 #elif NETFX_CORE
@@ -13,7 +12,6 @@ using Pathfinding.Serialization.Zip;
 using ZipEntry = System.IO.Compression.ZipArchiveEntry;
 using ZipFile = System.IO.Compression.ZipArchive;
 #else
-
 #endif
 
 namespace Pathfinding.Serialization {
