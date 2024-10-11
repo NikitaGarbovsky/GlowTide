@@ -37,10 +37,21 @@ public class SlugProjectile : MonoBehaviour
             Instantiate(m_slug, transform.position, transform.rotation);
             Destroy(gameObject);
         }
+
+        RaycastHit2D hit = Physics2D.CircleCast(transform.position, 0.5f, Vector2.zero);
+        if (hit)
+        {
+            if (hit.collider.gameObject.tag == "Enemy")
+            {
+                m_Velocity *= -1;
+            }
+        }
     }
 
     public void SetVelocity(float x, float y)
     {
         m_Velocity = new Vector3(x, y, 0);
     }
+
+    
 }
