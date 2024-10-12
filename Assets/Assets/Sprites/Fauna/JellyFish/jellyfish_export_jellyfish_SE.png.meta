@@ -1,0 +1,4536 @@
+fileFormatVersion: 2
+guid: 7f4ac62bc1e5ba4408d2daf3586fc78a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_0
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 11703
+        width: 532
+        height: 561
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0f1e45c731f79b4b8e694ff1bc90010
+      internalID: 12605925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_1
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 11702
+        width: 537
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cde50caea77e9414c88038e4e7203a05
+      internalID: -390182700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_2
+      rect:
+        serializedVersion: 2
+        x: 1804
+        y: 11702
+        width: 537
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b3282e33557a2f4fa982afe257b5bab
+      internalID: -168196093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_3
+      rect:
+        serializedVersion: 2
+        x: 2584
+        y: 11702
+        width: 531
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60b5a505a6160eb40a63a2833353fcb5
+      internalID: -305303337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_4
+      rect:
+        serializedVersion: 2
+        x: 3363
+        y: 11697
+        width: 532
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08d332aab7fcc764795416c9158bdb3c
+      internalID: 459992281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_5
+      rect:
+        serializedVersion: 2
+        x: 4143
+        y: 11696
+        width: 530
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bb601fe6ec97bf40beb961b448b0983
+      internalID: 467754022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_6
+      rect:
+        serializedVersion: 2
+        x: 4922
+        y: 11696
+        width: 526
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c43c00e0ec4984ab4644b442bce58f
+      internalID: 1389931203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_7
+      rect:
+        serializedVersion: 2
+        x: 5698
+        y: 11696
+        width: 530
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5dc570cdb3361046b19192850ff1fd1
+      internalID: -1760237281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_8
+      rect:
+        serializedVersion: 2
+        x: 6476
+        y: 11691
+        width: 525
+        height: 573
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c4cdd9df02aaf846891fbddcb58dfc3
+      internalID: 1462871269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_9
+      rect:
+        serializedVersion: 2
+        x: 7255
+        y: 11690
+        width: 526
+        height: 574
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bc07f040a718b246bc9e0f94d084297
+      internalID: -151796293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_10
+      rect:
+        serializedVersion: 2
+        x: 8035
+        y: 11690
+        width: 525
+        height: 574
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 577d696fab7819f42a66abaef4964a83
+      internalID: 2023229766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_11
+      rect:
+        serializedVersion: 2
+        x: 8815
+        y: 11690
+        width: 519
+        height: 574
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2734541f7c6dc6b41b79eb273525a54f
+      internalID: -1102267413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_12
+      rect:
+        serializedVersion: 2
+        x: 9594
+        y: 11685
+        width: 520
+        height: 579
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c065bd274d032f4890b407427b7ae75
+      internalID: 1990515597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_13
+      rect:
+        serializedVersion: 2
+        x: 10374
+        y: 11684
+        width: 519
+        height: 580
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0251b9907f064e34fad0d064c45d2583
+      internalID: 1971029816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_14
+      rect:
+        serializedVersion: 2
+        x: 11153
+        y: 11684
+        width: 514
+        height: 580
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9b7f300e78652d40b478c112c9ffaa1
+      internalID: -1326001712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_15
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 10799
+        width: 513
+        height: 583
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 613c5afcb1e31e14586d7f78298a9ae6
+      internalID: -105040410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_16
+      rect:
+        serializedVersion: 2
+        x: 1037
+        y: 10796
+        width: 513
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20c05707846dff14793e5574de605a41
+      internalID: -1946872076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_17
+      rect:
+        serializedVersion: 2
+        x: 1816
+        y: 10796
+        width: 514
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5101bf0f1b1e7db4d999167842396110
+      internalID: 896899773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_18
+      rect:
+        serializedVersion: 2
+        x: 2596
+        y: 10796
+        width: 513
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0380673b0412cf44e977c1cabe72eed7
+      internalID: 39127293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_19
+      rect:
+        serializedVersion: 2
+        x: 3375
+        y: 10796
+        width: 508
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9962eb25047e86d49bd9f46a28a8ef16
+      internalID: -2102691174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_20
+      rect:
+        serializedVersion: 2
+        x: 4155
+        y: 10790
+        width: 507
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06f9c9304aebb0e41ae6579a7757b228
+      internalID: -557809882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_21
+      rect:
+        serializedVersion: 2
+        x: 4935
+        y: 10790
+        width: 501
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 989ce2da6ed15df419be32430408366a
+      internalID: 1034173038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_22
+      rect:
+        serializedVersion: 2
+        x: 5714
+        y: 10790
+        width: 502
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 991e4df1b992b8545aad6b90d41f010f
+      internalID: 1091543114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_23
+      rect:
+        serializedVersion: 2
+        x: 6489
+        y: 10790
+        width: 506
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50642fb3c8073f046b7012a65f6939f2
+      internalID: 74152486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_24
+      rect:
+        serializedVersion: 2
+        x: 7268
+        y: 10785
+        width: 501
+        height: 597
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2021e2898e2bdfe4baba8d9f58a23a50
+      internalID: 24961896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_25
+      rect:
+        serializedVersion: 2
+        x: 8047
+        y: 10784
+        width: 501
+        height: 598
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80b274cbe07761041a7afcee4b7b54ca
+      internalID: -213868169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_26
+      rect:
+        serializedVersion: 2
+        x: 8827
+        y: 10784
+        width: 495
+        height: 598
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68f908bcfb6fc464391b31f89f42e6cf
+      internalID: -1029274833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_27
+      rect:
+        serializedVersion: 2
+        x: 9606
+        y: 10784
+        width: 496
+        height: 598
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c8e0bf39a563ee489800b575e1961bf
+      internalID: 2124479105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_28
+      rect:
+        serializedVersion: 2
+        x: 10386
+        y: 10784
+        width: 495
+        height: 598
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d3895167e2454b4cbf50d07a2b2b3cf
+      internalID: 1795407012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_29
+      rect:
+        serializedVersion: 2
+        x: 11165
+        y: 10779
+        width: 490
+        height: 603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1d790369e993ff4da15773d9f6b6327
+      internalID: -523217457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_30
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 9895
+        width: 489
+        height: 599
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37e657c23f88f61428015a6f9d6893c5
+      internalID: -1730500857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_31
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 9895
+        width: 483
+        height: 599
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97b363d6ec4c3b84fb37bf13d752b06d
+      internalID: 1738420589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_32
+      rect:
+        serializedVersion: 2
+        x: 1831
+        y: 9895
+        width: 487
+        height: 599
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 006d82cd779292a48b557c0c939abdef
+      internalID: -1740815314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_33
+      rect:
+        serializedVersion: 2
+        x: 2608
+        y: 9890
+        width: 483
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d35bef68a55fd64b8fdfcd4e17e57eb
+      internalID: 411735778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_34
+      rect:
+        serializedVersion: 2
+        x: 3388
+        y: 9890
+        width: 483
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57bd34b5d37245b4ca8c95403f927083
+      internalID: -1138374589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_35
+      rect:
+        serializedVersion: 2
+        x: 4167
+        y: 9889
+        width: 483
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8141106e2a845ec4e8be355534a46168
+      internalID: 1186084079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_36
+      rect:
+        serializedVersion: 2
+        x: 4947
+        y: 9889
+        width: 477
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab89cd40e9d49f84e868c15d87d4edf0
+      internalID: -1125644878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_37
+      rect:
+        serializedVersion: 2
+        x: 5726
+        y: 9889
+        width: 477
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e8b44797b0d7b645ac95b5e284a4498
+      internalID: 192764105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_38
+      rect:
+        serializedVersion: 2
+        x: 6506
+        y: 9889
+        width: 471
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 217f24fd02ca878458764249e7553cef
+      internalID: -160647707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_39
+      rect:
+        serializedVersion: 2
+        x: 7285
+        y: 9884
+        width: 472
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82076a2992da72249a8112e0d630b651
+      internalID: -1983912487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_40
+      rect:
+        serializedVersion: 2
+        x: 8065
+        y: 9883
+        width: 465
+        height: 611
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3108fb993bbb1a4f955fef320e7ae88
+      internalID: -2123495906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_41
+      rect:
+        serializedVersion: 2
+        x: 8845
+        y: 9883
+        width: 465
+        height: 611
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e27f59be1bc848e40b745a619d190d88
+      internalID: -774514858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_42
+      rect:
+        serializedVersion: 2
+        x: 9624
+        y: 9883
+        width: 463
+        height: 611
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b33c9fd5c894d1043a8d96f1807c6685
+      internalID: -860995092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_43
+      rect:
+        serializedVersion: 2
+        x: 10401
+        y: 9883
+        width: 462
+        height: 611
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9312694a8ed8eb448a40aed6045eeb52
+      internalID: 1119906509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_44
+      rect:
+        serializedVersion: 2
+        x: 11178
+        y: 9883
+        width: 464
+        height: 611
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54de541ca5662344e8cc2ee52a6b057c
+      internalID: -1712133761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_45
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 8995
+        width: 459
+        height: 616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59ef384d30c2b294f8d19c7ec97c27e5
+      internalID: -1866601923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_46
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 8995
+        width: 459
+        height: 616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5eb022e778ffaf4e8ec77bbb38c75e1
+      internalID: 1077252643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_47
+      rect:
+        serializedVersion: 2
+        x: 1846
+        y: 8995
+        width: 454
+        height: 616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f621aa8e40fd6048aad0a383dcac68c
+      internalID: 712286298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_48
+      rect:
+        serializedVersion: 2
+        x: 2626
+        y: 8995
+        width: 453
+        height: 616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0935d55b04b432d4c9e5f33cbd3a0fce
+      internalID: -658334969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_49
+      rect:
+        serializedVersion: 2
+        x: 3406
+        y: 8995
+        width: 447
+        height: 616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ec42d56884e558459714d9cd3930f7b
+      internalID: 1004595645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_50
+      rect:
+        serializedVersion: 2
+        x: 4185
+        y: 8995
+        width: 447
+        height: 616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd68fa8960d0e334688be01d04466b1f
+      internalID: 1278899499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_51
+      rect:
+        serializedVersion: 2
+        x: 4965
+        y: 8992
+        width: 441
+        height: 619
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f0ac4e0361dd44bb86ca3bb5da244a
+      internalID: 550412996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_52
+      rect:
+        serializedVersion: 2
+        x: 5744
+        y: 8989
+        width: 441
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 112971bdf3114394ebc6b5db56dcc4dc
+      internalID: 437751825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_53
+      rect:
+        serializedVersion: 2
+        x: 6524
+        y: 8989
+        width: 435
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d8d86a655839e441b6207bb19ab9d34
+      internalID: -1122402807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_54
+      rect:
+        serializedVersion: 2
+        x: 7304
+        y: 8989
+        width: 435
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43b16a1b6ca95f646945813c03815b65
+      internalID: 1907034956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_55
+      rect:
+        serializedVersion: 2
+        x: 8083
+        y: 8989
+        width: 429
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37eb98e02e48d2f4f8ae49b4f77b1b9b
+      internalID: -224886439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_56
+      rect:
+        serializedVersion: 2
+        x: 8863
+        y: 8989
+        width: 429
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fdf226f934e8dd45bacab5f0f5fac55
+      internalID: 863398088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_57
+      rect:
+        serializedVersion: 2
+        x: 9637
+        y: 8989
+        width: 428
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24de8ccb55ec0ca41bf5e0bdc6228dd8
+      internalID: 505639974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_58
+      rect:
+        serializedVersion: 2
+        x: 10416
+        y: 8989
+        width: 429
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e366a79287abd824cbce5af9cd7692ce
+      internalID: 1360864750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_59
+      rect:
+        serializedVersion: 2
+        x: 11196
+        y: 8989
+        width: 428
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544bf6f9192b19541b976d1f258d3d74
+      internalID: 1084830143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_60
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 8101
+        width: 423
+        height: 628
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711330ac647b01e4082d1d91d3dbb782
+      internalID: 2077034696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_61
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 8101
+        width: 423
+        height: 628
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc4bfd94018653f408ab08424a85b4d6
+      internalID: 1057034504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_62
+      rect:
+        serializedVersion: 2
+        x: 1865
+        y: 8101
+        width: 416
+        height: 627
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0040d7444fe2a7b4ebee8663da84bef8
+      internalID: 668681407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_63
+      rect:
+        serializedVersion: 2
+        x: 2644
+        y: 8101
+        width: 417
+        height: 627
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 756c4f45200e9b44eb3bbe4bb32a7e9f
+      internalID: -1978863532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_64
+      rect:
+        serializedVersion: 2
+        x: 3424
+        y: 8101
+        width: 417
+        height: 627
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 014a60e1baf526247b259875d00007bc
+      internalID: 2021484389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_65
+      rect:
+        serializedVersion: 2
+        x: 4203
+        y: 8101
+        width: 417
+        height: 627
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 166b2f77938174846a29f1d16f0dafc6
+      internalID: 1033497228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_66
+      rect:
+        serializedVersion: 2
+        x: 4983
+        y: 8101
+        width: 411
+        height: 627
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a261330c80eb30840b78563085446100
+      internalID: -1287736526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_67
+      rect:
+        serializedVersion: 2
+        x: 5763
+        y: 8101
+        width: 410
+        height: 627
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fda5f9e4f82206242a5578487458f835
+      internalID: 5355249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_68
+      rect:
+        serializedVersion: 2
+        x: 6542
+        y: 8101
+        width: 411
+        height: 627
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ebebea654e91a4b97a7abbe5826feb
+      internalID: -1793303715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_69
+      rect:
+        serializedVersion: 2
+        x: 7322
+        y: 8101
+        width: 410
+        height: 627
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf4f55dfde52d4f47831782c6668f78a
+      internalID: -654128721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_70
+      rect:
+        serializedVersion: 2
+        x: 8101
+        y: 8101
+        width: 405
+        height: 627
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93154c32b9029f248b593d4feea066d1
+      internalID: 96280104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_71
+      rect:
+        serializedVersion: 2
+        x: 8878
+        y: 8101
+        width: 408
+        height: 627
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be0ac173266fcd42bd9531c366f7c2c
+      internalID: -2039105539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_72
+      rect:
+        serializedVersion: 2
+        x: 9655
+        y: 8101
+        width: 410
+        height: 626
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99f33c5237d3c804e8cf54ff63632c0d
+      internalID: 1057328198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_73
+      rect:
+        serializedVersion: 2
+        x: 10434
+        y: 8101
+        width: 410
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef4f562da4102224598ffefaa343fad2
+      internalID: -1223487057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_74
+      rect:
+        serializedVersion: 2
+        x: 11214
+        y: 8101
+        width: 405
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16a44df32ff46f74e862d050de546e91
+      internalID: -1107574252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_75
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 7213
+        width: 405
+        height: 628
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf960873f5aa0624a9a30c8fd17a8e69
+      internalID: 1333396527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_76
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 7213
+        width: 405
+        height: 628
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62412c699d40f12419ee29bbd69d0f56
+      internalID: 136953471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_77
+      rect:
+        serializedVersion: 2
+        x: 1883
+        y: 7213
+        width: 404
+        height: 628
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e68341d311fccb4ca9982c94f0a102f
+      internalID: 510596607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_78
+      rect:
+        serializedVersion: 2
+        x: 2662
+        y: 7213
+        width: 399
+        height: 628
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6632dc931c56b8b42a7874b996491829
+      internalID: -690952476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_79
+      rect:
+        serializedVersion: 2
+        x: 3442
+        y: 7213
+        width: 399
+        height: 628
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 757db99ed8a2a1746b831a0cbf29ee55
+      internalID: -1024377277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_80
+      rect:
+        serializedVersion: 2
+        x: 4221
+        y: 7213
+        width: 399
+        height: 628
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92f89173d7085a84f9f2abd8b34756e6
+      internalID: 1416341712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_81
+      rect:
+        serializedVersion: 2
+        x: 5001
+        y: 7213
+        width: 398
+        height: 628
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9746c10c601c0ef4cb6a64cce8807194
+      internalID: 1507707441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_82
+      rect:
+        serializedVersion: 2
+        x: 5781
+        y: 7213
+        width: 392
+        height: 628
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25297323cde62a54faa9f3c7d49528dd
+      internalID: -1299462320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_83
+      rect:
+        serializedVersion: 2
+        x: 6560
+        y: 7213
+        width: 393
+        height: 628
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1944b905d507fa845a7e5686dd03e489
+      internalID: -1020845380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_84
+      rect:
+        serializedVersion: 2
+        x: 7340
+        y: 7213
+        width: 393
+        height: 628
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f9d87cba9f1ece468b87449444a7c34
+      internalID: 1489052661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_85
+      rect:
+        serializedVersion: 2
+        x: 8119
+        y: 7214
+        width: 390
+        height: 627
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a08ff09f8525ca49b391a6e39e7f6ab
+      internalID: 439872892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_86
+      rect:
+        serializedVersion: 2
+        x: 8899
+        y: 7215
+        width: 387
+        height: 626
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe83d40b8543676478ad3e2f2bbd2d26
+      internalID: -1004813846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_87
+      rect:
+        serializedVersion: 2
+        x: 9679
+        y: 7218
+        width: 386
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b87a22193594045478c7a4783f42c726
+      internalID: -1169484324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_88
+      rect:
+        serializedVersion: 2
+        x: 10458
+        y: 7218
+        width: 387
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5594714a072f4a241996a72f47f74868
+      internalID: -364414856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_89
+      rect:
+        serializedVersion: 2
+        x: 11233
+        y: 7218
+        width: 386
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dee82553403c3294cb37dbd861051bb0
+      internalID: 1921355655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_90
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 6332
+        width: 386
+        height: 626
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6425c2f4f8a24243a2bff52145998f1
+      internalID: -738335639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_91
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 6333
+        width: 386
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75987df48a351604b94e68960f47725d
+      internalID: 382385084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_92
+      rect:
+        serializedVersion: 2
+        x: 1901
+        y: 6332
+        width: 386
+        height: 626
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d95571767f420d4aa3f0b0588f884f9
+      internalID: 408670527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_93
+      rect:
+        serializedVersion: 2
+        x: 2680
+        y: 6336
+        width: 381
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84aceb78f5296ee4095ac56b57c0c642
+      internalID: 1614183210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_94
+      rect:
+        serializedVersion: 2
+        x: 3460
+        y: 6336
+        width: 381
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a427be0fbccb92438df3d651351c448
+      internalID: 807797227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_95
+      rect:
+        serializedVersion: 2
+        x: 4234
+        y: 6336
+        width: 386
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86ef86d8e8fc3764cb61a24dd6f05905
+      internalID: 823980647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_96
+      rect:
+        serializedVersion: 2
+        x: 5013
+        y: 6336
+        width: 386
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a1021c72c6a64e44bd7db57ba3eb6f4
+      internalID: -1788445047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_97
+      rect:
+        serializedVersion: 2
+        x: 5793
+        y: 6336
+        width: 380
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac4a1e1b6f8e9174682c354de90abb9d
+      internalID: 1573686692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_98
+      rect:
+        serializedVersion: 2
+        x: 6572
+        y: 6336
+        width: 381
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae223ff958b4cfd46bcbd2abe9a3452b
+      internalID: 1029914807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_99
+      rect:
+        serializedVersion: 2
+        x: 7346
+        y: 6336
+        width: 387
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 076af8b9a9e08654195146ccacb94e2c
+      internalID: 532294493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_100
+      rect:
+        serializedVersion: 2
+        x: 8126
+        y: 6336
+        width: 383
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f9c49a38dc8b244a9fadb5b47744e6
+      internalID: -1054107839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_101
+      rect:
+        serializedVersion: 2
+        x: 8905
+        y: 6336
+        width: 381
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eaeaecd5e5cff14fad8e996018f52fb
+      internalID: -1165366662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_102
+      rect:
+        serializedVersion: 2
+        x: 9685
+        y: 6336
+        width: 380
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19e1099284d3626429a9f4d70b69a51f
+      internalID: -633069161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_103
+      rect:
+        serializedVersion: 2
+        x: 10459
+        y: 6336
+        width: 386
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d38ff4e86e36160489c4dd0a22e62a4e
+      internalID: 1398506701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_104
+      rect:
+        serializedVersion: 2
+        x: 11238
+        y: 6336
+        width: 381
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f350d3aa61dde949ada7f6fe9dd632f
+      internalID: -1276545311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_105
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 5454
+        width: 380
+        height: 616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c0332ee8fd84e54fbf4833a304b1fa9
+      internalID: -307005116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_106
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 5454
+        width: 386
+        height: 616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9be1bd170de895f428074dd4882aa0d2
+      internalID: 1616243487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_107
+      rect:
+        serializedVersion: 2
+        x: 1901
+        y: 5449
+        width: 386
+        height: 621
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35cb6cec0e2860a4da90850d7058642c
+      internalID: 2136447113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_108
+      rect:
+        serializedVersion: 2
+        x: 2680
+        y: 5448
+        width: 381
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c2207f69a9b85c4d8d3ebf4d1a7de21
+      internalID: 458156601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_109
+      rect:
+        serializedVersion: 2
+        x: 3460
+        y: 5448
+        width: 381
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bdeb0a4b911ccb4e86b6ccbaf6bb96e
+      internalID: -570348829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_110
+      rect:
+        serializedVersion: 2
+        x: 4234
+        y: 5448
+        width: 386
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65ae1cfba72d81245beb60848af0ba25
+      internalID: -2147419195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_111
+      rect:
+        serializedVersion: 2
+        x: 5013
+        y: 5448
+        width: 386
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c82f997b5140ec846a25d37e68b8a48d
+      internalID: 794958129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_112
+      rect:
+        serializedVersion: 2
+        x: 5790
+        y: 5448
+        width: 383
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9f242029c5252540ab97c02ea4502e6
+      internalID: -904677795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_113
+      rect:
+        serializedVersion: 2
+        x: 6566
+        y: 5448
+        width: 387
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7095a722486345f40bb21f18de7e7557
+      internalID: -416124694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_114
+      rect:
+        serializedVersion: 2
+        x: 7346
+        y: 5448
+        width: 387
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b7e728bb666b244abb3cdffa493ce6
+      internalID: 1571666083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_115
+      rect:
+        serializedVersion: 2
+        x: 8120
+        y: 5448
+        width: 389
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 647ae010740cc8e408e81d51b0affe2b
+      internalID: -1520950214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_116
+      rect:
+        serializedVersion: 2
+        x: 8899
+        y: 5448
+        width: 387
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9495e6f22ea28d24aae4111dbab68fe7
+      internalID: -1910333978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_117
+      rect:
+        serializedVersion: 2
+        x: 9673
+        y: 5448
+        width: 392
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 178496cf6b7c17c4d9333bd586a4f75a
+      internalID: 1930777986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_118
+      rect:
+        serializedVersion: 2
+        x: 10452
+        y: 5448
+        width: 393
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 931deb682a53c8b4795ad2a382acd466
+      internalID: -382016076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_119
+      rect:
+        serializedVersion: 2
+        x: 11226
+        y: 5448
+        width: 393
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794d2bec7a322e840b7b701d5cf46f67
+      internalID: -1269795719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_120
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 4565
+        width: 393
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6c1f9a4a8c6d9b468f22865e2139e5b
+      internalID: -1190036093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_121
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 4565
+        width: 399
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56abe6a0e6389ca4f9ec4ffd1ed1c462
+      internalID: 514185229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_122
+      rect:
+        serializedVersion: 2
+        x: 1889
+        y: 4563
+        width: 398
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60414879a91c95d4cbbc42bd07287d5a
+      internalID: 828137320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_123
+      rect:
+        serializedVersion: 2
+        x: 2662
+        y: 4563
+        width: 399
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4d6d33a675f3be4e8d96460a2ef08a6
+      internalID: -990942840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_124
+      rect:
+        serializedVersion: 2
+        x: 3442
+        y: 4561
+        width: 399
+        height: 627
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852abc31fa35ef44abd7b1b575fe8ea1
+      internalID: 1659486282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_125
+      rect:
+        serializedVersion: 2
+        x: 4216
+        y: 4563
+        width: 404
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 765dca439912332429beab1b068b8fef
+      internalID: -2133129112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_126
+      rect:
+        serializedVersion: 2
+        x: 4995
+        y: 4565
+        width: 404
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 916fc365fb566984c8d34a2879f26501
+      internalID: -1948033487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_127
+      rect:
+        serializedVersion: 2
+        x: 5769
+        y: 4565
+        width: 404
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dfaf9ca2c6535947b649a31e3708050
+      internalID: 126632452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_128
+      rect:
+        serializedVersion: 2
+        x: 6548
+        y: 4565
+        width: 405
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84156b973995459499c8d0c624d733e5
+      internalID: 972421612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_129
+      rect:
+        serializedVersion: 2
+        x: 7322
+        y: 4565
+        width: 410
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97ff21395dddc4f4caa1a60d8043ec55
+      internalID: -246676124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_130
+      rect:
+        serializedVersion: 2
+        x: 8101
+        y: 4565
+        width: 405
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1708ffbc297cbce4a83479a253dd9185
+      internalID: -1763102624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_131
+      rect:
+        serializedVersion: 2
+        x: 8875
+        y: 4565
+        width: 411
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b6c5a679899e254ba8f9ac620863510
+      internalID: -1118157900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_132
+      rect:
+        serializedVersion: 2
+        x: 9655
+        y: 4565
+        width: 410
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60ca31d9c3786f54c9edc7925301fcd8
+      internalID: -1582278293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_133
+      rect:
+        serializedVersion: 2
+        x: 10429
+        y: 4565
+        width: 415
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 803c4b561a5fcc149a91e7afc2dbb43a
+      internalID: 839592512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_134
+      rect:
+        serializedVersion: 2
+        x: 11208
+        y: 4565
+        width: 411
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18554f71e83fe9343b709f09270207ab
+      internalID: 1185163254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_135
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 3679
+        width: 411
+        height: 627
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1ae7eab6c0d82b4687a271963e3383f
+      internalID: 154458424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_136
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 3680
+        width: 417
+        height: 626
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aa14652de9ef794cae493f4847ae235
+      internalID: -763531053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_137
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 3683
+        width: 411
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 035ea42e98b30834ca3220313025acf3
+      internalID: 510985078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_138
+      rect:
+        serializedVersion: 2
+        x: 2644
+        y: 3683
+        width: 417
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 898067eaa5e3f3f4c8d4107012c17f86
+      internalID: -567114913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_139
+      rect:
+        serializedVersion: 2
+        x: 3424
+        y: 3683
+        width: 417
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f09b4a0049065bb41bb2608e68933c7d
+      internalID: -2017065580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_140
+      rect:
+        serializedVersion: 2
+        x: 4197
+        y: 3683
+        width: 423
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e7432009f18a6f44a6551b9b0dac301
+      internalID: 352021035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_141
+      rect:
+        serializedVersion: 2
+        x: 4977
+        y: 3683
+        width: 417
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df8c7be313bf2554cb443f1b89f49810
+      internalID: 2032849404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_142
+      rect:
+        serializedVersion: 2
+        x: 5751
+        y: 3683
+        width: 422
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 568b9985a2a64a744ac56a32b63cf35f
+      internalID: -1349088060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_143
+      rect:
+        serializedVersion: 2
+        x: 6530
+        y: 3683
+        width: 423
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f997bbedab0a194e8a154984405fb7e
+      internalID: 1540549199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_144
+      rect:
+        serializedVersion: 2
+        x: 7304
+        y: 3683
+        width: 429
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebe96b8116c6385468e6f30ae4b0463a
+      internalID: 1234990519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_145
+      rect:
+        serializedVersion: 2
+        x: 8083
+        y: 3683
+        width: 429
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14154386a5efff140a443f33c80ff86e
+      internalID: 1206545411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_146
+      rect:
+        serializedVersion: 2
+        x: 8857
+        y: 3683
+        width: 435
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0050907219a3e9f4ea7ebb836c65fb61
+      internalID: -272687983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_147
+      rect:
+        serializedVersion: 2
+        x: 9636
+        y: 3684
+        width: 435
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d314061a3624ed438e7a07547c606c1
+      internalID: 1114942297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_148
+      rect:
+        serializedVersion: 2
+        x: 10412
+        y: 3685
+        width: 439
+        height: 621
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13e2479a29b6ff54695739a48c4249f1
+      internalID: -1861004423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_149
+      rect:
+        serializedVersion: 2
+        x: 11190
+        y: 3689
+        width: 441
+        height: 617
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 821f298fe922a9645acbe83c980fc97a
+      internalID: -1007908618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_150
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 2804
+        width: 441
+        height: 619
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 582b5d71b8551194eb43f267523d47d1
+      internalID: -1595295767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_151
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 2804
+        width: 447
+        height: 619
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 850e934d721e34e4abc779a9fe581c99
+      internalID: -1384888134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_152
+      rect:
+        serializedVersion: 2
+        x: 1852
+        y: 2807
+        width: 447
+        height: 616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eff4fe2f086151e47b63dda8009121de
+      internalID: -659758523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_153
+      rect:
+        serializedVersion: 2
+        x: 2626
+        y: 2807
+        width: 453
+        height: 616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd3cd97a699c68143923f60ba4deeb0a
+      internalID: -687992476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_154
+      rect:
+        serializedVersion: 2
+        x: 3406
+        y: 2807
+        width: 452
+        height: 616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74ef233028ef3e74c999f96f89b2f85e
+      internalID: 229655837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_155
+      rect:
+        serializedVersion: 2
+        x: 4179
+        y: 2807
+        width: 453
+        height: 616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc0f66c33935b2d4fac69cba9e6238db
+      internalID: 1466470544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_156
+      rect:
+        serializedVersion: 2
+        x: 4959
+        y: 2807
+        width: 453
+        height: 616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f8f87996f2d05343bd9a67c5d24605c
+      internalID: 201995444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_157
+      rect:
+        serializedVersion: 2
+        x: 5732
+        y: 2807
+        width: 460
+        height: 616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5607f28a9d22ed64297e601e124b0840
+      internalID: 1587811619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_158
+      rect:
+        serializedVersion: 2
+        x: 6512
+        y: 2810
+        width: 459
+        height: 613
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b361c1807f15e84abca483a14161734
+      internalID: -1629217123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_159
+      rect:
+        serializedVersion: 2
+        x: 7286
+        y: 2813
+        width: 465
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e713bb29ba93ab49ac816bbb8441905
+      internalID: 802838428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_160
+      rect:
+        serializedVersion: 2
+        x: 8065
+        y: 2813
+        width: 465
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92cb7603fcbc16e4ab2c535179e97f7a
+      internalID: -280433249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_161
+      rect:
+        serializedVersion: 2
+        x: 8845
+        y: 2813
+        width: 465
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf90ff8a3c5fd9f45b92bf99d8e6a9ae
+      internalID: -902103053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_162
+      rect:
+        serializedVersion: 2
+        x: 9618
+        y: 2813
+        width: 472
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2172c8ff79f08054bb441a746e7c8e14
+      internalID: 273757724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_163
+      rect:
+        serializedVersion: 2
+        x: 10398
+        y: 2813
+        width: 471
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ee5db7a27f09f3439cc984566791848
+      internalID: -1419021816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_164
+      rect:
+        serializedVersion: 2
+        x: 11172
+        y: 2813
+        width: 477
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 443d81a710a4bfe4ca9148ff7249a00a
+      internalID: -935978850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_165
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 1931
+        width: 477
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31e4d6d64321bc1439f454ad5cf24348
+      internalID: -1722966751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_166
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 1931
+        width: 483
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 104208fa94a313649aad212269f8cf8b
+      internalID: -432048209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_167
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 1937
+        width: 483
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a3cdaba8a04546448a2d962e0c2c70e
+      internalID: 1202335257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_168
+      rect:
+        serializedVersion: 2
+        x: 2608
+        y: 1937
+        width: 483
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cb5f3b60b69bcb4faaa8bca016073ba
+      internalID: -1111310917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_169
+      rect:
+        serializedVersion: 2
+        x: 3387
+        y: 1937
+        width: 484
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c6367eb7e7630429256793bd05f12b
+      internalID: -1546374890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_170
+      rect:
+        serializedVersion: 2
+        x: 4167
+        y: 1937
+        width: 483
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cf727b778207f04aa0ce070b444555b
+      internalID: 1501317957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_171
+      rect:
+        serializedVersion: 2
+        x: 4941
+        y: 1937
+        width: 489
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b087da6f405a241aaf51d7eca5240a
+      internalID: 913996055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_172
+      rect:
+        serializedVersion: 2
+        x: 5720
+        y: 1943
+        width: 490
+        height: 598
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79c7f8b67a3f4a74f8530f724ec5ff89
+      internalID: 882399763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_173
+      rect:
+        serializedVersion: 2
+        x: 6494
+        y: 1943
+        width: 495
+        height: 598
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3257e2c057dc9004bbd516e706543bff
+      internalID: 268030109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_174
+      rect:
+        serializedVersion: 2
+        x: 7273
+        y: 1943
+        width: 496
+        height: 598
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd0f55e1f4c6a2048a000fcd23afbec2
+      internalID: -862089750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_175
+      rect:
+        serializedVersion: 2
+        x: 8047
+        y: 1943
+        width: 501
+        height: 598
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92bdfa93b3ddf434e98657b510a3e8cb
+      internalID: -819551831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_176
+      rect:
+        serializedVersion: 2
+        x: 8827
+        y: 1943
+        width: 498
+        height: 598
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f8b449601204f2438f25a636a0ee68e
+      internalID: -655190967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_177
+      rect:
+        serializedVersion: 2
+        x: 9606
+        y: 1949
+        width: 496
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe8251167292f342b672a19d642e051
+      internalID: -572999942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_178
+      rect:
+        serializedVersion: 2
+        x: 10380
+        y: 1949
+        width: 501
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46d265b20cb35d948a67c3b2bebf6620
+      internalID: 899664791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_179
+      rect:
+        serializedVersion: 2
+        x: 11159
+        y: 1949
+        width: 502
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b26f0b45dd06dd41a680bcf432241fe
+      internalID: 1171507361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_180
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1067
+        width: 770
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d34630f494bb2242bd710f6e5b65bc2
+      internalID: -508745937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_181
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 1067
+        width: 507
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af2d1282a73218c49acb4e66462f19c3
+      internalID: 504506985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_182
+      rect:
+        serializedVersion: 2
+        x: 1818
+        y: 1067
+        width: 512
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85e03dd16f9bdfc41b4994ea6200633a
+      internalID: -591751043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_183
+      rect:
+        serializedVersion: 2
+        x: 2596
+        y: 1073
+        width: 513
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d07702f90f50fa49b696721641e4227
+      internalID: -1640656729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_184
+      rect:
+        serializedVersion: 2
+        x: 3375
+        y: 1073
+        width: 511
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05c627812b7fed14bb7c1d244b6e979a
+      internalID: -212005959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_185
+      rect:
+        serializedVersion: 2
+        x: 4149
+        y: 1073
+        width: 514
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13d5c9b66605a224985ea878c45f453a
+      internalID: 722673042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_186
+      rect:
+        serializedVersion: 2
+        x: 4929
+        y: 1073
+        width: 513
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7552116ec8fc37641b2ef02bbb6fe506
+      internalID: 1260774969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_187
+      rect:
+        serializedVersion: 2
+        x: 5705
+        y: 1079
+        width: 517
+        height: 580
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 897bc9235c4c587478b347b227289f12
+      internalID: -677510220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_188
+      rect:
+        serializedVersion: 2
+        x: 6482
+        y: 1079
+        width: 519
+        height: 580
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad360fba72b3b664abf011c4fbdb5330
+      internalID: 984908592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_189
+      rect:
+        serializedVersion: 2
+        x: 7261
+        y: 1079
+        width: 520
+        height: 580
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 029da46456ddcd549a9271a0de1ff8d3
+      internalID: -1860189467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_190
+      rect:
+        serializedVersion: 2
+        x: 8035
+        y: 1079
+        width: 525
+        height: 580
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab74f7b068e99ef42beeb5ee6df3769c
+      internalID: 160416520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_191
+      rect:
+        serializedVersion: 2
+        x: 8814
+        y: 1085
+        width: 520
+        height: 574
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9614002ab78b494e8b0bc2052846ef7
+      internalID: -1079243194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_192
+      rect:
+        serializedVersion: 2
+        x: 9590
+        y: 1085
+        width: 524
+        height: 574
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f84f1079c7e55e408f8527c5781ccdf
+      internalID: 25947540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_193
+      rect:
+        serializedVersion: 2
+        x: 10368
+        y: 1085
+        width: 525
+        height: 574
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 942c3920335595c488def5ab83d9c2af
+      internalID: 1782427702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_194
+      rect:
+        serializedVersion: 2
+        x: 11147
+        y: 1085
+        width: 523
+        height: 574
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c691b1e0db5ec749855bfa007c9b456
+      internalID: 1129587582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_195
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 203
+        width: 531
+        height: 573
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3653c5e0ebda0141975a24163174ae5
+      internalID: -1290106305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_196
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 203
+        width: 531
+        height: 573
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b46d7af0be57611449d7bdee3703d0af
+      internalID: -1734775373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_197
+      rect:
+        serializedVersion: 2
+        x: 1807
+        y: 209
+        width: 529
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b91838f04da234badff264b0580fe9
+      internalID: -83665761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_198
+      rect:
+        serializedVersion: 2
+        x: 2584
+        y: 209
+        width: 531
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06353da3c1e77c24d84e82c7721fc2ca
+      internalID: -281285910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_199
+      rect:
+        serializedVersion: 2
+        x: 3363
+        y: 209
+        width: 532
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76e5740682f451149a775456695df1a9
+      internalID: -2120511920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jellyfish_export_jellyfish_SE_200
+      rect:
+        serializedVersion: 2
+        x: 4137
+        y: 209
+        width: 538
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df5427abcaf111c4fb111ab440d8b71f
+      internalID: 779841010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      jellyfish_export_jellyfish_SE_0: 12605925
+      jellyfish_export_jellyfish_SE_1: -390182700
+      jellyfish_export_jellyfish_SE_10: 2023229766
+      jellyfish_export_jellyfish_SE_100: -1054107839
+      jellyfish_export_jellyfish_SE_101: -1165366662
+      jellyfish_export_jellyfish_SE_102: -633069161
+      jellyfish_export_jellyfish_SE_103: 1398506701
+      jellyfish_export_jellyfish_SE_104: -1276545311
+      jellyfish_export_jellyfish_SE_105: -307005116
+      jellyfish_export_jellyfish_SE_106: 1616243487
+      jellyfish_export_jellyfish_SE_107: 2136447113
+      jellyfish_export_jellyfish_SE_108: 458156601
+      jellyfish_export_jellyfish_SE_109: -570348829
+      jellyfish_export_jellyfish_SE_11: -1102267413
+      jellyfish_export_jellyfish_SE_110: -2147419195
+      jellyfish_export_jellyfish_SE_111: 794958129
+      jellyfish_export_jellyfish_SE_112: -904677795
+      jellyfish_export_jellyfish_SE_113: -416124694
+      jellyfish_export_jellyfish_SE_114: 1571666083
+      jellyfish_export_jellyfish_SE_115: -1520950214
+      jellyfish_export_jellyfish_SE_116: -1910333978
+      jellyfish_export_jellyfish_SE_117: 1930777986
+      jellyfish_export_jellyfish_SE_118: -382016076
+      jellyfish_export_jellyfish_SE_119: -1269795719
+      jellyfish_export_jellyfish_SE_12: 1990515597
+      jellyfish_export_jellyfish_SE_120: -1190036093
+      jellyfish_export_jellyfish_SE_121: 514185229
+      jellyfish_export_jellyfish_SE_122: 828137320
+      jellyfish_export_jellyfish_SE_123: -990942840
+      jellyfish_export_jellyfish_SE_124: 1659486282
+      jellyfish_export_jellyfish_SE_125: -2133129112
+      jellyfish_export_jellyfish_SE_126: -1948033487
+      jellyfish_export_jellyfish_SE_127: 126632452
+      jellyfish_export_jellyfish_SE_128: 972421612
+      jellyfish_export_jellyfish_SE_129: -246676124
+      jellyfish_export_jellyfish_SE_13: 1971029816
+      jellyfish_export_jellyfish_SE_130: -1763102624
+      jellyfish_export_jellyfish_SE_131: -1118157900
+      jellyfish_export_jellyfish_SE_132: -1582278293
+      jellyfish_export_jellyfish_SE_133: 839592512
+      jellyfish_export_jellyfish_SE_134: 1185163254
+      jellyfish_export_jellyfish_SE_135: 154458424
+      jellyfish_export_jellyfish_SE_136: -763531053
+      jellyfish_export_jellyfish_SE_137: 510985078
+      jellyfish_export_jellyfish_SE_138: -567114913
+      jellyfish_export_jellyfish_SE_139: -2017065580
+      jellyfish_export_jellyfish_SE_14: -1326001712
+      jellyfish_export_jellyfish_SE_140: 352021035
+      jellyfish_export_jellyfish_SE_141: 2032849404
+      jellyfish_export_jellyfish_SE_142: -1349088060
+      jellyfish_export_jellyfish_SE_143: 1540549199
+      jellyfish_export_jellyfish_SE_144: 1234990519
+      jellyfish_export_jellyfish_SE_145: 1206545411
+      jellyfish_export_jellyfish_SE_146: -272687983
+      jellyfish_export_jellyfish_SE_147: 1114942297
+      jellyfish_export_jellyfish_SE_148: -1861004423
+      jellyfish_export_jellyfish_SE_149: -1007908618
+      jellyfish_export_jellyfish_SE_15: -105040410
+      jellyfish_export_jellyfish_SE_150: -1595295767
+      jellyfish_export_jellyfish_SE_151: -1384888134
+      jellyfish_export_jellyfish_SE_152: -659758523
+      jellyfish_export_jellyfish_SE_153: -687992476
+      jellyfish_export_jellyfish_SE_154: 229655837
+      jellyfish_export_jellyfish_SE_155: 1466470544
+      jellyfish_export_jellyfish_SE_156: 201995444
+      jellyfish_export_jellyfish_SE_157: 1587811619
+      jellyfish_export_jellyfish_SE_158: -1629217123
+      jellyfish_export_jellyfish_SE_159: 802838428
+      jellyfish_export_jellyfish_SE_16: -1946872076
+      jellyfish_export_jellyfish_SE_160: -280433249
+      jellyfish_export_jellyfish_SE_161: -902103053
+      jellyfish_export_jellyfish_SE_162: 273757724
+      jellyfish_export_jellyfish_SE_163: -1419021816
+      jellyfish_export_jellyfish_SE_164: -935978850
+      jellyfish_export_jellyfish_SE_165: -1722966751
+      jellyfish_export_jellyfish_SE_166: -432048209
+      jellyfish_export_jellyfish_SE_167: 1202335257
+      jellyfish_export_jellyfish_SE_168: -1111310917
+      jellyfish_export_jellyfish_SE_169: -1546374890
+      jellyfish_export_jellyfish_SE_17: 896899773
+      jellyfish_export_jellyfish_SE_170: 1501317957
+      jellyfish_export_jellyfish_SE_171: 913996055
+      jellyfish_export_jellyfish_SE_172: 882399763
+      jellyfish_export_jellyfish_SE_173: 268030109
+      jellyfish_export_jellyfish_SE_174: -862089750
+      jellyfish_export_jellyfish_SE_175: -819551831
+      jellyfish_export_jellyfish_SE_176: -655190967
+      jellyfish_export_jellyfish_SE_177: -572999942
+      jellyfish_export_jellyfish_SE_178: 899664791
+      jellyfish_export_jellyfish_SE_179: 1171507361
+      jellyfish_export_jellyfish_SE_18: 39127293
+      jellyfish_export_jellyfish_SE_180: -508745937
+      jellyfish_export_jellyfish_SE_181: 504506985
+      jellyfish_export_jellyfish_SE_182: -591751043
+      jellyfish_export_jellyfish_SE_183: -1640656729
+      jellyfish_export_jellyfish_SE_184: -212005959
+      jellyfish_export_jellyfish_SE_185: 722673042
+      jellyfish_export_jellyfish_SE_186: 1260774969
+      jellyfish_export_jellyfish_SE_187: -677510220
+      jellyfish_export_jellyfish_SE_188: 984908592
+      jellyfish_export_jellyfish_SE_189: -1860189467
+      jellyfish_export_jellyfish_SE_19: -2102691174
+      jellyfish_export_jellyfish_SE_190: 160416520
+      jellyfish_export_jellyfish_SE_191: -1079243194
+      jellyfish_export_jellyfish_SE_192: 25947540
+      jellyfish_export_jellyfish_SE_193: 1782427702
+      jellyfish_export_jellyfish_SE_194: 1129587582
+      jellyfish_export_jellyfish_SE_195: -1290106305
+      jellyfish_export_jellyfish_SE_196: -1734775373
+      jellyfish_export_jellyfish_SE_197: -83665761
+      jellyfish_export_jellyfish_SE_198: -281285910
+      jellyfish_export_jellyfish_SE_199: -2120511920
+      jellyfish_export_jellyfish_SE_2: -168196093
+      jellyfish_export_jellyfish_SE_20: -557809882
+      jellyfish_export_jellyfish_SE_200: 779841010
+      jellyfish_export_jellyfish_SE_21: 1034173038
+      jellyfish_export_jellyfish_SE_22: 1091543114
+      jellyfish_export_jellyfish_SE_23: 74152486
+      jellyfish_export_jellyfish_SE_24: 24961896
+      jellyfish_export_jellyfish_SE_25: -213868169
+      jellyfish_export_jellyfish_SE_26: -1029274833
+      jellyfish_export_jellyfish_SE_27: 2124479105
+      jellyfish_export_jellyfish_SE_28: 1795407012
+      jellyfish_export_jellyfish_SE_29: -523217457
+      jellyfish_export_jellyfish_SE_3: -305303337
+      jellyfish_export_jellyfish_SE_30: -1730500857
+      jellyfish_export_jellyfish_SE_31: 1738420589
+      jellyfish_export_jellyfish_SE_32: -1740815314
+      jellyfish_export_jellyfish_SE_33: 411735778
+      jellyfish_export_jellyfish_SE_34: -1138374589
+      jellyfish_export_jellyfish_SE_35: 1186084079
+      jellyfish_export_jellyfish_SE_36: -1125644878
+      jellyfish_export_jellyfish_SE_37: 192764105
+      jellyfish_export_jellyfish_SE_38: -160647707
+      jellyfish_export_jellyfish_SE_39: -1983912487
+      jellyfish_export_jellyfish_SE_4: 459992281
+      jellyfish_export_jellyfish_SE_40: -2123495906
+      jellyfish_export_jellyfish_SE_41: -774514858
+      jellyfish_export_jellyfish_SE_42: -860995092
+      jellyfish_export_jellyfish_SE_43: 1119906509
+      jellyfish_export_jellyfish_SE_44: -1712133761
+      jellyfish_export_jellyfish_SE_45: -1866601923
+      jellyfish_export_jellyfish_SE_46: 1077252643
+      jellyfish_export_jellyfish_SE_47: 712286298
+      jellyfish_export_jellyfish_SE_48: -658334969
+      jellyfish_export_jellyfish_SE_49: 1004595645
+      jellyfish_export_jellyfish_SE_5: 467754022
+      jellyfish_export_jellyfish_SE_50: 1278899499
+      jellyfish_export_jellyfish_SE_51: 550412996
+      jellyfish_export_jellyfish_SE_52: 437751825
+      jellyfish_export_jellyfish_SE_53: -1122402807
+      jellyfish_export_jellyfish_SE_54: 1907034956
+      jellyfish_export_jellyfish_SE_55: -224886439
+      jellyfish_export_jellyfish_SE_56: 863398088
+      jellyfish_export_jellyfish_SE_57: 505639974
+      jellyfish_export_jellyfish_SE_58: 1360864750
+      jellyfish_export_jellyfish_SE_59: 1084830143
+      jellyfish_export_jellyfish_SE_6: 1389931203
+      jellyfish_export_jellyfish_SE_60: 2077034696
+      jellyfish_export_jellyfish_SE_61: 1057034504
+      jellyfish_export_jellyfish_SE_62: 668681407
+      jellyfish_export_jellyfish_SE_63: -1978863532
+      jellyfish_export_jellyfish_SE_64: 2021484389
+      jellyfish_export_jellyfish_SE_65: 1033497228
+      jellyfish_export_jellyfish_SE_66: -1287736526
+      jellyfish_export_jellyfish_SE_67: 5355249
+      jellyfish_export_jellyfish_SE_68: -1793303715
+      jellyfish_export_jellyfish_SE_69: -654128721
+      jellyfish_export_jellyfish_SE_7: -1760237281
+      jellyfish_export_jellyfish_SE_70: 96280104
+      jellyfish_export_jellyfish_SE_71: -2039105539
+      jellyfish_export_jellyfish_SE_72: 1057328198
+      jellyfish_export_jellyfish_SE_73: -1223487057
+      jellyfish_export_jellyfish_SE_74: -1107574252
+      jellyfish_export_jellyfish_SE_75: 1333396527
+      jellyfish_export_jellyfish_SE_76: 136953471
+      jellyfish_export_jellyfish_SE_77: 510596607
+      jellyfish_export_jellyfish_SE_78: -690952476
+      jellyfish_export_jellyfish_SE_79: -1024377277
+      jellyfish_export_jellyfish_SE_8: 1462871269
+      jellyfish_export_jellyfish_SE_80: 1416341712
+      jellyfish_export_jellyfish_SE_81: 1507707441
+      jellyfish_export_jellyfish_SE_82: -1299462320
+      jellyfish_export_jellyfish_SE_83: -1020845380
+      jellyfish_export_jellyfish_SE_84: 1489052661
+      jellyfish_export_jellyfish_SE_85: 439872892
+      jellyfish_export_jellyfish_SE_86: -1004813846
+      jellyfish_export_jellyfish_SE_87: -1169484324
+      jellyfish_export_jellyfish_SE_88: -364414856
+      jellyfish_export_jellyfish_SE_89: 1921355655
+      jellyfish_export_jellyfish_SE_9: -151796293
+      jellyfish_export_jellyfish_SE_90: -738335639
+      jellyfish_export_jellyfish_SE_91: 382385084
+      jellyfish_export_jellyfish_SE_92: 408670527
+      jellyfish_export_jellyfish_SE_93: 1614183210
+      jellyfish_export_jellyfish_SE_94: 807797227
+      jellyfish_export_jellyfish_SE_95: 823980647
+      jellyfish_export_jellyfish_SE_96: -1788445047
+      jellyfish_export_jellyfish_SE_97: 1573686692
+      jellyfish_export_jellyfish_SE_98: 1029914807
+      jellyfish_export_jellyfish_SE_99: 532294493
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
