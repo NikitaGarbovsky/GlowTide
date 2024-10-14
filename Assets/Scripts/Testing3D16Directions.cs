@@ -69,14 +69,17 @@ public class Testing3D16Directions : MonoBehaviour
     // Only update the animator if the direction has changed
     if (newDirection != currentDirection)
     {
+        //Debug.Log(newDirection);
+        animator.SetInteger("Direction", newDirection);
         // Get the current animation state and its normalized time
         AnimatorStateInfo currentState = animator.GetCurrentAnimatorStateInfo(0);
-        float currentNormalizedTime = currentState.normalizedTime % 1; // This keeps the animation's progress
-
+        float currentNormalizedTime = currentState.normalizedTime; // This keeps the animation's progress
+        //Debug.Log("Normalized Time: " + currentNormalizedTime);
+        
+        //Debug.Log("Direction animation change: " + GetDirectionNumber(newDirection) + "_JELLYFISH_" + GetDirectionName(newDirection));
         // Update the Animator parameter with normalized time to continue from the same frame
         string animationName = GetDirectionNumber(newDirection) + "_JELLYFISH_" + GetDirectionName(newDirection);
         animator.Play(animationName, 0, currentNormalizedTime);
-
         // Update the current direction tracker
         currentDirection = newDirection;
     }
@@ -132,74 +135,76 @@ private string GetDirectionNumber(int directionIndex)
 }
 
 
-    private int GetDirectionIndexForAngle(float angle)
+    private int GetDirectionIndexForAngle(float _angle)
     {
+        //Debug.Log("Angle: " + _angle);
         // 16 direction handling - 22.5 degree increments
-        if (angle >= 348.75f || angle < 11.25f)
+        if (_angle >= 348.75f || _angle < 11.25f)
         {
             return 0; // East
         }
-        else if (angle >= 11.25f && angle < 33.75f)
+        else if (_angle >= 11.25f && _angle < 33.75f)
         {
             return 1; // North-East East
         }
-        else if (angle >= 33.75f && angle < 56.25f)
+        else if (_angle >= 33.75f && _angle < 56.25f)
         {
             return 2; // North-East
         }
-        else if (angle >= 56.25f && angle < 78.75f)
+        else if (_angle >= 56.25f && _angle < 78.75f)
         {
             return 3; // North North-East
         }
-        else if (angle >= 78.75f && angle < 101.25f)
+        else if (_angle >= 78.75f && _angle < 101.25f)
         {
             return 4; // North
         }
-        else if (angle >= 101.25f && angle < 123.75f)
+        else if (_angle >= 101.25f && _angle < 123.75f)
         {
             return 5; // North North-West
         }
-        else if (angle >= 123.75f && angle < 146.25f)
+        else if (_angle >= 123.75f && _angle < 146.25f)
         {
             return 6; // North-West
         }
-        else if (angle >= 146.25f && angle < 168.75f)
+        else if (_angle >= 146.25f && _angle < 168.75f)
         {
             return 7; // West North-West
         }
-        else if (angle >= 168.75f && angle < 191.25f)
+        else if (_angle >= 168.75f && _angle < 191.25f)
         {
             return 8; // West
         }
-        else if (angle >= 191.25f && angle < 213.75f)
+        else if (_angle >= 191.25f && _angle < 213.75f)
         {
             return 9; // South-West West
         }
-        else if (angle >= 213.75f && angle < 236.25f)
+        else if (_angle >= 213.75f && _angle < 236.25f)
         {
             return 10; // South-West
         }
-        else if (angle >= 236.25f && angle < 258.75f)
+        else if (_angle >= 236.25f && _angle < 258.75f)
         {
             return 11; // South South-West
         }
-        else if (angle >= 258.75f && angle < 281.25f)
+        else if (_angle >= 258.75f && _angle < 281.25f)
         {
             return 12; // South
         }
-        else if (angle >= 281.25f && angle < 303.75f)
+        else if (_angle >= 281.25f && _angle < 303.75f)
         {
             return 13; // South South-East
         }
-        else if (angle >= 303.75f && angle < 326.25f)
+        else if (_angle >= 303.75f && _angle < 326.25f)
         {
             return 14; // South-East
         }
-        else if (angle >= 326.25f && angle < 348.75f)
+        else if (_angle >= 326.25f && _angle < 348.75f)
         {
             return 15; // South-East East
         }
-
+        
+        Debug.Log("FAILED TO RETURN ANGLE");
         return 0; // Default to East if something goes wrong
     }
 }
