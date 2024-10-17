@@ -17,6 +17,11 @@ using UnityEngine;
 
 public class SlugThrowing : MonoBehaviour
 {
+<<<<<<< HEAD
+=======
+    
+    public int m_slugCount;
+>>>>>>> origin/Reece
     [SerializeField]
     int m_pickupRadius;
     [SerializeField]
