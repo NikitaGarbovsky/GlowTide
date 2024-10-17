@@ -36,12 +36,14 @@ public abstract class InteractiveObject : MonoBehaviour
     {
         // that's when we want to allow assigning of seaslugs;
         m_bAssignable = true;
+        Debug.Log("Interactive Object Mouse Over");
     }
     // If the player is no longer mousing over, 
     private void OnMouseExit()
     {
         // Dont allow slugs to be assignable.
         m_bAssignable = false;
+        Debug.Log("Interactive Object MOUSE EXIT");
     }
     protected void CheckIfActionConditionMet()
     {
@@ -50,7 +52,7 @@ public abstract class InteractiveObject : MonoBehaviour
             ExecuteObjectAction();
         }
     }
-    private void AddSlugToSlugList(GameObject _seaslug)
+    public virtual  void AddSlugToSlugList(GameObject _seaslug)
     {
         // Add passed in slug to slug list.
         m_lstAssignedSeaSlugs.Add(_seaslug);
