@@ -18,7 +18,7 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int m_slugCount = m_testPlayer.GetComponent<SlugThrowing>().m_slugCount;
+        int m_slugCount = m_testPlayer.GetComponent<LaunchSeaSlugBro>().seaSlugBros.Count;
        string m_slugCountString = m_slugCount.ToString();
         m_slugCountText.text = m_slugCountString;
     }
