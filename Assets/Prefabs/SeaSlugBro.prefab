@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1440134432750644755}
   - component: {fileID: 459190334328944573}
   - component: {fileID: 4734576477949168621}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SeaSlugBro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4064d745f66f58d44abfb472918d6a04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  m_Player: {fileID: 0}
+  m_bIsFollowingPlayer: 1
+  m_chaseSpeed: 1.2
+  m_wanderSpeed: 0.4
+  moveSpeed: 7
+  friction: 0.9
 --- !u!114 &21066700126059804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +227,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
