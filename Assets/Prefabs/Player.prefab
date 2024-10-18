@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 3922750595604442637}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.01, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -73,12 +73,12 @@ SpriteRenderer:
   m_SortingLayerID: -841161751
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: abfcd8f3ec5e21d43a4d34060b6d97a1, type: 3}
+  m_Sprite: {fileID: -2032026347, guid: 14ff95415ab81874582eb0cc776a24be, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.71, y: 1.28}
+  m_Size: {x: 1.1460127, y: 1.4371428}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -93,11 +93,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3685708292754175298}
-  - component: {fileID: 4674897465736391328}
   - component: {fileID: 8615781140397122585}
   - component: {fileID: 4275678318547303782}
   - component: {fileID: 724604512307458818}
-  - component: {fileID: 8643004040310554420}
+  - component: {fileID: 6518477081529317673}
+  - component: {fileID: 8244741817756163826}
+  - component: {fileID: 4002788588064383205}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -121,30 +122,6 @@ Transform:
   - {fileID: 8507998248761502461}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4674897465736391328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4693817167849357668}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6fe497fdd6bc7449b5508b223cadd9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aiPath: {fileID: 0}
-  N: {fileID: 21300000, guid: 6dba9cba632095347a32e5483ce1bb12, type: 3}
-  NE: {fileID: 21300000, guid: cad5097db2be3444aa19fe9e04198196, type: 3}
-  E: {fileID: 21300000, guid: 4e020b9514016534697847ceb41c5f02, type: 3}
-  SE: {fileID: 21300000, guid: 887e36e8f83144b448586188c58aa6ae, type: 3}
-  S: {fileID: 21300000, guid: 295f72b438222494daaac5a90d41b366, type: 3}
-  SW: {fileID: 21300000, guid: abfcd8f3ec5e21d43a4d34060b6d97a1, type: 3}
-  W: {fileID: 21300000, guid: dacf35b52eb3975488cb8469e74b600e, type: 3}
-  NW: {fileID: 21300000, guid: 88b841e2166f8c84da818faec3d14012, type: 3}
-  spriteTransform: {fileID: 8507998248761502461}
-  bobbingAmplitude: 0.1
-  bobbingSpeed: 2
 --- !u!114 &8615781140397122585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,13 +221,13 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.25}
   m_Size: {x: 0.5, y: 0.5}
   m_Direction: 0
---- !u!114 &8643004040310554420
+--- !u!114 &6518477081529317673
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -259,12 +236,52 @@ MonoBehaviour:
   m_GameObject: {fileID: 4693817167849357668}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11b149aa5b3942741a318cdc70db8d69, type: 3}
+  m_Script: {fileID: 11500000, guid: 8389a1d450ed9a348b2d68d1126d60e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seaSlugBros:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  m_pickupRadius: 1
+  m_slugObject: {fileID: 5415000071001427898, guid: bb86d18c26cbb1340aa7b1aa5088c2c1, type: 3}
+  m_slugMask:
+    serializedVersion: 2
+    m_Bits: 256
+  m_pickup: 1
+  m_slugs: []
+  m_throwableSlugs: []
+--- !u!114 &8244741817756163826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4693817167849357668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16b72e792283cc2498351d3ba88a133f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aiPath: {fileID: 0}
+  animator: {fileID: 0}
+  spriteTransform: {fileID: 0}
+  bobbingAmplitude: 0.1
+  bobbingSpeed: 2
+--- !u!95 &4002788588064383205
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4693817167849357668}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f1268f188b0f4f141953ccd924d0900d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
