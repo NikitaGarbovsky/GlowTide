@@ -1,74 +1,148 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using Random = UnityEngine.Random;
 
 public class SeaSlugBroFollower : MonoBehaviour
 {
-    public GameObject m_Player;  // Reference to the player (seahorse)
-    private AIPath aiPath;    // Reference to A* Pathfinding component on this gameobject
-    private bool m_bIsFollowingPlayer = true; // Bool to check if it's following the player
-    private Rigidbody2D rb;   // Rigidbody for handling launching
+    // Represents the current state of the slug
+    public enum SlugState
+    {
+        FollowingPlayer,
+        MovingToObject,
+        Idle
+    }
 
-    private Vector3 velocity; // For projectile movement
-    public float moveSpeed = 5f;  // Speed when thrown
-    public float friction = 0.9f; // Friction to reduce velocity over time
+    // The current state (starts in Idle)
+    public SlugState currentState = SlugState.Idle;
+    private Transform targetObject;
+    private GameObject m_Player;  // Reference to the player (seahorse)
+    private AIPath aiPath;    // Reference to A* Pathfinding component on this gameobject
+    private Rigidbody2D rb;   // Rigidbody for handling physics
+
+    public float m_chaseSpeed = 3f; // Speed when chasing the player
+    public float m_wanderSpeed = 1f; // Speed when wandering
+    public float moveSpeed = 5f;  // Speed when moving to assigned object
+
+    public bool m_wandering = true;
+    private float m_waitTime;
 
     private Vector3 CorrectedPlayerPosition;
+
+    // Define an event for when the slug reaches its target
+    public event Action<SeaSlugBroFollower> OnReachedTarget;
     private void Start()
     {
-        // Finds the player gameobject 
+        // Find the player gameobject 
         m_Player = GameObject.FindWithTag("Player"); 
         aiPath = GetComponent<AIPath>(); // Get the A* pathfinding component
         rb = GetComponent<Rigidbody2D>(); // Get the Rigidbody component for movement control
+        m_waitTime = 0;
     }
 
     private void Update()
     {
-        if (m_bIsFollowingPlayer)
+        switch (currentState)
         {
-            // Continue following the player using A* pathfinding
-            aiPath.enabled = true;
-            if (m_Player != null)
+            case SlugState.FollowingPlayer:
+                FollowPlayer();
+                break;
+            case SlugState.MovingToObject:
+                MoveToObject();
+                break;
+            case SlugState.Idle:
+                Wander();
+                break;
+        }
+    }
+
+    private void FollowPlayer()
+    {
+        aiPath.enabled = true;
+        if (m_Player != null)
+        {
+            // Adjust position to follow slightly behind the player
+            CorrectedPlayerPosition = new Vector3(m_Player.transform.position.x, m_Player.transform.position.y - 0.5f);
+            aiPath.destination = CorrectedPlayerPosition;
+
+            // Adjust speed based on distance to the player
+            float distanceToPlayer = Vector2.Distance(transform.position, m_Player.transform.position);
+            if (distanceToPlayer > 1.5f)
             {
-                CorrectedPlayerPosition =
-                    new Vector3(m_Player.transform.position.x, (float)(m_Player.transform.position.y - 0.5));
-                aiPath.destination = CorrectedPlayerPosition;
+                aiPath.maxSpeed = m_chaseSpeed;
             }
+            else
+            {
+                aiPath.maxSpeed = m_wanderSpeed; 
+            }
+        }
+    }
+
+    private void Wander()
+    {
+        if (m_wandering)
+        {  
+            aiPath.enabled = true;
+            if (m_waitTime <= 0)
+            {
+                // Randomly choose a nearby position to move to
+                float xPos = Random.Range(-0.5f, 0.5f);
+                float yPos = Random.Range(-0.5f, 0.5f);
+                aiPath.destination = new Vector3(transform.position.x + xPos, transform.position.y + yPos);
+                m_waitTime = Random.Range(5, 7);
+            }
+            m_waitTime -= Time.deltaTime;
+            aiPath.maxSpeed = m_wanderSpeed;
         }
         else
         {
-            // Stop following the player and apply projectile logic
-            aiPath.enabled = false; // Disable pathfinding while launched
-            rb.velocity = velocity * moveSpeed; // Move using the current velocity
-            velocity -= velocity * friction * Time.deltaTime; // Apply friction to slow down
+            aiPath.enabled = false;
+        }
+    }
 
-            if (velocity.magnitude < 0.01f) // Stop if velocity is too small
+    public void MoveToAssignedObject(Transform target)
+    {
+        targetObject = target;
+        currentState = SlugState.MovingToObject;
+        aiPath.enabled = true;
+        aiPath.destination = targetObject.position;
+        aiPath.maxSpeed = moveSpeed;
+    }
+
+    private void MoveToObject()
+    {
+        if (targetObject != null)
+        {
+            aiPath.destination = targetObject.position;
+            aiPath.maxSpeed = moveSpeed;
+
+            // Check if arrived at the target
+            if (Vector2.Distance(transform.position, targetObject.position) < 0.1f)
             {
-                rb.velocity = Vector2.zero; // Stop movement
-                velocity = Vector3.zero;    // Reset velocity
+                currentState = SlugState.Idle;
+                aiPath.enabled = false;
+
+                // Snap to the exact spot
+                transform.position = targetObject.position;
+                
+                // Invoke the event to notify that the slug has reached its target
+                OnReachedTarget?.Invoke(this);
             }
         }
     }
 
-    // Function to set the velocity and launch the seaslugbro
-    public void Launch(Vector3 direction)
+    // Method to start following the player
+    public void StartFollowingPlayer()
     {
-        m_bIsFollowingPlayer = false; // Stop following the player when launched
-        velocity = direction.normalized; // Set the velocity based on the input direction
-        rb.isKinematic = false; // Enable physics for projectile movement
+        currentState = SlugState.FollowingPlayer;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    // Method to stop following the player and become idle
+    public void StopFollowingPlayer()
     {
-        // Check if the player collides with the sea slug bro when it's stationary
-        if (other.CompareTag("Player") && !m_bIsFollowingPlayer)
-        {
-            // Adds this gameobject (slug) to the players slug launcher list.
-            m_Player.GetComponent<LaunchSeaSlugBro>().AddSlug(gameObject); 
-            m_bIsFollowingPlayer = true;  // Start following the player again
-            
-            aiPath.enabled = true;
-        }
+        currentState = SlugState.Idle;
+        aiPath.enabled = false;
     }
 }

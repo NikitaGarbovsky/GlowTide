@@ -26,7 +26,7 @@ public class LaunchSeaSlugBro : MonoBehaviour
             if (slugController != null)
             {
                 // Launch the slug in the direction of the mouse
-                slugController.Launch(direction);
+                //slugController.Launch(direction); // ========================
             }
         }
     }
