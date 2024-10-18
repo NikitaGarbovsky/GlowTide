@@ -17,8 +17,7 @@ using UnityEngine;
 
 public class SlugThrowing : MonoBehaviour
 {
-    [SerializeField]
-    int m_slugCount;
+    public int m_slugCount;
     [SerializeField]
     int m_pickupRadius;
     [SerializeField]
@@ -27,12 +26,14 @@ public class SlugThrowing : MonoBehaviour
     public LayerMask m_slugMask;
     public bool m_pickup;
     Vector3 mousePos;
-    CircleCollider2D playerCollider;
+    public List<GameObject> m_slugs;
+    [SerializeField]
+    List<GameObject> m_throwableSlugs;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerCollider = GetComponent<CircleCollider2D>();
+
     }
 
     // Update is called once per frame
@@ -41,28 +42,66 @@ public class SlugThrowing : MonoBehaviour
         // Calculate Mouse angle from Player
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         float mouseAngle = Mathf.Atan2(mousePos.y - transform.position.y, mousePos.x - transform.position.x);
-        // Create Slugs
-        if (Input.GetMouseButtonDown(0) && m_slugCount > 0)
+        // Handle slug throwing
+        if (Input.GetMouseButtonDown(0) && m_throwableSlugs.Count > 0)
         {
-            m_slugCount--;
-            GameObject newSlug = Instantiate(m_slugObject, transform.position, transform.rotation);
-            SlugProjectile slugController = newSlug.GetComponent<SlugProjectile>();
-            if (slugController != null)
+            // Get the mouse position in world coordinates
+            Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            // Perform a raycast to check if the mouse is over an interactive object
+            RaycastHit2D hit = Physics2D.Raycast(mouseWorldPos, Vector2.zero);
+            if (hit.collider != null)
             {
-                // Set Slug Velocity
-                slugController.SetVelocity(Mathf.Cos(mouseAngle), Mathf.Sin(mouseAngle));
+                InteractiveObject interactiveObject = hit.collider.GetComponent<InteractiveObject>();
+                if (interactiveObject != null)
+                {
+                    // Mouse is over an interactive object; proceed to assign slug
+                    AssignSlugToInteractiveObject(interactiveObject);
+                }
             }
         }
 
-        // Picking up Slugs [NOT FINISHED]
+        // Call slugs on mousedown e
+        if (Input.GetKey(KeyCode.E))
+        {
+            foreach (GameObject slug in m_slugs)
+            {
+                SeaSlugBroFollower slugController = slug.GetComponent<SeaSlugBroFollower>();
+                if (slugController != null)
+                {
+                    slugController.StartFollowingPlayer();
+                }
+            }
+        }
+
+        // Picking up Slugs
         if (m_pickup)
         {
             Collider2D[] slugColliders = Physics2D.OverlapCircleAll(transform.position, m_pickupRadius, m_slugMask);
             foreach (Collider2D slug in slugColliders)
             {
-                Destroy(slug.gameObject);
-                m_slugCount++;
+                Debug.Log(slug.gameObject.name);
+                if (m_throwableSlugs.Contains(slug.gameObject) == false)
+                {
+                    m_throwableSlugs.Add(slug.gameObject);
+                }
+                
+                if (m_slugs.Contains(slug.gameObject) == false)
+                {
+                    m_slugs.Add(slug.gameObject);
+                }
+
             }
         }
+    }
+    private void AssignSlugToInteractiveObject(InteractiveObject interactiveObject)
+    {
+        // Remove the slug from your lists
+        m_slugs.Remove(m_throwableSlugs[0]);
+        Destroy(m_throwableSlugs[0]);
+        m_throwableSlugs.RemoveAt(0);
+
+        // Instantiate a new slug and assign it to the interactive object
+        GameObject newSlug = Instantiate(m_slugObject, transform.position, transform.rotation);
+        interactiveObject.AddSlugToSlugList(newSlug);
     }
 }
