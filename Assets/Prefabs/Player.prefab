@@ -239,6 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8389a1d450ed9a348b2d68d1126d60e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_slugCount: 0
   m_pickupRadius: 1
   m_slugObject: {fileID: 5415000071001427898, guid: bb86d18c26cbb1340aa7b1aa5088c2c1, type: 3}
   m_slugMask:
