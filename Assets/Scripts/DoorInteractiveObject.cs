@@ -17,11 +17,10 @@ public class DoorInteractiveObject : InteractiveObject
     private int slugSpotIndex = 0; // Tracks the next available slug spot
 
     private int slugsReachedTarget = 0; // Count of slugs that have reached their spots
-
+    
     private void Start()
     {
         m_iCondition = m_iObjectConditionAmount;
-
         // Initialize the slug spots list
         if (SlugSpot1 != null) slugSpots.Add(SlugSpot1);
         if (SlugSpot2 != null) slugSpots.Add(SlugSpot2);
