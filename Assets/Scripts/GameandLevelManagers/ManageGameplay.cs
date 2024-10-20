@@ -1,3 +1,4 @@
+using Cinemachine;
 using Pathfinding;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -31,12 +32,6 @@ public sealed class ManageGameplay : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
-
-        // Initialize player reference 
-        if (playerCharacter == null)
-        {
-            playerCharacter = GameObject.FindWithTag("Player");
-        }
     }
     
     private void OnEnable()
@@ -59,6 +54,19 @@ public sealed class ManageGameplay : MonoBehaviour
         ActivateLevelManager(scene.name);
         // Initializes the level.
         GetLevelManager(scene.name).GetComponent<LevelManager>().InitializeLevel();
+        GetPlayerReference();
+    }
+
+    void GetPlayerReference()
+    {
+        // Initialize player reference 
+        if (playerCharacter == null)
+        {
+            playerCharacter = GameObject.FindWithTag("Player");
+        }
+
+        gameObject.GetComponentInChildren<CinemachineVirtualCamera>().Follow = playerCharacter.transform;
+        gameObject.GetComponentInChildren<CinemachineVirtualCamera>().LookAt = playerCharacter.transform;
     }
     // A bunch of debug loaders for loading into each level
     private void Update()
