@@ -1,3 +1,4 @@
+using System;
 using Cinemachine;
 using Pathfinding;
 using UnityEngine;
@@ -56,7 +57,8 @@ public sealed class ManageGameplay : MonoBehaviour
         GetLevelManager(scene.name).GetComponent<LevelManager>().InitializeLevel();
         GetPlayerReference();
     }
-
+    // After scene loads we call this to get a new reference to the player, (wont need this anymore if the player 
+    // becomes a global object.)
     void GetPlayerReference()
     {
         // Initialize player reference 
@@ -64,7 +66,8 @@ public sealed class ManageGameplay : MonoBehaviour
         {
             playerCharacter = GameObject.FindWithTag("Player");
         }
-
+        
+        // Sets the camera to follow the player gameobject
         gameObject.GetComponentInChildren<CinemachineVirtualCamera>().Follow = playerCharacter.transform;
         gameObject.GetComponentInChildren<CinemachineVirtualCamera>().LookAt = playerCharacter.transform;
     }
@@ -138,5 +141,12 @@ public sealed class ManageGameplay : MonoBehaviour
             }
         }
         return null;
+    }
+    // This is executed from each individual ObjectTrigger script in scenes,
+    // It passes its name(string) of the gameobject as a reference to the associated script, in the associated level. 
+    public void ExecuteLevelManagerTrigger(string _sTriggerName)
+    {
+        GetLevelManager(SceneManager.GetActiveScene().name).GetComponent<LevelManager>().levelTrigger
+            .ExecuteLevelTrigger(_sTriggerName);
     }
 }

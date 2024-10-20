@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fbf96a62f6927241b0826bcee54af13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_sLevelName: 
 --- !u!1 &1419157646771207417
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,6 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fbf96a62f6927241b0826bcee54af13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_sLevelName: 
 --- !u!1 &1650199405832313847
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,6 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fbf96a62f6927241b0826bcee54af13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_sLevelName: 
 --- !u!1 &3807848965172573117
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,6 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fbf96a62f6927241b0826bcee54af13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_sLevelName: 
 --- !u!1 &8358886677518826340
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,8 +249,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3406312020421575947}
   - component: {fileID: 2586838399161922186}
+  - component: {fileID: 9028756526024834320}
   m_Layer: 0
-  m_Name: LevelIntroManager
+  m_Name: 0_IntroductionManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -277,6 +282,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4fbf96a62f6927241b0826bcee54af13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_sLevelName: 
+--- !u!114 &9028756526024834320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8358886677518826340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e758dccd4ced824384e102ca75fd22a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8575911852564803885
@@ -323,6 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fbf96a62f6927241b0826bcee54af13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_sLevelName: 
 --- !u!1001 &3580373645543571380
 PrefabInstance:
   m_ObjectHideFlags: 0
