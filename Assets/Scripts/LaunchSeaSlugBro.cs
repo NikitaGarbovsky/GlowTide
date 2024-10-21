@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class LaunchSeaSlugBro : MonoBehaviour
 {
-    [SerializeField]
-    List<GameObject> seaSlugBros; // List of sea slugs currently following the player
+    
+    public List<GameObject> seaSlugBros; // List of sea slugs currently following the player
 
     Vector3 mousePos;
 
