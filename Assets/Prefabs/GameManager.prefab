@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8821836408881930434}
   - component: {fileID: 5119106313127388376}
   m_Layer: 0
-  m_Name: Level3Manager
+  m_Name: 3_Level3Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_sLevelName: 
+  levelTrigger: {fileID: 0}
 --- !u!1 &1419157646771207417
 GameObject:
   m_ObjectHideFlags: 0
@@ -56,7 +57,7 @@ GameObject:
   - component: {fileID: 3494887161480790523}
   - component: {fileID: 5454782866620595653}
   m_Layer: 0
-  m_Name: Level1Manager
+  m_Name: 1_Level1Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90,6 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_sLevelName: 
+  levelTrigger: {fileID: 0}
 --- !u!1 &1650199405832313847
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,7 +162,7 @@ GameObject:
   - component: {fileID: 8826968043843886077}
   - component: {fileID: 918482633600177703}
   m_Layer: 0
-  m_Name: Level4Manager
+  m_Name: 4_Level4Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -194,6 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_sLevelName: 
+  levelTrigger: {fileID: 0}
 --- !u!1 &3807848965172573117
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,7 +208,7 @@ GameObject:
   - component: {fileID: 1042096693206910869}
   - component: {fileID: 9035379249588193751}
   m_Layer: 0
-  m_Name: Level2Manager
+  m_Name: 2_Level2Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -239,6 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_sLevelName: 
+  levelTrigger: {fileID: 0}
 --- !u!1 &8358886677518826340
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,6 +289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_sLevelName: 
+  levelTrigger: {fileID: 0}
 --- !u!114 &9028756526024834320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,7 +313,7 @@ GameObject:
   - component: {fileID: 671089843652960092}
   - component: {fileID: 6251687348665845409}
   m_Layer: 0
-  m_Name: Level5Manager
+  m_Name: 5_Level5Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -342,6 +347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_sLevelName: 
+  levelTrigger: {fileID: 0}
 --- !u!1001 &3580373645543571380
 PrefabInstance:
   m_ObjectHideFlags: 0
