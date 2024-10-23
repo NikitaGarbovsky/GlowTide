@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7894162148107165526}
   - component: {fileID: 6145153351362339955}
   m_Layer: 0
-  m_Name: PS_AmbientLevel
+  m_Name: PS_EnvoWisps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
