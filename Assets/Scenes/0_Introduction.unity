@@ -351,6 +351,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4275678318547303782, guid: 116b32d25cae78940be2a3cb5eed22d2, type: 3}
+      propertyPath: pickNextWaypointDist
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 4693817167849357668, guid: 116b32d25cae78940be2a3cb5eed22d2, type: 3}
       propertyPath: m_Name
       value: Jellyfish Player
@@ -12036,7 +12040,7 @@ PrefabInstance:
       objectReference: {fileID: 2066598257}
     - target: {fileID: 7671322776027412173, guid: 93b35b2111eac1e46a5adcd8ab1a3c43, type: 3}
       propertyPath: m_iObjectConditionAmount
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12059,6 +12063,10 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 615026156}
+    - target: {fileID: 4877856657517448255, guid: 035230a8cfb702446866ecca2213c994, type: 3}
+      propertyPath: orthographic size
+      value: 2.75
+      objectReference: {fileID: 0}
     - target: {fileID: 7781988572552437774, guid: 035230a8cfb702446866ecca2213c994, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
