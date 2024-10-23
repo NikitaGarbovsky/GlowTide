@@ -23,6 +23,12 @@ public class SlugProjectile : MonoBehaviour
 
     [SerializeField]
     GameObject m_slug;
+    [SerializeField]
+    GameObject m_player;
+    private void Awake()
+    {
+        m_player = GameObject.FindWithTag("Player");
+    }
 
     // Update is called once per frame
     void Update()
@@ -34,8 +40,22 @@ public class SlugProjectile : MonoBehaviour
 
         if (m_Velocity.magnitude < 0.01)
         {
-            Instantiate(m_slug, transform.position, transform.rotation);
+            GameObject slug = Instantiate(m_slug, transform.position, transform.rotation);
+            SlugThrowing slugThrowing = m_player.GetComponent<SlugThrowing>();
+            if (slugThrowing != null)
+            {
+                slugThrowing.m_slugs.Add(slug);
+            }
             Destroy(gameObject);
+        }
+
+        RaycastHit2D hit = Physics2D.CircleCast(transform.position, 0.5f, Vector2.zero);
+        if (hit)
+        {
+            if (hit.collider.gameObject.tag == "Enemy")
+            {
+                m_Velocity *= -1;
+            }
         }
     }
 
@@ -43,4 +63,6 @@ public class SlugProjectile : MonoBehaviour
     {
         m_Velocity = new Vector3(x, y, 0);
     }
+
+    
 }
