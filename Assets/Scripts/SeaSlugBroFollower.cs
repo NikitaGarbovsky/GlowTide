@@ -17,7 +17,7 @@ public class SeaSlugBroFollower : MonoBehaviour
 
     // The current state (starts in Idle)
     public SlugState currentState = SlugState.Idle;
-    private Transform targetObject;
+    private GameObject targetObject;
     private GameObject m_Player;  // Reference to the player (seahorse)
     private AIPath aiPath;    // Reference to A* Pathfinding component on this gameobject
     private Rigidbody2D rb;   // Rigidbody for handling physics
@@ -60,7 +60,6 @@ public class SeaSlugBroFollower : MonoBehaviour
 
     private void FollowPlayer()
     {
-        aiPath.enabled = true;
         if (m_Player != null)
         {
             // Adjust position to follow slightly behind the player
@@ -82,50 +81,38 @@ public class SeaSlugBroFollower : MonoBehaviour
 
     private void Wander()
     {
-        if (m_wandering)
-        {  
-            aiPath.enabled = true;
-            if (m_waitTime <= 0)
-            {
-                // Randomly choose a nearby position to move to
-                float xPos = Random.Range(-0.5f, 0.5f);
-                float yPos = Random.Range(-0.5f, 0.5f);
-                aiPath.destination = new Vector3(transform.position.x + xPos, transform.position.y + yPos);
-                m_waitTime = Random.Range(5, 7);
-            }
-            m_waitTime -= Time.deltaTime;
-            aiPath.maxSpeed = m_wanderSpeed;
-        }
-        else
+        if (m_waitTime <= 0)
         {
-            aiPath.enabled = false;
+            // Randomly choose a nearby position to move to
+            float xPos = Random.Range(-0.5f, 0.5f);
+            float yPos = Random.Range(-0.5f, 0.5f);
+            aiPath.destination = new Vector3(transform.position.x + xPos, transform.position.y + yPos);
+            m_waitTime = Random.Range(5, 7);
         }
+        m_waitTime -= Time.deltaTime;
+        aiPath.maxSpeed = m_wanderSpeed;
     }
 
-    public void MoveToAssignedObject(Transform target)
+    public void MoveToAssignedObject(GameObject _target)
     {
-        targetObject = target;
+        targetObject = _target;
         currentState = SlugState.MovingToObject;
-        aiPath.enabled = true;
-        aiPath.destination = targetObject.position;
-        aiPath.maxSpeed = moveSpeed;
     }
 
     private void MoveToObject()
     {
         if (targetObject != null)
         {
-            aiPath.destination = targetObject.position;
+            aiPath.destination = new Vector3(targetObject.transform.position.x, targetObject.transform.position.y);
             aiPath.maxSpeed = moveSpeed;
 
             // Check if arrived at the target
-            if (Vector2.Distance(transform.position, targetObject.position) < 0.1f)
+            if (Vector2.Distance(transform.position, targetObject.transform.position) < 0.1f)
             {
                 currentState = SlugState.Idle;
-                aiPath.enabled = false;
 
                 // Snap to the exact spot
-                transform.position = targetObject.position;
+                transform.position = targetObject.transform.position;
                 
                 // Invoke the event to notify that the slug has reached its target
                 OnReachedTarget?.Invoke(this);
@@ -143,6 +130,5 @@ public class SeaSlugBroFollower : MonoBehaviour
     public void StopFollowingPlayer()
     {
         currentState = SlugState.Idle;
-        aiPath.enabled = false;
     }
 }

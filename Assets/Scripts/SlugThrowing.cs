@@ -102,6 +102,13 @@ public class SlugThrowing : MonoBehaviour
                 }
 
             }
+            foreach (GameObject slug in m_slugs)
+            {
+                if (Vector3.Distance(slug.transform.position, transform.position) < m_pickupRadius)
+                {
+                    m_throwableSlugs.Remove(slug.gameObject);
+                }
+            }
         }
     }
     private void AssignSlugToInteractiveObject(InteractiveObject interactiveObject)

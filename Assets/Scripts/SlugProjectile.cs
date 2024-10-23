@@ -56,6 +56,27 @@ public class SlugProjectile : MonoBehaviour
             {
                 m_Velocity *= -1;
             }
+
+            if (hit.collider.gameObject.tag == "Door")
+            {
+                GameObject slug = Instantiate(m_slug, transform.position, transform.rotation);
+                SlugThrowing slugThrowing = m_player.GetComponent<SlugThrowing>();
+                if (slugThrowing != null)
+                {
+                    slugThrowing.m_slugs.Add(slug);
+                }
+                DoorInteractable doorscript = hit.collider.gameObject.GetComponent<DoorInteractable>();
+                if (doorscript != null)
+                {
+                    doorscript.AddToSlugList(slug);
+                    Debug.Log("kfgjldskfsgjhlsdkfjgl");
+                    Destroy(gameObject);
+                }
+            }
+
+            if (hit.collider.gameObject.tag == "Door")
+            {
+            }
         }
     }
 
