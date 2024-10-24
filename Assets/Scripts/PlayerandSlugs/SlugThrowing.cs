@@ -58,7 +58,7 @@ public class SlugThrowing : MonoBehaviour
             if (slugController != null)
             {
                 // Set Slug Velocity
-                slugController.SetVelocity(Mathf.Cos(mouseAngle), Mathf.Sin(mouseAngle));
+                //slugController.SetVelocity(Mathf.Cos(mouseAngle), Mathf.Sin(mouseAngle));
 
             }
             // Get the mouse position in world coordinates

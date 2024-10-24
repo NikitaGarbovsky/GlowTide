@@ -1,4 +1,49 @@
-/***********************************************************************
+using UnityEngine;
+
+public class SlugProjectile : MonoBehaviour
+{
+    private Vector2 targetPosition;
+    private float throwDistance;
+    private float speed;
+
+    public void Initialize(Vector2 mousePosition, float distance, float throwSpeed)
+    {
+        // Calculate direction and final target position
+        Vector2 playerPosition = transform.position;
+        Vector2 direction = (mousePosition - playerPosition).normalized;
+        targetPosition = playerPosition + direction * distance;
+
+        // Set speed
+        speed = throwSpeed;
+    }
+
+    void Update()
+    {
+        // Move the slug towards the target position
+        if ((Vector2)transform.position != targetPosition)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+        }
+        else
+        {
+            // Reached the target position
+            OnReachTarget();
+        }
+    }
+
+    void OnReachTarget()
+    {
+        // TODO: Implement what happens when the slug reaches the target
+        // For now, we'll destroy the slug
+        Destroy(gameObject);
+    }
+}
+
+
+
+/*
+
+***********************************************************************
     Bachelor of Software Engineering
     Media Design School
     Auckland
@@ -10,7 +55,7 @@
     Description :   Slug Controller - Allows the slugs to move with Velocity
     Author      :   Connor Maguigan
     Mail        :   connor.maguigan@mds.ac.nz
-**************************************************************************/
+**************************************************************************
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -87,3 +132,4 @@ public class SlugProjectile : MonoBehaviour
 
     
 }
+*/
