@@ -49,6 +49,18 @@ public class SlugThrowing : MonoBehaviour
         // Handle slug throwing
         if (Input.GetMouseButtonDown(0) && m_throwableSlugs.Count > 0)
         {
+            m_slugs.Remove(m_throwableSlugs[0]);
+            Destroy(m_throwableSlugs[0]);
+            m_throwableSlugs.RemoveAt(0);
+            GameObject newSlug = Instantiate(m_slugObject, transform.position, transform.rotation);
+            SlugProjectile slugController = newSlug.GetComponent<SlugProjectile>();
+            m_textHUD.text = m_throwableSlugs.Count.ToString();
+            if (slugController != null)
+            {
+                // Set Slug Velocity
+                slugController.SetVelocity(Mathf.Cos(mouseAngle), Mathf.Sin(mouseAngle));
+
+            }
             // Get the mouse position in world coordinates
             Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             // Perform a raycast to check if the mouse is over an interactive object
@@ -62,8 +74,6 @@ public class SlugThrowing : MonoBehaviour
                     AssignSlugToInteractiveObject(interactiveObject);
                 }
             }
-            m_textHUD.text = m_throwableSlugs.Count.ToString();
-
         }
 
         // Call slugs on mousedown e
@@ -98,6 +108,7 @@ public class SlugThrowing : MonoBehaviour
 
             }
             m_textHUD.text = m_throwableSlugs.Count.ToString();
+
         }
     }
     private void AssignSlugToInteractiveObject(InteractiveObject interactiveObject)
@@ -106,6 +117,8 @@ public class SlugThrowing : MonoBehaviour
         m_slugs.Remove(m_throwableSlugs[0]);
         Destroy(m_throwableSlugs[0]);
         m_throwableSlugs.RemoveAt(0);
+        m_textHUD.text = m_throwableSlugs.Count.ToString();
+
 
         // Instantiate a new slug and assign it to the interactive object
         GameObject newSlug = Instantiate(m_slugObject, transform.position, transform.rotation);
