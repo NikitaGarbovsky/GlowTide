@@ -15,15 +15,7 @@ public class LevelIntroTriggers : LevelTriggers
     {
         if (_sTriggerName == "0_CallingBros") // This is the name of the gameobject that is being triggered.
         {
-            // This is where the "Calling bros" trigger occurs
-            Debug.Log("Calling bros triggered");
-            // Scriptable event for Calling bros:
-            // 1. Take movement controls away from player,
-            // 2. Camera pans to right to show bro in view,
-            // 3. Bro jumps for joy, Pop up box displays prompt to position mouse towards bro and press e to call
-            // 4. Bro moves towards player,
-            // 5. When bro has reached player, return movement controls back to player,
-            // 6. Return camera to normal. 
+            StartCoroutine(CallBrosSequence());
         }
         if (_sTriggerName == "1_ThrowingBros") 
         {
@@ -45,5 +37,26 @@ public class LevelIntroTriggers : LevelTriggers
             // TODO add a fade out for level transitions.
             SceneManager.LoadScene("1_Level1");
         }
+        
+    }
+    private IEnumerator CallBrosSequence()
+    {
+        // This is where the "Calling bros" trigger occurs
+        Debug.Log("Calling bros triggered");
+        // Scriptable event for Calling bros:
+        // 1. Take movement controls away from player,
+        ManageGameplay.Instance.RemovePlayerControl();
+        // 2. Camera pans to right to show bro in view,
+        yield return StartCoroutine(ManageGameplay.Instance.PanCamera(new Vector2(5f,0f),5f));
+        // 3. Pop up box displays prompt to position mouse towards bro and press e to call
+        
+        // 4. Bro moves towards player,
+        // 5. When bro has reached player, return movement controls back to player,
+        // 6. Return camera to normal. 
+
+        
+
+
     }
 }
+
