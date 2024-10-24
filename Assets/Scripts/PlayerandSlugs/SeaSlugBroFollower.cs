@@ -13,18 +13,21 @@ public class SeaSlugBroFollower : MonoBehaviour
     public enum ESlugState
     {
         FollowingPlayer,  // The slug is following the player
-        MovingToObject,   // The slug is moving toward an assigned object
         Idle,             // The slug is idle and not moving
-        Thrown            // The slug has been thrown and is moving in the air
+        Thrown,            // The slug has been thrown and is moving in the air
+        Assigned            // The slug is assigned to an object
     }
-
+    
+    // Reference to the assigned InteractiveObject
+    public InteractiveObject m_assignedInteractiveObject;
+    
     // Current state of the sea slug (default is Idle)
     public ESlugState m_eCurrentState = ESlugState.Idle;
 
     private GameObject m_goTargetObject;  // Object that the slug will move toward
     private GameObject m_goPlayer;        // Reference to the player 
-    private AIPath m_aiPath;              // Reference to the A* Pathfinding component on this object
-    private Rigidbody2D m_rbSlug;         // Rigidbody for handling physics interactions
+    [HideInInspector] public AIPath m_aiPath;              // Reference to the A* Pathfinding component on this object
+    [HideInInspector] public Rigidbody2D m_rbSlug;         // Rigidbody for handling physics interactions
 
     [Header("Movement Speeds")]
     public float m_fChaseSpeed = 3f;   // Speed when chasing the player
@@ -70,14 +73,14 @@ public class SeaSlugBroFollower : MonoBehaviour
             case ESlugState.FollowingPlayer:
                 FollowPlayer();
                 break;
-            case ESlugState.MovingToObject:
-                MoveToObject();
-                break;
             case ESlugState.Thrown:
                 MoveToThrownPosition();
                 break;
             case ESlugState.Idle:
                 Wander();
+                break;
+            case ESlugState.Assigned:
+                // Do nothing; the seaslug remains at its assigned spot
                 break;
         }
     }
@@ -133,41 +136,32 @@ public class SeaSlugBroFollower : MonoBehaviour
         m_aiPath.maxSpeed = m_fWanderSpeed;
     }
 
-    // Public function to assign an object for the slug to move toward
-    public void MoveToAssignedObject(GameObject _goTarget)
-    {
-        m_goTargetObject = _goTarget;
-        m_eCurrentState = ESlugState.MovingToObject;
-    }
-
-    // Function to move toward an assigned object TODO maybe change this in the future, is it rally needed?
-    private void MoveToObject()
-    {
-        if (m_goTargetObject != null)
-        {
-            // Set AI pathfinding destination to the object's position
-            m_aiPath.destination = m_goTargetObject.transform.position;
-            m_aiPath.maxSpeed = m_fMoveSpeed;
-
-            // Check if the slug has arrived at the target
-            if (Vector2.Distance(transform.position, m_goTargetObject.transform.position) < 0.1f)
-            {
-                m_eCurrentState = ESlugState.Idle;
-
-                // Snap to the exact target position
-                transform.position = m_goTargetObject.transform.position;
-
-                // Invoke the event to notify that the target has been reached
-                OnReachedTarget?.Invoke(this);
-            }
-        }
-    }
-
     // Function to start following the player
     public void StartFollowingPlayer()
     {
+        // If the slug was assigned to an InteractiveObject, notify it
+        if (m_assignedInteractiveObject != null)
+        {
+            m_assignedInteractiveObject.RemoveSlugFromSlugList(gameObject);
+            m_assignedInteractiveObject = null;
+        }
+
         m_eCurrentState = ESlugState.FollowingPlayer;
+
+        // Re-enable AIPath
+        if (!m_aiPath.enabled)
+            m_aiPath.enabled = true;
+
+        // Set the player's position as the destination
+        m_aiPath.destination = m_goPlayer.transform.position;
+
+        // Reset Rigidbody settings
+        if (m_rbSlug.bodyType != RigidbodyType2D.Dynamic)
+            m_rbSlug.bodyType = RigidbodyType2D.Dynamic;
+
+        m_rbSlug.isKinematic = false;
     }
+
 
     // Function to stop following the player and become idle
     public void StopFollowingPlayer()
@@ -185,24 +179,50 @@ public class SeaSlugBroFollower : MonoBehaviour
                 // Deactivate the bubbles when the target has reached location.
                 Destroy(trailBubblesInstance);
             }
-            
-            Debug.Log($"Seaslug collided with {collision.gameObject.name}");
+            // Check if collided with an InteractiveObject
+            InteractiveObject interactiveObject = collision.gameObject.GetComponent<InteractiveObject>();
+            if (interactiveObject != null)
+            {
+                // Notify the InteractiveObject that the slug wants to be assigned
+                interactiveObject.AddSlugToSlugList(gameObject);
 
-            // Stop the slug's movement and change its state to Idle
-            m_eCurrentState = ESlugState.Idle;
-            
-            // Revert the slug's layer back to "Slug"
-            gameObject.layer = LayerMask.NameToLayer("Slug");
-            
-            // Returns the seaslug to dynamic, so it can collide with things again.
-            m_rbSlug.bodyType = RigidbodyType2D.Dynamic;
-            
-            // Snap the slug's position to the collision point
-            m_rbSlug.position = collision.contacts[0].point;
+                // Set the assigned InteractiveObject reference
+                m_assignedInteractiveObject = interactiveObject;
 
-            // Re-enable the AIPath component
-            m_aiPath.enabled = true;
-            m_aiPath.destination = gameObject.transform.position;
+                // Change the slug's state to Assigned
+                m_eCurrentState = ESlugState.Assigned;
+                
+                // Revert the slug's layer back to "Slug"
+                gameObject.layer = LayerMask.NameToLayer("Slug");
+                
+                // Remove the slug from the player's assigned slug list
+                m_goPlayer.GetComponent<PlayerSlugManager>().m_lAssignedSlugs.Remove(gameObject);
+
+                // Disable AIPath and stop movement
+                m_aiPath.enabled = false;
+                m_rbSlug.velocity = Vector2.zero;
+                m_rbSlug.isKinematic = true;
+            }
+            else
+            {
+                Debug.Log($"Seaslug collided with {collision.gameObject.name}");
+
+                // Stop the slug's movement and change its state to Idle
+                m_eCurrentState = ESlugState.Idle;
+            
+                // Revert the slug's layer back to "Slug"
+                gameObject.layer = LayerMask.NameToLayer("Slug");
+            
+                // Returns the seaslug to dynamic, so it can collide with things again.
+                m_rbSlug.bodyType = RigidbodyType2D.Dynamic;
+            
+                // Snap the slug's position to the collision point
+                m_rbSlug.position = collision.contacts[0].point;
+
+                // Re-enable the AIPath component
+                m_aiPath.enabled = true;
+                m_aiPath.destination = gameObject.transform.position;
+            }
         }
     }
 

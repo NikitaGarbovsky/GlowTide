@@ -16,7 +16,7 @@ public abstract class SlugInteractableObject : MonoBehaviour
             if (m_slugList.Count < m_slugSpotList.Count)
             { 
                 m_slugList.Add(_slug);
-                slugFollower.MoveToAssignedObject(m_slugSpotList[m_slugList.Count - 1]);
+                //slugFollower.MoveToAssignedObject(m_slugSpotList[m_slugList.Count - 1]);
                 CheckCondition();
             }
         }

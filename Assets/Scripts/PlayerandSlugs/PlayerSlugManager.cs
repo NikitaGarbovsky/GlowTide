@@ -130,16 +130,17 @@ public class PlayerSlugManager : MonoBehaviour
         {
             GameObject goSlug = cSlugCollider.gameObject;
 
-            // Add the slug to the list if it hasn't been assigned yet
-            if (!m_lAssignedSlugs.Contains(goSlug))
+            // Get the SeaSlugBroFollower component
+            SeaSlugBroFollower slugFollower = goSlug.GetComponent<SeaSlugBroFollower>();
+            if (slugFollower != null)
             {
-                m_lAssignedSlugs.Add(goSlug);
-
                 // Make the slug start following the player
-                SeaSlugBroFollower slugFollower = goSlug.GetComponent<SeaSlugBroFollower>();
-                if (slugFollower != null)
+                slugFollower.StartFollowingPlayer();
+
+                // Add the slug to the list if it's not already there
+                if (!m_lAssignedSlugs.Contains(goSlug))
                 {
-                    slugFollower.StartFollowingPlayer();
+                    m_lAssignedSlugs.Add(goSlug);
                 }
             }
         }

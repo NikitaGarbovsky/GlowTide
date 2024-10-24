@@ -1,15 +1,11 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
-public class DoorInteractiveObject : InteractiveObject
+public class DoorInteractiveObject : InteractiveObject  
 {
     [SerializeField] int m_iObjectConditionAmount = 0;
-    //[SerializeField] Transform SlugSpot1;
-    //[SerializeField] Transform SlugSpot2;
-    //[SerializeField] Transform SlugSpot3;
-    //[SerializeField] Transform SlugSpot4;
-    //[SerializeField] Transform SlugSpot5;
 
     [SerializeField] GameObject Grid;
 
@@ -21,51 +17,103 @@ public class DoorInteractiveObject : InteractiveObject
     private void Start()
     {
         m_iCondition = m_iObjectConditionAmount;
-        //// Initialize the slug spots list
-        //if (SlugSpot1 != null) slugSpots.Add(SlugSpot1);
-        //if (SlugSpot2 != null) slugSpots.Add(SlugSpot2);
-        //if (SlugSpot3 != null) slugSpots.Add(SlugSpot3);
-        //if (SlugSpot4 != null) slugSpots.Add(SlugSpot4);
-        //if (SlugSpot5 != null) slugSpots.Add(SlugSpot5);
-    }
-
-    private void Update()
-    {
     }
 
     protected override void ExecuteObjectAction()
     {
-        // Door disappears
-        // Grabs the bounds of the door,
-        Bounds doorBounds = GetComponent<PolygonCollider2D>().bounds;
-        // Destroys it,
-        Debug.Log(slugSpotIndex);
-        Debug.Log(slugSpots.Count);
-        Debug.Log(slugsReachedTarget);
-        Debug.Log(m_iObjectConditionAmount);
-        Destroy(gameObject);  
-        // Then updates the pathfinding graph (removes the collision) 
-        Grid.GetComponent<AstarPath>().UpdateGraphs(doorBounds);
+        StartCoroutine(FadeOutAndDestroy());
     }
+
+    private IEnumerator FadeOutAndDestroy()
+    {
+        // Before destroying the door, reset assigned SeaSlugs
+        foreach (var seaSlug in m_lstAssignedSeaSlugs)
+        {
+            if (seaSlug != null)
+            {
+                SeaSlugBroFollower slugFollower = seaSlug.GetComponent<SeaSlugBroFollower>();
+                if (slugFollower != null)
+                {
+                    // Reset the slug's state
+                    slugFollower.m_eCurrentState = SeaSlugBroFollower.ESlugState.Idle;
+                }
+            }
+        }
+        
+        // Get the sprite render for the door 
+        SpriteRenderer[] renderers = GetComponents<SpriteRenderer>();
+        float duration = 2f;
+        float elapsedTime = 0f;
+
+        // Fade out over time
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            float alpha = Mathf.Lerp(1f, 0f, elapsedTime / duration);
+            foreach (var sr in renderers)
+            {
+                if (sr != null)
+                {
+                    Color color = sr.color;
+                    color.a = alpha;
+                    sr.color = color;
+                }
+            }
+            yield return null;
+        }
+
+        // Ensure alpha is set to 0
+        foreach (var sr in renderers)
+        {
+            if (sr != null)
+            {
+                Color color = sr.color;
+                color.a = 0f;
+                sr.color = color;
+            }
+        }
+
+        // Grab the polygon collider of the door
+        PolygonCollider2D collider = GetComponent<PolygonCollider2D>();
+
+        // Update the pathfinding graph
+        Bounds doorBounds = collider.bounds;
+        Grid.GetComponent<AstarPath>().UpdateGraphs(doorBounds);
+
+        // Destroy the door GameObject
+        Destroy(gameObject);
+    }
+
 
     public override void AddSlugToSlugList(GameObject seaSlug)
     {
-        base.AddSlugToSlugList(seaSlug);
-
         // Assign the slug to a spot
         if (slugSpotIndex < slugSpots.Count)
         {
             Transform targetSpot = slugSpots[slugSpotIndex];
             slugSpotIndex++;
 
-            // Command the slug to move to the target spot
+            // Move the seaslug to the target spot immediately
+            seaSlug.transform.position = targetSpot.position;
+
+            // Change the slug's state to Assigned
             SeaSlugBroFollower slugFollower = seaSlug.GetComponent<SeaSlugBroFollower>();
             if (slugFollower != null)
             {
-                //slugFollower.MoveToAssignedObject(targetSpot);
+                slugFollower.m_eCurrentState = SeaSlugBroFollower.ESlugState.Assigned;
+                // Disable AIPath and stop movement
+                slugFollower.m_aiPath.enabled = false;
+                slugFollower.m_rbSlug.velocity = Vector2.zero;
+                slugFollower.m_rbSlug.isKinematic = true;
+            }
 
-                // Subscribe to the slug's OnReachedTarget event
-                slugFollower.OnReachedTarget += SlugReachedTarget;
+            // Increase the count of slugs that have reached their spots
+            slugsReachedTarget++;
+
+            // Check if the condition is met
+            if (slugsReachedTarget >= m_iObjectConditionAmount)
+            {
+                ExecuteObjectAction();
             }
         }
         else
@@ -74,17 +122,13 @@ public class DoorInteractiveObject : InteractiveObject
         }
     }
 
-    private void SlugReachedTarget(SeaSlugBroFollower slug)
+    public override void RemoveSlugFromSlugList(GameObject seaSlug)
     {
-        slugsReachedTarget++;
+        base.RemoveSlugFromSlugList(seaSlug);
 
-        // Unsubscribe from the event to avoid memory leaks
-        slug.OnReachedTarget -= SlugReachedTarget;
-
-        // Check if all assigned slugs have reached their spots
-        if (slugsReachedTarget >= m_iObjectConditionAmount)
-        {
-            ExecuteObjectAction();
-        }
+        // Decrease the count of slugs that have reached their spots
+        slugsReachedTarget--;
+        
+        slugSpotIndex--;
     }
 }
