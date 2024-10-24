@@ -331,6 +331,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jellyfish Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8634067906856939228, guid: 116b32d25cae78940be2a3cb5eed22d2, type: 3}
+      propertyPath: m_fCallMaxDistance
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -355,7 +359,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3557355496399265425, guid: 6b5be1658f2be644a98cb6c7c3559ffe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.87
+      value: 5.91
       objectReference: {fileID: 0}
     - target: {fileID: 3557355496399265425, guid: 6b5be1658f2be644a98cb6c7c3559ffe, type: 3}
       propertyPath: m_LocalPosition.y
@@ -459,6 +463,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1275803238459255255, guid: 593bf234994eb2e4499c31fe30449218, type: 3}
   m_PrefabInstance: {fileID: 1055758576}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1059761560 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 740087250463829832, guid: 6b5be1658f2be644a98cb6c7c3559ffe, type: 3}
+  m_PrefabInstance: {fileID: 791187404}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1217803855
 PrefabInstance:
@@ -11802,6 +11811,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9028756526024834320, guid: 035230a8cfb702446866ecca2213c994, type: 3}
+      propertyPath: seaslugBroToCall
+      value: 
+      objectReference: {fileID: 1059761560}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

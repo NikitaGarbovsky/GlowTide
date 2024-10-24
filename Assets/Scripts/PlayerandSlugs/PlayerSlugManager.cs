@@ -47,38 +47,41 @@ public class PlayerSlugManager : MonoBehaviour
 
     void HandleCalling()
     {
-        // Get the mouse position in world coordinates
-        Vector3 v3MouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        v3MouseWorldPos.z = 0f; // Set Z to 0 (because 2D)
-
-        // Calculate the distance between the mouse position and the player
-        float fDistanceToMouse = Vector2.Distance(m_goPlayer.transform.position, v3MouseWorldPos);
-
-        // If the 'E' key is being held down
-        if (Input.GetKey(KeyCode.E))
+        if (ManageGameplay.Instance.PlayerCanCallBros) // Only call if the player is allowed to call
         {
-            // If the mouse is within the allowed distance
-            if (fDistanceToMouse <= m_fCallMaxDistance)
+            // Get the mouse position in world coordinates
+            Vector3 v3MouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            v3MouseWorldPos.z = 0f; // Set Z to 0 (because 2D)
+
+            // Calculate the distance between the mouse position and the player
+            float fDistanceToMouse = Vector2.Distance(m_goPlayer.transform.position, v3MouseWorldPos);
+
+            // If the 'E' key is being held down
+            if (Input.GetKey(KeyCode.E))
             {
-                // Show the call effect radius
-                ShowCallRadiusEffect(v3MouseWorldPos);
+                // If the mouse is within the allowed distance
+                if (fDistanceToMouse <= m_fCallMaxDistance)
+                {
+                    // Show the call effect radius
+                    ShowCallRadiusEffect(v3MouseWorldPos);
+                }
+                else
+                {
+                    // Hide the call radius effect
+                    HideCallRadiusEffect();
+                }
             }
             else
             {
                 // Hide the call radius effect
                 HideCallRadiusEffect();
-            }
-        }
-        else
-        {
-            // Hide the call radius effect
-            HideCallRadiusEffect();
 
-            // If the 'E' key was released, and the mouse is within the allowed distance
-            if (Input.GetKeyUp(KeyCode.E) && fDistanceToMouse <= m_fCallMaxDistance)
-            {
-                // Call slugs
-                CallSlugs(v3MouseWorldPos);
+                // If the 'E' key was released, and the mouse is within the allowed distance
+                if (Input.GetKeyUp(KeyCode.E) && fDistanceToMouse <= m_fCallMaxDistance)
+                {
+                    // Call slugs
+                    CallSlugs(v3MouseWorldPos);
+                }
             }
         }
     }

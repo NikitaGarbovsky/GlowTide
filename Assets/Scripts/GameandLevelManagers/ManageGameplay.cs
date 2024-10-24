@@ -114,6 +114,7 @@ public sealed class ManageGameplay : MonoBehaviour
         if (playerCharacter != null)
         {
             playerCharacter.GetComponent<AIPath>().canMove = true;
+            PlayerCanIssueMoveCommands = true;
         }
     }
     

@@ -9,8 +9,11 @@ using TMPro;
 /// </summary>
 public class LevelIntroTriggers : LevelTriggers
 {
-    [SerializeField] List<TextMeshProUGUI> m_popUpText;
+    [SerializeField] private List<TextMeshProUGUI> m_popUpText;
 
+    // Add a reference to the seaslug bro that needs to be called
+    [SerializeField] private GameObject seaslugBroToCall;
+    
     public override void ExecuteLevelTrigger(string _sTriggerName)
     {
         if (_sTriggerName == "0_CallingBros") // This is the name of the gameobject that is being triggered.
@@ -46,17 +49,31 @@ public class LevelIntroTriggers : LevelTriggers
         // Scriptable event for Calling bros:
         // 1. Take movement controls away from player,
         ManageGameplay.Instance.RemovePlayerControl();
-        // 2. Camera pans to right to show bro in view,
-        yield return StartCoroutine(ManageGameplay.Instance.PanCamera(new Vector2(5f,0f),5f));
-        // 3. Pop up box displays prompt to position mouse towards bro and press e to call
+        // 2. Calculate the offset between the seaslug and the player
         
+        Vector2 targetOffset = seaslugBroToCall.transform.position - ManageGameplay.Instance.playerCharacter.transform.position;
+
+        // 3. Camera pans to the seaslug bro
+        yield return StartCoroutine(ManageGameplay.Instance.PanCamera(targetOffset, 2f));
+        
+        // 4. TODO Pop up box displays prompt to position mouse towards bro and press e to call
+
+        ManageGameplay.Instance.PlayerCanCallBros = true;
+        
+        // Wait until the player presses 'E' and the seaslug is added to the player's slug list
+        PlayerSlugManager playerSlugManager = ManageGameplay.Instance.playerCharacter.GetComponent<PlayerSlugManager>();
+
+        while (!playerSlugManager.m_lAssignedSlugs.Contains(seaslugBroToCall))
+        {
+            // Wait for the next frame
+            yield return null;
+        }
         // 4. Bro moves towards player,
-        // 5. When bro has reached player, return movement controls back to player,
-        // 6. Return camera to normal. 
-
+        // 5. Return movement controls back to player
+        ManageGameplay.Instance.ReturnPlayerControl();
         
-
-
+        // 6. Return camera to normal (pan back to the player)
+        yield return StartCoroutine(ManageGameplay.Instance.PanCamera(Vector2.zero, 2f));
     }
 }
 
