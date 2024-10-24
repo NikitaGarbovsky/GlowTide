@@ -45,7 +45,18 @@ public class SlugThrowing : MonoBehaviour
         // Handle slug throwing
         if (Input.GetMouseButtonDown(0) && m_throwableSlugs.Count > 0)
         {
-            // Get the mouse position in world coordinates
+            m_slugs.Remove(m_throwableSlugs[0]);
+            Destroy(m_throwableSlugs[0]);
+            m_throwableSlugs.RemoveAt(0);
+            GameObject newSlug = Instantiate(m_slugObject, transform.position, transform.rotation);
+            SlugProjectile slugController = newSlug.GetComponent<SlugProjectile>();
+            if (slugController != null)
+            {
+                // Set Slug Velocity
+                slugController.SetVelocity(Mathf.Cos(mouseAngle), Mathf.Sin(mouseAngle));
+
+            }
+            /*// Get the mouse position in world coordinates
             Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             // Perform a raycast to check if the mouse is over an interactive object
             RaycastHit2D hit = Physics2D.Raycast(mouseWorldPos, Vector2.zero);
@@ -57,7 +68,7 @@ public class SlugThrowing : MonoBehaviour
                     // Mouse is over an interactive object; proceed to assign slug
                     AssignSlugToInteractiveObject(interactiveObject);
                 }
-            }
+            }*/
         }
 
         // Call slugs on mousedown e
@@ -90,6 +101,13 @@ public class SlugThrowing : MonoBehaviour
                     m_slugs.Add(slug.gameObject);
                 }
 
+            }
+            foreach (GameObject slug in m_slugs)
+            {
+                if (Vector3.Distance(slug.transform.position, transform.position) < m_pickupRadius)
+                {
+                    m_throwableSlugs.Remove(slug.gameObject);
+                }
             }
         }
     }

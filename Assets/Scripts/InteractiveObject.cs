@@ -49,7 +49,7 @@ public abstract class InteractiveObject : MonoBehaviour
     }
     protected void CheckIfActionConditionMet()
     {
-        if (m_iCondition >= m_lstAssignedSeaSlugs.Count)
+        if (m_iCondition <= m_lstAssignedSeaSlugs.Count)
         {
             ExecuteObjectAction();
         }
