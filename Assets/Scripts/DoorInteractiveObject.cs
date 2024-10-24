@@ -5,15 +5,15 @@ using Pathfinding;
 public class DoorInteractiveObject : InteractiveObject
 {
     [SerializeField] int m_iObjectConditionAmount = 0;
-    [SerializeField] Transform SlugSpot1;
-    [SerializeField] Transform SlugSpot2;
-    [SerializeField] Transform SlugSpot3;
-    [SerializeField] Transform SlugSpot4;
-    [SerializeField] Transform SlugSpot5;
+    //[SerializeField] Transform SlugSpot1;
+    //[SerializeField] Transform SlugSpot2;
+    //[SerializeField] Transform SlugSpot3;
+    //[SerializeField] Transform SlugSpot4;
+    //[SerializeField] Transform SlugSpot5;
 
     [SerializeField] GameObject Grid;
 
-    private List<Transform> slugSpots = new List<Transform>();
+    [SerializeField] List<Transform> slugSpots = new List<Transform>();
     private int slugSpotIndex = 0; // Tracks the next available slug spot
 
     private int slugsReachedTarget = 0; // Count of slugs that have reached their spots
@@ -21,12 +21,16 @@ public class DoorInteractiveObject : InteractiveObject
     private void Start()
     {
         m_iCondition = m_iObjectConditionAmount;
-        // Initialize the slug spots list
-        if (SlugSpot1 != null) slugSpots.Add(SlugSpot1);
-        if (SlugSpot2 != null) slugSpots.Add(SlugSpot2);
-        if (SlugSpot3 != null) slugSpots.Add(SlugSpot3);
-        if (SlugSpot4 != null) slugSpots.Add(SlugSpot4);
-        if (SlugSpot5 != null) slugSpots.Add(SlugSpot5);
+        //// Initialize the slug spots list
+        //if (SlugSpot1 != null) slugSpots.Add(SlugSpot1);
+        //if (SlugSpot2 != null) slugSpots.Add(SlugSpot2);
+        //if (SlugSpot3 != null) slugSpots.Add(SlugSpot3);
+        //if (SlugSpot4 != null) slugSpots.Add(SlugSpot4);
+        //if (SlugSpot5 != null) slugSpots.Add(SlugSpot5);
+    }
+
+    private void Update()
+    {
     }
 
     protected override void ExecuteObjectAction()
@@ -35,6 +39,10 @@ public class DoorInteractiveObject : InteractiveObject
         // Grabs the bounds of the door,
         Bounds doorBounds = GetComponent<PolygonCollider2D>().bounds;
         // Destroys it,
+        Debug.Log(slugSpotIndex);
+        Debug.Log(slugSpots.Count);
+        Debug.Log(slugsReachedTarget);
+        Debug.Log(m_iObjectConditionAmount);
         Destroy(gameObject);  
         // Then updates the pathfinding graph (removes the collision) 
         Grid.GetComponent<AstarPath>().UpdateGraphs(doorBounds);
@@ -54,7 +62,7 @@ public class DoorInteractiveObject : InteractiveObject
             SeaSlugBroFollower slugFollower = seaSlug.GetComponent<SeaSlugBroFollower>();
             if (slugFollower != null)
             {
-                slugFollower.MoveToAssignedObject(targetSpot);
+                //slugFollower.MoveToAssignedObject(targetSpot);
 
                 // Subscribe to the slug's OnReachedTarget event
                 slugFollower.OnReachedTarget += SlugReachedTarget;
