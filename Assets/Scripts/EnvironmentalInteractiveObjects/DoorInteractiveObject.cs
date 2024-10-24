@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,8 @@ public class DoorInteractiveObject : InteractiveObject
 
     private int slugsReachedTarget = 0; // Count of slugs that have reached their spots
     
+    // Add an event to notify when the door has been destroyed
+    public event Action OnDoorDestroyed;
     private void Start()
     {
         m_iCondition = m_iObjectConditionAmount;
@@ -39,6 +42,7 @@ public class DoorInteractiveObject : InteractiveObject
                 }
             }
         }
+        
         
         // Get the sprite render for the door 
         SpriteRenderer[] renderers = GetComponents<SpriteRenderer>();
@@ -80,6 +84,9 @@ public class DoorInteractiveObject : InteractiveObject
         Bounds doorBounds = collider.bounds;
         Grid.GetComponent<AstarPath>().UpdateGraphs(doorBounds);
 
+        // Before destroying the door, invoke the event
+        OnDoorDestroyed?.Invoke();
+        
         // Destroy the door GameObject
         Destroy(gameObject);
     }

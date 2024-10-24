@@ -332,6 +332,10 @@ PrefabInstance:
       value: Jellyfish Player
       objectReference: {fileID: 0}
     - target: {fileID: 8634067906856939228, guid: 116b32d25cae78940be2a3cb5eed22d2, type: 3}
+      propertyPath: m_fThrowDistance
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634067906856939228, guid: 116b32d25cae78940be2a3cb5eed22d2, type: 3}
       propertyPath: m_fCallMaxDistance
       value: 3
       objectReference: {fileID: 0}
@@ -416,11 +420,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1275803238459255255, guid: 593bf234994eb2e4499c31fe30449218, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.99
+      value: 15.935
       objectReference: {fileID: 0}
     - target: {fileID: 1275803238459255255, guid: 593bf234994eb2e4499c31fe30449218, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.12
+      value: 1.43
       objectReference: {fileID: 0}
     - target: {fileID: 1275803238459255255, guid: 593bf234994eb2e4499c31fe30449218, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11607,6 +11611,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c99563156722b954cbd9937ce620ff2e, type: 3}
+--- !u!1 &1964019797 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3239146755075825814, guid: 93b35b2111eac1e46a5adcd8ab1a3c43, type: 3}
+  m_PrefabInstance: {fileID: 3699614603667780963}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2023828022 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1275803238459255255, guid: 593bf234994eb2e4499c31fe30449218, type: 3}
@@ -11811,6 +11820,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9028756526024834320, guid: 035230a8cfb702446866ecca2213c994, type: 3}
+      propertyPath: goDoor
+      value: 
+      objectReference: {fileID: 1964019797}
     - target: {fileID: 9028756526024834320, guid: 035230a8cfb702446866ecca2213c994, type: 3}
       propertyPath: seaslugBroToCall
       value: 

@@ -153,7 +153,7 @@ public class PlayerSlugManager : MonoBehaviour
     void HandleThrowing()
     {
         // Check if the left mouse button is pressed
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && ManageGameplay.Instance.PlayerCanThrowBros)
         {
             ThrowSlug(); // ThrowSlug
         }

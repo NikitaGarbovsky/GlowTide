@@ -13,7 +13,8 @@ public class LevelIntroTriggers : LevelTriggers
 
     // Add a reference to the seaslug bro that needs to be called
     [SerializeField] private GameObject seaslugBroToCall;
-    
+    // Add a reference to the door in the level 
+    [SerializeField] private GameObject goDoor;
     public override void ExecuteLevelTrigger(string _sTriggerName)
     {
         if (_sTriggerName == "0_CallingBros") // This is the name of the gameobject that is being triggered.
@@ -23,15 +24,7 @@ public class LevelIntroTriggers : LevelTriggers
         if (_sTriggerName == "1_ThrowingBros") 
         {
             // This is where the "Throwing bros" trigger occurs
-            Debug.Log("Throwing bros triggered");
-            // Scriptable event for Throwing bros:
-            // 1. Take movement controls away from player,
-            // 2. Camera pans towards door
-            // 3. Prompt player to mouse over door, press left mouse to throw sea slug bro,
-            // 4. Door disappears,
-            // 5. Sea slug bro returns to player
-            // 6. When bro has reached player, return movement control back to player,
-            // 7. Return camera to normal
+            StartCoroutine(ThrowingBrosSequence());
         }
         if (_sTriggerName == "2_LevelTransition") 
         {
@@ -51,6 +44,7 @@ public class LevelIntroTriggers : LevelTriggers
         ManageGameplay.Instance.RemovePlayerControl();
         // 2. Calculate the offset between the seaslug and the player
         
+        // This is the offset that the camera moves towards. 
         Vector2 targetOffset = seaslugBroToCall.transform.position - ManageGameplay.Instance.playerCharacter.transform.position;
 
         // 3. Camera pans to the seaslug bro
@@ -72,6 +66,48 @@ public class LevelIntroTriggers : LevelTriggers
         // 5. Return movement controls back to player
         ManageGameplay.Instance.ReturnPlayerControl();
         
+        // 6. Return camera to normal (pan back to the player)
+        yield return StartCoroutine(ManageGameplay.Instance.PanCamera(Vector2.zero, 2f));
+    }
+
+    private IEnumerator ThrowingBrosSequence()
+    {
+        Debug.Log("Throwing bros triggered");
+        // Scriptable event for Throwing bros:
+        // 1. Take movement controls away from player,
+        ManageGameplay.Instance.RemovePlayerControl();
+        // 2. Camera pans towards door
+        Vector2 targetOffset = goDoor.transform.position - ManageGameplay.Instance.playerCharacter.transform.position;
+        
+        // 3. Camera pans to the door
+        yield return StartCoroutine(ManageGameplay.Instance.PanCamera(targetOffset, 2f));
+
+        ManageGameplay.Instance.PlayerCanThrowBros = true;
+        // 4. Wait until the door has fully disappeared
+        DoorInteractiveObject doorInteractiveObject = goDoor.GetComponent<DoorInteractiveObject>();
+
+        bool doorDestroyed = false;
+
+        if (doorInteractiveObject != null)
+        {
+            // Subscribe to the OnDoorDestroyed event
+            doorInteractiveObject.OnDoorDestroyed += () => { doorDestroyed = true; };
+        }
+        else
+        {
+            Debug.LogError("DoorInteractiveObject component not found on the door GameObject.");
+            // Handle the error to avoid an infinite loop
+            doorDestroyed = true;
+        }
+
+        // Wait until the door is destroyed
+        while (!doorDestroyed)
+        {
+            yield return null;
+        }
+        
+        // 5. When the door has been destroyed, return movement control back to player,
+        ManageGameplay.Instance.ReturnPlayerControl();
         // 6. Return camera to normal (pan back to the player)
         yield return StartCoroutine(ManageGameplay.Instance.PanCamera(Vector2.zero, 2f));
     }
