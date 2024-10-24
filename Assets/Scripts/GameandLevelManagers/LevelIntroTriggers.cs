@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using TMPro;
 /// <summary>
 /// This class inherited from the LevelTriggers class, it executes functionality related to individual triggers
 /// associated with the INTRO level.
 /// </summary>
 public class LevelIntroTriggers : LevelTriggers
 {
+    [SerializeField] List<TextMeshProUGUI> m_popUpText;
+
     public override void ExecuteLevelTrigger(string _sTriggerName)
     {
         if (_sTriggerName == "0_CallingBros") // This is the name of the gameobject that is being triggered.

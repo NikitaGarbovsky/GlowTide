@@ -14,6 +14,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class SlugThrowing : MonoBehaviour
 {
@@ -29,6 +30,9 @@ public class SlugThrowing : MonoBehaviour
     public List<GameObject> m_slugs;
     [SerializeField]
     List<GameObject> m_throwableSlugs;
+
+    [SerializeField]
+    TextMeshProUGUI m_textHUD;
 
     // Start is called before the first frame update
     void Start()
@@ -50,13 +54,14 @@ public class SlugThrowing : MonoBehaviour
             m_throwableSlugs.RemoveAt(0);
             GameObject newSlug = Instantiate(m_slugObject, transform.position, transform.rotation);
             SlugProjectile slugController = newSlug.GetComponent<SlugProjectile>();
+            m_textHUD.text = m_throwableSlugs.Count.ToString();
             if (slugController != null)
             {
                 // Set Slug Velocity
                 slugController.SetVelocity(Mathf.Cos(mouseAngle), Mathf.Sin(mouseAngle));
 
             }
-            /*// Get the mouse position in world coordinates
+            // Get the mouse position in world coordinates
             Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             // Perform a raycast to check if the mouse is over an interactive object
             RaycastHit2D hit = Physics2D.Raycast(mouseWorldPos, Vector2.zero);
@@ -68,7 +73,7 @@ public class SlugThrowing : MonoBehaviour
                     // Mouse is over an interactive object; proceed to assign slug
                     AssignSlugToInteractiveObject(interactiveObject);
                 }
-            }*/
+            }
         }
 
         // Call slugs on mousedown e
@@ -102,13 +107,8 @@ public class SlugThrowing : MonoBehaviour
                 }
 
             }
-            foreach (GameObject slug in m_slugs)
-            {
-                if (Vector3.Distance(slug.transform.position, transform.position) < m_pickupRadius)
-                {
-                    m_throwableSlugs.Remove(slug.gameObject);
-                }
-            }
+            m_textHUD.text = m_throwableSlugs.Count.ToString();
+
         }
     }
     private void AssignSlugToInteractiveObject(InteractiveObject interactiveObject)
@@ -117,6 +117,8 @@ public class SlugThrowing : MonoBehaviour
         m_slugs.Remove(m_throwableSlugs[0]);
         Destroy(m_throwableSlugs[0]);
         m_throwableSlugs.RemoveAt(0);
+        m_textHUD.text = m_throwableSlugs.Count.ToString();
+
 
         // Instantiate a new slug and assign it to the interactive object
         GameObject newSlug = Instantiate(m_slugObject, transform.position, transform.rotation);
