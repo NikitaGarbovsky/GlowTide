@@ -14,6 +14,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class SlugThrowing : MonoBehaviour
 {
@@ -29,6 +30,9 @@ public class SlugThrowing : MonoBehaviour
     public List<GameObject> m_slugs;
     [SerializeField]
     List<GameObject> m_throwableSlugs;
+
+    [SerializeField]
+    TextMeshProUGUI m_textHUD;
 
     // Start is called before the first frame update
     void Start()
@@ -58,6 +62,8 @@ public class SlugThrowing : MonoBehaviour
                     AssignSlugToInteractiveObject(interactiveObject);
                 }
             }
+            m_textHUD.text = m_throwableSlugs.Count.ToString();
+
         }
 
         // Call slugs on mousedown e
@@ -91,6 +97,7 @@ public class SlugThrowing : MonoBehaviour
                 }
 
             }
+            m_textHUD.text = m_throwableSlugs.Count.ToString();
         }
     }
     private void AssignSlugToInteractiveObject(InteractiveObject interactiveObject)
