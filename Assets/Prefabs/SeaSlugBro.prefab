@@ -107,6 +107,7 @@ MonoBehaviour:
   m_fMoveSpeed: 5
   m_fThrowSpeed: 10
   m_fThrowDistance: 10
+  trailBubblesPrefab: {fileID: 4909856430915467350, guid: a2c6d5c9ee9171943952627d5a1b774c, type: 3}
 --- !u!114 &21066700126059804
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -34,7 +34,12 @@ public class SeaSlugBroFollower : MonoBehaviour
 
     [Header("Throwing Settings")]
     public float m_fThrowDistance = 10f;  // Maximum distance the slug can be thrown
+    
+    [Header("Visual Effects")]
+    [SerializeField] private GameObject trailBubblesPrefab; // the prefab of the bubbles effect when thrown.
 
+    private GameObject trailBubblesInstance;
+    
     private float m_fWaitTime;                  // Time to wait when wandering before choosing a new position
     private Vector3 m_v3CorrectedPlayerPosition; // Adjusted position slightly behind the player
 
@@ -175,6 +180,12 @@ public class SeaSlugBroFollower : MonoBehaviour
     {
         if (m_eCurrentState == ESlugState.Thrown)
         {
+            if (trailBubblesInstance != null)
+            {
+                // Deactivate the bubbles when the target has reached location.
+                Destroy(trailBubblesInstance);
+            }
+            
             Debug.Log($"Seaslug collided with {collision.gameObject.name}");
 
             // Stop the slug's movement and change its state to Idle
@@ -198,6 +209,11 @@ public class SeaSlugBroFollower : MonoBehaviour
     // Public function to throw the slug toward a target position
     public void ThrowTowards(Vector2 v2TargetPosition)
     {
+        if (trailBubblesPrefab != null)
+        {
+            trailBubblesInstance = Instantiate(trailBubblesPrefab, transform.position, Quaternion.identity, transform);
+        }
+        
         // Calculate direction and final target position
         Vector2 v2StartPosition = m_goPlayer.transform.position;
         Vector2 v2Direction = (v2TargetPosition - v2StartPosition).normalized;
@@ -249,6 +265,11 @@ public class SeaSlugBroFollower : MonoBehaviour
     // Function triggered when the slug reaches the thrown target position
     private void OnReachThrownTarget()
     {
+        if (trailBubblesInstance != null)
+        {
+            // Deactivate the bubbles when the target has reached location.
+            Destroy(trailBubblesInstance);
+        }
         // Set the slug's state to Idle
         m_eCurrentState = ESlugState.Idle;
         

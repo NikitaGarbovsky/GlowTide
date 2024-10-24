@@ -24,7 +24,7 @@ public sealed class ManageGameplay : MonoBehaviour
     [SerializeField] CinemachineVirtualCamera virtualCamera;
     [SerializeField] private CinemachineFramingTransposer framingTransposer;
     
-    [SerializeField] private GameObject playerCharacter;
+    [SerializeField] public GameObject playerCharacter;
 
     // References to level manager GameObjects
     [SerializeField] private GameObject[] levelManagers;
