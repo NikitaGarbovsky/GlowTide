@@ -13,7 +13,7 @@ public class DoorInteractable : SlugInteractableObject
                 SeaSlugBroFollower slugFollower = slug.GetComponent<SeaSlugBroFollower>();
                 if (slugFollower != null)
                 {
-                    slugFollower.SetStuckToPoint(false);
+                    //slugFollower.SetStuckToPoint(false);
                 }
             }
             Destroy(gameObject);

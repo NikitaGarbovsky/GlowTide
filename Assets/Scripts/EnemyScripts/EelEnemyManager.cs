@@ -15,5 +15,23 @@ using UnityEngine;
 /// </summary>
 public class EelEnemyManager : MonoBehaviour
 {
-    // TODO complete functionality for Eel enemy
+    [SerializeField] GameObject m_eel;
+    [SerializeField] List<Transform> m_waypoints;
+    [SerializeField] float m_speed;
+
+    private int m_waypointIndex;
+    
+
+    private void Update()
+    {
+        m_eel.transform.position = Vector2.MoveTowards(m_eel.transform.position, m_waypoints[m_waypointIndex].position, m_speed * Time.deltaTime);
+        if (Vector2.Distance(m_eel.transform.position, m_waypoints[m_waypointIndex].position) <= 0)
+        {
+            m_waypointIndex++;
+            if (m_waypointIndex > m_waypoints.Count - 1)
+            {
+                m_waypointIndex = 0;
+            }
+        }
+    }
 }
