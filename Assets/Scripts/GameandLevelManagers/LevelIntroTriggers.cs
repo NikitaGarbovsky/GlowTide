@@ -9,7 +9,7 @@ using TMPro;
 /// </summary>
 public class LevelIntroTriggers : LevelTriggers
 {
-    [SerializeField] private List<TextMeshProUGUI> m_popUpText;
+    [SerializeField] private List<GameObject> m_popUpText;
 
     // Add a reference to the seaslug bro that needs to be called
     [SerializeField] private GameObject seaslugBroToCall;
@@ -45,9 +45,9 @@ public class LevelIntroTriggers : LevelTriggers
         // 2. Calculate the offset between the seaslug and the player
 
         // movement pop-up text is disabled and calling pop-up text is displayed
-        m_popUpText[0].enabled= false;
-        m_popUpText[1].enabled = true;
-
+        m_popUpText[0].gameObject.SetActive(false);
+        m_popUpText[1].gameObject.SetActive(true);
+        
         // This is the offset that the camera moves towards. 
         Vector2 targetOffset = seaslugBroToCall.transform.position - ManageGameplay.Instance.playerCharacter.transform.position;
 
@@ -73,7 +73,7 @@ public class LevelIntroTriggers : LevelTriggers
         
         // 6. Return camera to normal (pan back to the player)
         yield return StartCoroutine(ManageGameplay.Instance.PanCamera(Vector2.zero, 2f));
-        m_popUpText[1].enabled = false;
+        m_popUpText[1].gameObject.SetActive(false);
     }
 
     private IEnumerator ThrowingBrosSequence()
@@ -90,7 +90,7 @@ public class LevelIntroTriggers : LevelTriggers
 
         ManageGameplay.Instance.PlayerCanThrowBros = true;
         // 4. Wait until the door has fully disappeared
-        m_popUpText[2].enabled = true;
+        m_popUpText[2].gameObject.SetActive(true);
         DoorInteractiveObject doorInteractiveObject = goDoor.GetComponent<DoorInteractiveObject>();
 
         bool doorDestroyed = false;
@@ -118,7 +118,7 @@ public class LevelIntroTriggers : LevelTriggers
         ManageGameplay.Instance.ReturnPlayerControl();
         // 6. Return camera to normal (pan back to the player)
         yield return StartCoroutine(ManageGameplay.Instance.PanCamera(Vector2.zero, 2f));
-        m_popUpText[2].enabled = false;
+        m_popUpText[2].gameObject.SetActive(false);
     }            
 }
 

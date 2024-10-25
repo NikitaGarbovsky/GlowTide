@@ -46,7 +46,10 @@ public class PlayerSlugManager : MonoBehaviour
         // Handle slug calling and throwing
         HandleCalling();
         HandleThrowing();
-        m_HUDUI.text = m_lAssignedSlugs.Count.ToString();
+        if (m_lAssignedSlugs.Count != 0)
+        {
+            m_HUDUI.text = m_lAssignedSlugs.Count.ToString();
+        }
     }
 
     void HandleCalling()
