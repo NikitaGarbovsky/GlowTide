@@ -29,6 +29,8 @@ public class SeaSlugBroFollower : MonoBehaviour
     public bool m_wandering = true;
     private float m_waitTime;
 
+    private bool m_stuckToPoint;
+
     private Vector3 CorrectedPlayerPosition;
 
     // Define an event for when the slug reaches its target
@@ -60,7 +62,7 @@ public class SeaSlugBroFollower : MonoBehaviour
 
     private void FollowPlayer()
     {
-        if (m_Player != null)
+        if (m_Player != null )
         {
             // Adjust position to follow slightly behind the player
             CorrectedPlayerPosition = new Vector3(m_Player.transform.position.x, m_Player.transform.position.y - 0.5f);
@@ -109,7 +111,7 @@ public class SeaSlugBroFollower : MonoBehaviour
             // Check if arrived at the target
             if (Vector2.Distance(transform.position, targetObject.transform.position) < 0.1f)
             {
-                currentState = SlugState.Idle;
+                if (!m_stuckToPoint) currentState = SlugState.Idle;
 
                 // Snap to the exact spot
                 transform.position = targetObject.transform.position;
@@ -123,12 +125,24 @@ public class SeaSlugBroFollower : MonoBehaviour
     // Method to start following the player
     public void StartFollowingPlayer()
     {
-        currentState = SlugState.FollowingPlayer;
+        if (!m_stuckToPoint)
+        { 
+            currentState = SlugState.FollowingPlayer;
+        }
     }
 
     // Method to stop following the player and become idle
     public void StopFollowingPlayer()
     {
         currentState = SlugState.Idle;
+    }
+
+    public void SetStuckToPoint(bool _isStuck)
+    {
+        m_stuckToPoint = _isStuck;
+        if (!_isStuck)
+        {
+            currentState = SlugState.Idle;
+        }
     }
 }

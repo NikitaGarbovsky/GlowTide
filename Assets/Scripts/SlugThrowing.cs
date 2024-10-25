@@ -90,23 +90,28 @@ public class SlugThrowing : MonoBehaviour
             Collider2D[] slugColliders = Physics2D.OverlapCircleAll(transform.position, m_pickupRadius, m_slugMask);
             foreach (Collider2D slug in slugColliders)
             {
-                Debug.Log(slug.gameObject.name);
-                if (m_throwableSlugs.Contains(slug.gameObject) == false)
-                {
-                    m_throwableSlugs.Add(slug.gameObject);
-                }
-                
                 if (m_slugs.Contains(slug.gameObject) == false)
                 {
                     m_slugs.Add(slug.gameObject);
                 }
 
             }
+
             foreach (GameObject slug in m_slugs)
             {
-                if (Vector3.Distance(slug.transform.position, transform.position) < m_pickupRadius)
+                if (Vector2.Distance(slug.transform.position, transform.position) < m_pickupRadius)
                 {
-                    m_throwableSlugs.Remove(slug.gameObject);
+                    if (m_throwableSlugs.Contains(slug.gameObject) == false)
+                    {
+                        m_throwableSlugs.Add(slug.gameObject);
+                    }
+                }
+                else
+                {
+                    if (m_throwableSlugs.Contains(slug.gameObject) == true)
+                    {
+                        m_throwableSlugs.Remove(slug.gameObject);
+                    }
                 }
             }
         }

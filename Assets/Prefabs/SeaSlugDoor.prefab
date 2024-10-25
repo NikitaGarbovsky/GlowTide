@@ -73,10 +73,10 @@ GameObject:
   - component: {fileID: 5846182629731543882}
   - component: {fileID: 7746746438325644127}
   - component: {fileID: 3266250581157333506}
-  - component: {fileID: 7671322776027412173}
+  - component: {fileID: 6727846968144411462}
   m_Layer: 6
   m_Name: SeaSlugDoor
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -206,7 +206,7 @@ PolygonCollider2D:
       - {x: 0.96, y: 0.62}
       - {x: -0.19999999, y: 1.12}
   m_UseDelaunayMesh: 0
---- !u!114 &7671322776027412173
+--- !u!114 &6727846968144411462
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -215,9 +215,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 3239146755075825814}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14dda7d4e220a964980480dcacbc5ac8, type: 3}
+  m_Script: {fileID: 11500000, guid: 5686d9a3f3c31df4ca4d3b41dca069a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_RequiredSlugs: 3
+  m_slugSpotList:
+  - {fileID: 9174721624856721801}
+  - {fileID: 4153609687859785900}
+  - {fileID: 4665447255997138663}
+  - {fileID: 2613433723999744654}
+  - {fileID: 853310257663901785}
+  m_slugList: []
 --- !u!1 &4153609687859785900
 GameObject:
   m_ObjectHideFlags: 0
