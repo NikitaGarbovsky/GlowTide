@@ -73,10 +73,10 @@ GameObject:
   - component: {fileID: 5846182629731543882}
   - component: {fileID: 7746746438325644127}
   - component: {fileID: 3266250581157333506}
-  - component: {fileID: 6727846968144411462}
+  - component: {fileID: 7671322776027412173}
   m_Layer: 6
-  m_Name: SeaSlugDoor
-  m_TagString: Door
+  m_Name: Door
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,7 +121,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9fef1823fc97eab4b8e7686b1d11c2d0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -142,7 +142,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 80d415181559bbc468cf33426bc11a25, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3dbda4c5a7416e44ead04641826dac39, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -189,7 +189,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.92, y: 2.24}
+    oldSize: {x: 1.78, y: 1.78}
     newSize: {x: 0.96, y: 1.12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -197,16 +197,17 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.58, y: 1.12}
-      - {x: -0.96, y: 0.85999995}
-      - {x: -0.96, y: -0.53999996}
-      - {x: 0.19999999, y: -1.12}
-      - {x: 0.44, y: -1.12}
-      - {x: 0.96, y: -0.85999995}
-      - {x: 0.96, y: 0.62}
-      - {x: -0.19999999, y: 1.12}
+    - - {x: -0.54658324, y: 0.6490046}
+      - {x: -0.8928995, y: 0.29677063}
+      - {x: -0.8998308, y: -0.56420374}
+      - {x: -0.24543458, y: -0.8619906}
+      - {x: 0.13534492, y: -0.76927197}
+      - {x: 0.66083616, y: -0.5296857}
+      - {x: 0.9192705, y: 0.43567073}
+      - {x: 0.40210915, y: 0.8907771}
+      - {x: -0.010792911, y: 0.75851595}
   m_UseDelaunayMesh: 0
---- !u!114 &6727846968144411462
+--- !u!114 &7671322776027412173
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -215,17 +216,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 3239146755075825814}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5686d9a3f3c31df4ca4d3b41dca069a4, type: 3}
+  m_Script: {fileID: 11500000, guid: 14dda7d4e220a964980480dcacbc5ac8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RequiredSlugs: 3
-  m_slugSpotList:
-  - {fileID: 9174721624856721801}
-  - {fileID: 4153609687859785900}
-  - {fileID: 4665447255997138663}
-  - {fileID: 2613433723999744654}
-  - {fileID: 853310257663901785}
-  m_slugList: []
+  m_iObjectConditionAmount: 0
+  Grid: {fileID: 0}
+  slugSpots:
+  - {fileID: 8054169150592727788}
+  - {fileID: 2073253529935019699}
+  - {fileID: 1472952906982264051}
+  - {fileID: 1150055546442856599}
+  - {fileID: 2619579729001180359}
 --- !u!1 &4153609687859785900
 GameObject:
   m_ObjectHideFlags: 0

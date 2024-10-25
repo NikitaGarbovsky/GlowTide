@@ -34,7 +34,7 @@ public class Testing3D16Directions : MonoBehaviour
     void Update()
     {
         // Right-click to set destination
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && ManageGameplay.Instance.PlayerCanIssueMoveCommands)
         {
             // Get the mouse position in world space
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
