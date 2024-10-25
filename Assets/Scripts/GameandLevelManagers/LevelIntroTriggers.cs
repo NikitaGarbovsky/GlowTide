@@ -43,15 +43,20 @@ public class LevelIntroTriggers : LevelTriggers
         // 1. Take movement controls away from player,
         ManageGameplay.Instance.RemovePlayerControl();
         // 2. Calculate the offset between the seaslug and the player
-        
+
+        // movement pop-up text is disabled and calling pop-up text is displayed
+        m_popUpText[0].enabled= false;
+        m_popUpText[1].enabled = true;
+
         // This is the offset that the camera moves towards. 
         Vector2 targetOffset = seaslugBroToCall.transform.position - ManageGameplay.Instance.playerCharacter.transform.position;
 
         // 3. Camera pans to the seaslug bro
         yield return StartCoroutine(ManageGameplay.Instance.PanCamera(targetOffset, 2f));
-        
+
         // 4. TODO Pop up box displays prompt to position mouse towards bro and press e to call
 
+        
         ManageGameplay.Instance.PlayerCanCallBros = true;
         
         // Wait until the player presses 'E' and the seaslug is added to the player's slug list
@@ -68,6 +73,7 @@ public class LevelIntroTriggers : LevelTriggers
         
         // 6. Return camera to normal (pan back to the player)
         yield return StartCoroutine(ManageGameplay.Instance.PanCamera(Vector2.zero, 2f));
+        m_popUpText[1].enabled = false;
     }
 
     private IEnumerator ThrowingBrosSequence()
@@ -84,6 +90,7 @@ public class LevelIntroTriggers : LevelTriggers
 
         ManageGameplay.Instance.PlayerCanThrowBros = true;
         // 4. Wait until the door has fully disappeared
+        m_popUpText[2].enabled = true;
         DoorInteractiveObject doorInteractiveObject = goDoor.GetComponent<DoorInteractiveObject>();
 
         bool doorDestroyed = false;
@@ -98,6 +105,7 @@ public class LevelIntroTriggers : LevelTriggers
             Debug.LogError("DoorInteractiveObject component not found on the door GameObject.");
             // Handle the error to avoid an infinite loop
             doorDestroyed = true;
+
         }
 
         // Wait until the door is destroyed
@@ -110,6 +118,7 @@ public class LevelIntroTriggers : LevelTriggers
         ManageGameplay.Instance.ReturnPlayerControl();
         // 6. Return camera to normal (pan back to the player)
         yield return StartCoroutine(ManageGameplay.Instance.PanCamera(Vector2.zero, 2f));
-    }
+        m_popUpText[2].enabled = false;
+    }            
 }
 
