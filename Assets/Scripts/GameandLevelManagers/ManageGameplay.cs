@@ -1,8 +1,10 @@
 using System;
+using System.Collections;
 using Cinemachine;
 using Pathfinding;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 /// <summary>
 /// This class is a singleton game manager used throughout all the scenes of the game and manages the overall gameplay
@@ -16,7 +18,13 @@ public sealed class ManageGameplay : MonoBehaviour
     // Static instance for singleton pattern
     public static ManageGameplay Instance { get; private set; }
 
-    [SerializeField] private GameObject playerCharacter;
+    public bool PlayerCanIssueMoveCommands = true;
+    public bool PlayerCanCallBros = false;
+    public bool PlayerCanThrowBros = false;
+    [SerializeField] CinemachineVirtualCamera virtualCamera;
+    [SerializeField] private CinemachineFramingTransposer framingTransposer;
+    
+    [SerializeField] public GameObject playerCharacter;
 
     // References to level manager GameObjects
     [SerializeField] private GameObject[] levelManagers;
@@ -33,6 +41,9 @@ public sealed class ManageGameplay : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
+        // Gets the camera components from the child game object. (the main camera)
+        virtualCamera = GetComponentInChildren<CinemachineVirtualCamera>();
+        framingTransposer = virtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
     }
     
     private void OnEnable()
@@ -94,15 +105,16 @@ public sealed class ManageGameplay : MonoBehaviour
         if (playerCharacter != null)
         {
             playerCharacter.GetComponent<AIPath>().canMove = false;
-            // TODO disable player being able to throw the bros
+            PlayerCanIssueMoveCommands = false;
         }
     }
-    // Give back player controls (TODO probably call this when its needed in tutorial)
+    // Give back player controls 
     public void ReturnPlayerControl()
     {
         if (playerCharacter != null)
         {
             playerCharacter.GetComponent<AIPath>().canMove = true;
+            PlayerCanIssueMoveCommands = true;
         }
     }
     
@@ -149,4 +161,50 @@ public sealed class ManageGameplay : MonoBehaviour
         GetLevelManager(SceneManager.GetActiveScene().name).GetComponent<LevelManager>().levelTrigger
             .ExecuteLevelTrigger(_sTriggerName);
     }
+    // Pans the camera to a certain direction, for a certain duration
+    // (the panning position is relative to the player, which the camera still follows)
+    public IEnumerator PanCamera(Vector2 _v2TargetOffset, float _fPanDuration)
+    {
+        Vector2 startOffset = framingTransposer.m_TrackedObjectOffset;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < _fPanDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            float t = elapsedTime / _fPanDuration;
+            framingTransposer.m_TrackedObjectOffset = Vector2.Lerp(startOffset, _v2TargetOffset, t);
+            yield return null;
+        }
+
+        // Ensure it reaches the exact target value at the end
+        framingTransposer.m_TrackedObjectOffset = _v2TargetOffset;
+    }
+    
+    // Pans & Zooms out the camera. (this is called when starting a level)
+    public IEnumerator PanAndZoomCamera(Vector2 targetOffset, float targetOrthographicSize, float duration)
+    {
+        Vector2 startOffset = framingTransposer.m_TrackedObjectOffset;
+        float startOrthographicSize = virtualCamera.m_Lens.OrthographicSize;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            float t = elapsedTime / duration;
+
+            // Lerp the camera offset
+            framingTransposer.m_TrackedObjectOffset = Vector2.Lerp(startOffset, targetOffset, t);
+
+            // Lerp the orthographic size
+            virtualCamera.m_Lens.OrthographicSize = Mathf.Lerp(startOrthographicSize, targetOrthographicSize, t);
+
+            yield return null;
+        }
+
+        // Ensure final values are set
+        framingTransposer.m_TrackedObjectOffset = targetOffset;
+        virtualCamera.m_Lens.OrthographicSize = targetOrthographicSize;
+    }
+
+
 }

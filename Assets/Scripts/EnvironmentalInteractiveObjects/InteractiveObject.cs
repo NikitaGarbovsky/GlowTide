@@ -26,42 +26,20 @@ public abstract class InteractiveObject : MonoBehaviour
     // The condition (amount of slugs in the slug list) that is assigned from the child class then 
     protected int m_iCondition;
     // Holds all a reference to all assigned SeaSlugs to this object
-    private List<GameObject> m_lstAssignedSeaSlugs = new List<GameObject>();
+    protected List<GameObject> m_lstAssignedSeaSlugs = new List<GameObject>();
 
     private bool m_bAssignable;
     
     // Depending on what the object is, when the conditions are met we want to execute its action,
     // For example it may fade away to reveal a path, or remove itself as it is a door, or die because it is an enemy.
     protected abstract void ExecuteObjectAction();
-    // When the player mouses over the target(this gameobject), 
-    private void OnMouseEnter()
-    {
-        // that's when we want to allow assigning of seaslugs;
-        m_bAssignable = true;
-        Debug.Log("Interactive Object Mouse Over");
-    }
-    // If the player is no longer mousing over, 
-    private void OnMouseExit()
-    {
-        // Dont allow slugs to be assignable.
-        m_bAssignable = false;
-        Debug.Log("Interactive Object MOUSE EXIT");
-    }
-    protected void CheckIfActionConditionMet()
-    {
-        if (m_iCondition >= m_lstAssignedSeaSlugs.Count)
-        {
-            ExecuteObjectAction();
-        }
-    }
-    public virtual  void AddSlugToSlugList(GameObject _seaslug)
-    {
-        // Add passed in slug to slug list.
-        m_lstAssignedSeaSlugs.Add(_seaslug);
-        // Check if the amount of slugs matches the condition, If so, execute action
-        CheckIfActionConditionMet(); 
-    }
 
+    public abstract void AddSlugToSlugList(GameObject _seaslug);
+
+    public virtual void RemoveSlugFromSlugList(GameObject seaSlug)
+    {
+        
+    }
     protected int GetSeaSlugListCount()
     {
         return m_lstAssignedSeaSlugs.Count;
