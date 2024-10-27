@@ -48,7 +48,9 @@ public class EelEnemyManager : MonoBehaviour
 
     [Header("Investigate")]
     [SerializeField, Min(0.0f)] float m_rotationTime; // Modifies how long it takes to look at Player Position when spotted
+    [SerializeField, Min(0.0f)] float m_investigationTime; // Modifies how long it takes to look at Player Position when spotted
     float m_currentRotationTime = 0; // Variable for Rotational Lerping
+    float m_eelStartAngle = 0; // Variable for Rotational Lerping
 
     [Header("Chase")]
     [SerializeField] float m_chaseSpeedModifier;
@@ -59,6 +61,8 @@ public class EelEnemyManager : MonoBehaviour
     [Header("Stunned")]
     [SerializeField] float m_stunTime;
     float m_currentStunTime = 0;
+    bool m_isCollidingWithGeyser = false;
+    bool m_canBeStunned = false;
 
     [Header("View Cone")]
     [SerializeField, Min(0.0f)] float m_sightRadius; // Max Distance the Eel can See
@@ -119,6 +123,30 @@ public class EelEnemyManager : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             Debug.Log("Restart Level");
         }
+
+        // Collide with Geyser
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(m_eel.transform.position, m_killDistance);
+        foreach (Collider2D collider in colliders)
+        {
+            m_isCollidingWithGeyser = false;
+            if (collider.gameObject.tag == "Geyser")
+            {
+                m_isCollidingWithGeyser = true;
+                break;
+            }
+        }
+
+        if (m_isCollidingWithGeyser && m_canBeStunned)
+        {
+            m_canBeStunned = false;
+            m_currentEelState = EelState.Stunned;
+        }
+
+        if (!m_isCollidingWithGeyser && !m_canBeStunned)
+        {
+            m_canBeStunned = true;
+        }
+
     }
 
     // Moves the Eel to the Waypoint at m_waypointIndex
@@ -129,6 +157,9 @@ public class EelEnemyManager : MonoBehaviour
         m_eel.transform.position = Vector2.MoveTowards(m_eel.transform.position, m_waypoints[m_waypointIndex].position, m_speed * Time.deltaTime);
         // Update Direction
         m_directionManager.UpdateSpriteDirection(m_waypoints[m_waypointIndex].position - m_eel.transform.position);
+        // Update m_eelAngle
+        m_eelAngle = Mathf.Atan2(m_waypoints[m_waypointIndex].position.y - m_eel.transform.position.y,
+                                 m_waypoints[m_waypointIndex].position.x - m_eel.transform.position.x);
         if (Vector2.Distance(m_eel.transform.position, m_waypoints[m_waypointIndex].position) <= 0)
         {
             // Increment m_waypointIndex
@@ -138,10 +169,6 @@ public class EelEnemyManager : MonoBehaviour
             {
                 m_waypointIndex = 0;
             }
-
-            // Update m_eelAngle
-            m_eelAngle = Mathf.Atan2(m_waypoints[m_waypointIndex].position.y - m_eel.transform.position.y,
-                                     m_waypoints[m_waypointIndex].position.x - m_eel.transform.position.x);
         }
     }
 
@@ -158,12 +185,13 @@ public class EelEnemyManager : MonoBehaviour
             if (m_angleToPlayer <= m_eelAngle + m_hardSightAngle && m_angleToPlayer >= m_eelAngle - m_hardSightAngle)
             {
                 m_currentEelState = EelState.Chase;
-                m_aiPath.enabled = true;
             }
             // Soft Sight --- Investigate
             else if (m_angleToPlayer <= m_eelAngle + m_softSightAngle && m_angleToPlayer >= m_eelAngle - m_softSightAngle)
             {
                 m_lastPlayerAngle = m_angleToPlayer;
+                m_currentRotationTime = 0;
+                m_eelStartAngle = m_eelAngle;
                 m_currentEelState = EelState.Investigate;
             }
         }
@@ -171,14 +199,15 @@ public class EelEnemyManager : MonoBehaviour
 
     void LookForPlayer()
     {
+        Debug.Log(m_currentRotationTime);
         m_currentRotationTime += Time.deltaTime / m_rotationTime;
         if (m_currentRotationTime < 1)
         {
-            m_eelAngle = Mathf.LerpAngle(m_eelAngle, m_lastPlayerAngle, m_currentRotationTime);
+            m_eelAngle = Mathf.LerpAngle(m_eelStartAngle, m_lastPlayerAngle, m_currentRotationTime);
             Vector3 newDirection = new Vector3(Mathf.Cos(m_eelAngle), Mathf.Sin(m_eelAngle), 0);
             m_directionManager.UpdateSpriteDirection(newDirection);
         }
-        else if (m_currentRotationTime > 1.5f)
+        else if (m_currentRotationTime > 1.0f + m_investigationTime)
         {
             m_currentEelState = EelState.Patrol;
         }
@@ -186,6 +215,7 @@ public class EelEnemyManager : MonoBehaviour
 
     void ChasePlayer()
     {
+        m_aiPath.enabled = true;
         m_aiPath.destination = new Vector3(m_player.transform.position.x, m_player.transform.position.y, 0);
         m_eelAngle = Mathf.Atan2(m_player.transform.position.y - m_eel.transform.position.y,
                                  m_player.transform.position.x - m_eel.transform.position.x);

@@ -526,14 +526,15 @@ MonoBehaviour:
   - {fileID: 859770254463552474}
   - {fileID: 4831274689041678491}
   - {fileID: 5847787304376053685}
-  m_rotationTime: 200
-  m_chaseSpeedModifier: 0
+  m_rotationTime: 2
+  m_investigationTime: 1
+  m_chaseSpeedModifier: 2
   m_killDistance: 0.4
   m_killCircleOffset: 0.4
   m_stunTime: 3
   m_sightRadius: 2
   m_hardSightAngle: 0.1
-  m_softSightAngle: 0.5
+  m_softSightAngle: 0.7
 --- !u!114 &5765947618630402615
 MonoBehaviour:
   m_ObjectHideFlags: 0
