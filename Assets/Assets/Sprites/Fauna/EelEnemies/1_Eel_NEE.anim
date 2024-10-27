@@ -21,9 +21,9 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 21300000, guid: 0102cbf79f3a14546b152fbaa4d6aeb3, type: 3}
+      value: {fileID: 21300000, guid: c62e79deb25215a4f81ae3084290bd9f, type: 3}
     attribute: m_Sprite
-    path: EelSprite
+    path: Eel/EelSprite
     classID: 212
     script: {fileID: 0}
     flags: 2
@@ -35,7 +35,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 627241379
+      path: 953468557
       attribute: 0
       script: {fileID: 0}
       typeID: 212
@@ -44,7 +44,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 0102cbf79f3a14546b152fbaa4d6aeb3, type: 3}
+    - {fileID: 21300000, guid: c62e79deb25215a4f81ae3084290bd9f, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
