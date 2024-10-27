@@ -43,9 +43,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: BaseLayer
+  - name: Ground
     uniqueID: 531966131
     locked: 0
-  - name: Layer1
+  - name: Ground_Foilage
     uniqueID: 3453805545
+    locked: 0
+  - name: 1Up
+    uniqueID: 772907811
+    locked: 0
+  - name: 1.5Up
+    uniqueID: 12494729
+    locked: 0
+  - name: 2Up
+    uniqueID: 483626029
+    locked: 0
+  - name: 2.5Up
+    uniqueID: 2584167365
     locked: 0
