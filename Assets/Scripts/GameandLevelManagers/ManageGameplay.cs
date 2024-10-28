@@ -108,7 +108,7 @@ public sealed class ManageGameplay : MonoBehaviour
             PlayerCanIssueMoveCommands = false;
         }
     }
-    // Give back player controls (TODO probably call this when its needed in tutorial)
+    // Give back player controls 
     public void ReturnPlayerControl()
     {
         if (playerCharacter != null)
@@ -178,6 +178,32 @@ public sealed class ManageGameplay : MonoBehaviour
 
         // Ensure it reaches the exact target value at the end
         framingTransposer.m_TrackedObjectOffset = _v2TargetOffset;
+    }
+    
+    // Pans & Zooms out the camera. (this is called when starting a level)
+    public IEnumerator PanAndZoomCamera(Vector2 targetOffset, float targetOrthographicSize, float duration)
+    {
+        Vector2 startOffset = framingTransposer.m_TrackedObjectOffset;
+        float startOrthographicSize = virtualCamera.m_Lens.OrthographicSize;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            float t = elapsedTime / duration;
+
+            // Lerp the camera offset
+            framingTransposer.m_TrackedObjectOffset = Vector2.Lerp(startOffset, targetOffset, t);
+
+            // Lerp the orthographic size
+            virtualCamera.m_Lens.OrthographicSize = Mathf.Lerp(startOrthographicSize, targetOrthographicSize, t);
+
+            yield return null;
+        }
+
+        // Ensure final values are set
+        framingTransposer.m_TrackedObjectOffset = targetOffset;
+        virtualCamera.m_Lens.OrthographicSize = targetOrthographicSize;
     }
 
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 /// <summary>
 /// This class manages the slugs that are assigned to the player. It is attached to the player object
@@ -11,6 +12,8 @@ public class PlayerSlugManager : MonoBehaviour
 {
     // List to hold currently assigned slugs
     public List<GameObject> m_lAssignedSlugs = new List<GameObject>();
+
+    public TextMeshProUGUI m_HUDUI; // Amount of available slugs to throw
 
     // Adjustable variables
     [Header("Calling Settings")]
@@ -43,6 +46,10 @@ public class PlayerSlugManager : MonoBehaviour
         // Handle slug calling and throwing
         HandleCalling();
         HandleThrowing();
+        if (m_lAssignedSlugs.Count != 0)
+        {
+            m_HUDUI.text = m_lAssignedSlugs.Count.ToString();
+        }
     }
 
     void HandleCalling()
