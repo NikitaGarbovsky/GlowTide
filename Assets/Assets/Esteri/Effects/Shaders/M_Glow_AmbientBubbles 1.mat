@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Glow_Geyser
+  m_Name: M_Glow_AmbientBubbles 1
   m_Shader: {fileID: -6465566751694194690, guid: 47446852b91cba843a5d57d851c2a7d4, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -24,7 +24,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Glow_Map:
-        m_Texture: {fileID: 2800000, guid: 36763e70c31b4e34eb8dde16611e3b20, type: 3}
+        m_Texture: {fileID: 2800000, guid: 51a490b955ce99d4f8b8085916080b2a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -48,7 +48,7 @@ Material:
     - _Glow_Intensity: 0
     - _UseAlbedo: 0
     m_Colors:
-    - _Glow_Colour: {r: 32, g: 10.415094, b: 14.804191, a: 0}
+    - _Glow_Colour: {r: 5.0594153, g: 5.992157, b: 5.8667884, a: 0}
     - _RemapAlbedoToGlow: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &6240095697579758983

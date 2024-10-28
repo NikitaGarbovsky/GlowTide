@@ -29,8 +29,8 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 65472
   tint:
-    m_OverrideState: 1
-    m_Value: {r: 0, g: 0.37939993, b: 0.49056602, a: 1}
+    m_OverrideState: 0
+    m_Value: {r: 0.5801887, g: 0.9059623, b: 1, a: 1}
   highQualityFiltering:
     m_OverrideState: 0
     m_Value: 0
@@ -62,13 +62,13 @@ MonoBehaviour:
   active: 1
   color:
     m_OverrideState: 1
-    m_Value: {r: 0, g: 0.63737077, b: 0.6698113, a: 1}
+    m_Value: {r: 0.64275545, g: 0.8592642, b: 0.8679245, a: 1}
   center:
     m_OverrideState: 0
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.603
+    m_Value: 0.25
   smoothness:
     m_OverrideState: 0
     m_Value: 0.2
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81180773991d8724ab7f2d216912b564, type: 3}
   m_Name: ChromaticAberration
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   intensity:
     m_OverrideState: 1
     m_Value: 0.1
@@ -169,8 +169,8 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   colorFilter:
-    m_OverrideState: 1
-    m_Value: {r: 0.46848878, g: 0.8414278, b: 0.9355926, a: 1}
+    m_OverrideState: 0
+    m_Value: {r: 0.6650944, g: 0.93559515, b: 1, a: 1}
   hueShift:
     m_OverrideState: 0
     m_Value: 0
