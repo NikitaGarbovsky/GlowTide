@@ -7,7 +7,7 @@ using Pathfinding;
 public class DoorInteractiveObject : InteractiveObject  
 {
     [SerializeField] int m_iObjectConditionAmount = 0;
-
+    [SerializeField] float m_fDisolveDuration = 2;
     [SerializeField] GameObject Grid;
 
     [SerializeField] List<Transform> slugSpots = new List<Transform>();
@@ -46,14 +46,13 @@ public class DoorInteractiveObject : InteractiveObject
         
         // Get the sprite render for the door 
         SpriteRenderer[] renderers = GetComponents<SpriteRenderer>();
-        float duration = 2f;
         float elapsedTime = 0f;
 
         // Fade out over time
-        while (elapsedTime < duration)
+        while (elapsedTime < m_fDisolveDuration)
         {
             elapsedTime += Time.deltaTime;
-            float alpha = Mathf.Lerp(1f, 0f, elapsedTime / duration);
+            float alpha = Mathf.Lerp(1f, 0f, elapsedTime / m_fDisolveDuration);
             foreach (var sr in renderers)
             {
                 if (sr != null)
