@@ -498,6 +498,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PS_AmbientLevel (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6145153351362339955, guid: e096cd1a174c690498aad47fd51b3986, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6145153351362339955, guid: e096cd1a174c690498aad47fd51b3986, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 483626029
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17828,17 +17836,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2905859509541485670, guid: 8a3f04679a69ba84aa2d69227db47fd9, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905859509541485670, guid: 8a3f04679a69ba84aa2d69227db47fd9, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 483626029
+      objectReference: {fileID: 0}
     - target: {fileID: 4504652187637065494, guid: 8a3f04679a69ba84aa2d69227db47fd9, type: 3}
       propertyPath: m_Name
       value: PS_Geyser
       objectReference: {fileID: 0}
     - target: {fileID: 7715072968011115970, guid: 8a3f04679a69ba84aa2d69227db47fd9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.722
+      value: 3.748
       objectReference: {fileID: 0}
     - target: {fileID: 7715072968011115970, guid: 8a3f04679a69ba84aa2d69227db47fd9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.912
+      value: -2.916
       objectReference: {fileID: 0}
     - target: {fileID: 7715072968011115970, guid: 8a3f04679a69ba84aa2d69227db47fd9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18226,6 +18242,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3124780315490298394, guid: 058f44854fdac7b47855def0df5ae30f, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3124780315490298394, guid: 058f44854fdac7b47855def0df5ae30f, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 483626029
+      objectReference: {fileID: 0}
     - target: {fileID: 6456545660745827885, guid: 058f44854fdac7b47855def0df5ae30f, type: 3}
       propertyPath: m_Name
       value: PS_SeaweedWisps1
@@ -18253,11 +18277,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5474455759333401821, guid: 4e4fe4014d7baba4980fb0e470ed7304, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.715
+      value: 22.045
       objectReference: {fileID: 0}
     - target: {fileID: 5474455759333401821, guid: 4e4fe4014d7baba4980fb0e470ed7304, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.493
+      value: 0.123
       objectReference: {fileID: 0}
     - target: {fileID: 5474455759333401821, guid: 4e4fe4014d7baba4980fb0e470ed7304, type: 3}
       propertyPath: m_LocalPosition.z
