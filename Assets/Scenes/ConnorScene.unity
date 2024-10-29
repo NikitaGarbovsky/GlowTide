@@ -597,6 +597,14 @@ PrefabInstance:
       propertyPath: m_player
       value: 
       objectReference: {fileID: 1474349610}
+    - target: {fileID: 5151981776072291680, guid: 3a1db3e2037cd434981cbd093c301f24, type: 3}
+      propertyPath: m_ShowGizmos
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5675578644050933877, guid: 3a1db3e2037cd434981cbd093c301f24, type: 3}
+      propertyPath: alwaysDrawGizmos
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8129968519275057412, guid: 3a1db3e2037cd434981cbd093c301f24, type: 3}
       propertyPath: m_Camera
       value: 

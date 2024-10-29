@@ -515,8 +515,9 @@ MonoBehaviour:
   m_player: {fileID: 0}
   m_aiPath: {fileID: 5675578644050933877}
   m_directionManager: {fileID: 5765947618630402615}
+  m_ShowGizmos: 0
   m_UIImage: {fileID: 5021387772263246340}
-  m_imageOffset: 1
+  m_imageOffset: {x: 1.2, y: 0.8}
   m_investigatingSprite: {fileID: 21300000, guid: 7cda08b1d0e91044dae2e77dcda1ba57, type: 3}
   m_chaseSprite: {fileID: 21300000, guid: 095e5e457db4ec54795d82ae8d0c8ee9, type: 3}
   m_stunnedSprite: {fileID: 21300000, guid: 49766e4a131d44e44b50da28d91e0856, type: 3}
