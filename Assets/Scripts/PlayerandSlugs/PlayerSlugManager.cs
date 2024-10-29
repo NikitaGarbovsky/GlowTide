@@ -34,6 +34,7 @@ public class PlayerSlugManager : MonoBehaviour
     private GameObject m_goCallRadiusEffectInstance; // Instance of the call radius visual effect
     private GameObject m_goPlayer; // Reference to the player GameObject
 
+    [SerializeField] public bool m_bHasBroSnack;
     // Start is called before the first frame update
     void Start()
     {
