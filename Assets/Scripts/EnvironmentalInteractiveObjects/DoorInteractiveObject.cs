@@ -15,6 +15,9 @@ public class DoorInteractiveObject : InteractiveObject
 
     private int slugsReachedTarget = 0; // Count of slugs that have reached their spots
     
+    // VFX prefab for door destruction
+    [SerializeField] private GameObject vfxKelpPrefab;
+    
     // Add an event to notify when the door has been destroyed
     public event Action OnDoorDestroyed;
     private void Start()
@@ -29,6 +32,12 @@ public class DoorInteractiveObject : InteractiveObject
 
     private IEnumerator FadeOutAndDestroy()
     {
+        // Spawn the VFX once at the beginning of the fade-out
+        if (vfxKelpPrefab != null)
+        {
+            Instantiate(vfxKelpPrefab, transform.position, Quaternion.identity);
+        }
+        
         // Before destroying the door, reset assigned SeaSlugs
         foreach (var seaSlug in m_lstAssignedSeaSlugs)
         {

@@ -228,6 +228,7 @@ MonoBehaviour:
   - {fileID: 1472952906982264051}
   - {fileID: 1150055546442856599}
   - {fileID: 2619579729001180359}
+  vfxKelpPrefab: {fileID: 5832892849370157386, guid: f6f4b5e86807aa94cbe108022d707ea9, type: 3}
 --- !u!1 &4153609687859785900
 GameObject:
   m_ObjectHideFlags: 0
