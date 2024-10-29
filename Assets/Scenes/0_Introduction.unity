@@ -739,6 +739,10 @@ PrefabInstance:
       value: -1710799931
       objectReference: {fileID: 0}
     - target: {fileID: 2118441284137707783, guid: c849529eeb4267d47a92680d8b7c7d91, type: 3}
+      propertyPath: m_LightType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2118441284137707783, guid: c849529eeb4267d47a92680d8b7c7d91, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.size
       value: 7
       objectReference: {fileID: 0}
@@ -885,11 +889,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3149615787120449118, guid: 8e356972ef8efb042b04d7fd584420b5, type: 3}
       propertyPath: m_ChunkCullingBounds.x
-      value: 0.52400005
+      value: 4.6318517
       objectReference: {fileID: 0}
     - target: {fileID: 3149615787120449118, guid: 8e356972ef8efb042b04d7fd584420b5, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 1.17936
+      value: 6.0303698
       objectReference: {fileID: 0}
     - target: {fileID: 3149615787120449118, guid: 8e356972ef8efb042b04d7fd584420b5, type: 3}
       propertyPath: m_Materials.Array.data[0]

@@ -3,12 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using UnityEngine.Serialization;
 
 public class DoorInteractiveObject : InteractiveObject  
 {
     [SerializeField] int m_iObjectConditionAmount = 0;
     [SerializeField] float m_fDisolveDuration = 2;
-    [SerializeField] GameObject Grid;
+    [SerializeField] private GameObject m_Grid;
 
     [SerializeField] List<Transform> slugSpots = new List<Transform>();
     private int slugSpotIndex = 0; // Tracks the next available slug spot
@@ -22,6 +23,7 @@ public class DoorInteractiveObject : InteractiveObject
     public event Action OnDoorDestroyed;
     private void Start()
     {
+        m_Grid = GameObject.FindWithTag("Grid"); // finds the grid gameobject in the scene and applies it.
         m_iCondition = m_iObjectConditionAmount;
     }
 
@@ -90,7 +92,7 @@ public class DoorInteractiveObject : InteractiveObject
 
         // Update the pathfinding graph
         Bounds doorBounds = collider.bounds;
-        Grid.GetComponent<AstarPath>().UpdateGraphs(doorBounds);
+        m_Grid.GetComponent<AstarPath>().UpdateGraphs(doorBounds);
 
         // Before destroying the door, invoke the event
         OnDoorDestroyed?.Invoke();

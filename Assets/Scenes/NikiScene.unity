@@ -160,10 +160,6 @@ PrefabInstance:
       value: -1.528
       objectReference: {fileID: 0}
     - target: {fileID: 7069232978999027687, guid: 035230a8cfb702446866ecca2213c994, type: 3}
-      propertyPath: playerCharacter
-      value: 
-      objectReference: {fileID: 1197823283}
-    - target: {fileID: 7069232978999027687, guid: 035230a8cfb702446866ecca2213c994, type: 3}
       propertyPath: PlayerCanCallBros
       value: 1
       objectReference: {fileID: 0}
@@ -949,11 +945,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2120444834}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1197823283 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4693817167849357668, guid: 116b32d25cae78940be2a3cb5eed22d2, type: 3}
-  m_PrefabInstance: {fileID: 720401795}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1641122241
 GameObject:
   m_ObjectHideFlags: 0
