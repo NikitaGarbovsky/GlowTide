@@ -101,14 +101,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4064d745f66f58d44abfb472918d6a04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentState: 2
-  m_Player: {fileID: 0}
-  m_bIsFollowingPlayer: 1
-  m_chaseSpeed: 1.2
-  m_wanderSpeed: 0.4
-  m_wandering: 1
-  moveSpeed: 7
-  friction: 0.9
+  m_eCurrentState: 1
+  m_fChaseSpeed: 3
+  m_fWanderSpeed: 1
+  m_fMoveSpeed: 5
+  m_fThrowSpeed: 10
+  m_fThrowDistance: 10
+  trailBubblesPrefab: {fileID: 4909856430915467350, guid: a2c6d5c9ee9171943952627d5a1b774c, type: 3}
 --- !u!114 &21066700126059804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,7 +227,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -236,8 +235,8 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
