@@ -139,4 +139,9 @@ public class IsoSpriteDirectionManager : MonoBehaviour
     {
         return directionIndex.ToString();
     }
+
+    public int GetCurrentDirection()
+    {
+        return currentDirection;
+    }
 }

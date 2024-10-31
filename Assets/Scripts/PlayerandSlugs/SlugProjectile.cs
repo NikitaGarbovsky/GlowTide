@@ -115,8 +115,8 @@ public class SlugProjectile : MonoBehaviour
                 {
                     doorscript.AddToSlugList(slug);
                     Debug.Log("kfgjldskfsgjhlsdkfjgl");
-                    Destroy(gameObject);
                 }
+                Destroy(gameObject);
             }
 
             if (hit.collider.gameObject.tag == "Door")
