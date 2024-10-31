@@ -21,18 +21,36 @@ public class PlayerControllerManager : MonoBehaviour
         targetPosition = transform.position;
     }
 
+    private float updateInterval = 1.0f; // Interval in seconds to update the target position
+    private float timeSinceLastUpdate = 0.0f; // Timer to track the interval
+
     void Update()
     {
-        // Handle movement input
-        if (Input.GetMouseButtonDown(1) && ManageGameplay.Instance.PlayerCanIssueMoveCommands)
+        // Check if the right mouse button is held down or has been clicked
+        if (Input.GetMouseButton(1) && ManageGameplay.Instance.PlayerCanIssueMoveCommands)
         {
-            // Get the mouse position in world space
-            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            mousePosition.z = 0; 
+            // Increment the timer by the time elapsed since the last frame
+            timeSinceLastUpdate += Time.deltaTime;
 
-            // Set the target position for the A* pathfinding system
-            targetPosition = mousePosition;
-            aiPath.destination = targetPosition; // Tell A* where to move
+            // If the right mouse button was just pressed or the update interval has passed
+            if (Input.GetMouseButtonDown(1) || timeSinceLastUpdate >= updateInterval)
+            {
+                // Reset the timer
+                timeSinceLastUpdate = 0.0f;
+
+                // Get the mouse position in world space
+                Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                mousePosition.z = 0; 
+
+                // Set the target position for the A* pathfinding system
+                targetPosition = mousePosition;
+                aiPath.destination = targetPosition; // Tell A* where to move
+            }
+        }
+        else
+        {
+            // Reset the timer when the mouse button is not held
+            timeSinceLastUpdate = 0.0f;
         }
 
         // Get movement direction
@@ -44,4 +62,5 @@ public class PlayerControllerManager : MonoBehaviour
             spriteDirectionManager.UpdateSpriteDirection(direction);
         }
     }
+
 }
