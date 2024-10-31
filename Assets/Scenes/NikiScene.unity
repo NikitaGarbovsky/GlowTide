@@ -153,11 +153,11 @@ PrefabInstance:
       objectReference: {fileID: 897499}
     - target: {fileID: 5642738515946614634, guid: 035230a8cfb702446866ecca2213c994, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.338
+      value: -0.85
       objectReference: {fileID: 0}
     - target: {fileID: 5642738515946614634, guid: 035230a8cfb702446866ecca2213c994, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.528
+      value: -1.18
       objectReference: {fileID: 0}
     - target: {fileID: 7069232978999027687, guid: 035230a8cfb702446866ecca2213c994, type: 3}
       propertyPath: PlayerCanCallBros
@@ -725,11 +725,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3685708292754175298, guid: 116b32d25cae78940be2a3cb5eed22d2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.338
+      value: -0.85
       objectReference: {fileID: 0}
     - target: {fileID: 3685708292754175298, guid: 116b32d25cae78940be2a3cb5eed22d2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.528
+      value: -1.18
       objectReference: {fileID: 0}
     - target: {fileID: 3685708292754175298, guid: 116b32d25cae78940be2a3cb5eed22d2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -763,9 +763,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4002788588064383205, guid: 116b32d25cae78940be2a3cb5eed22d2, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e217ef8c484270742b7340e70f275ccd, type: 2}
     - target: {fileID: 4693817167849357668, guid: 116b32d25cae78940be2a3cb5eed22d2, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4796733298982744540, guid: 116b32d25cae78940be2a3cb5eed22d2, type: 3}
+      propertyPath: m_Size.x
+      value: 1.6670737
+      objectReference: {fileID: 0}
+    - target: {fileID: 4796733298982744540, guid: 116b32d25cae78940be2a3cb5eed22d2, type: 3}
+      propertyPath: m_Size.y
+      value: 1.6666666
       objectReference: {fileID: 0}
     - target: {fileID: 4796733298982744540, guid: 116b32d25cae78940be2a3cb5eed22d2, type: 3}
       propertyPath: m_SortingLayer

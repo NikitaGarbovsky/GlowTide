@@ -35,10 +35,13 @@ public class PlayerSlugManager : MonoBehaviour
     private GameObject m_goPlayer; // Reference to the player GameObject
 
     [SerializeField] public bool m_bHasBroSnack;
+
+    private Animator playerAnimator;
     // Start is called before the first frame update
     void Start()
     {
         m_goPlayer = gameObject; // assigns player gameobject
+        playerAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -163,6 +166,8 @@ public class PlayerSlugManager : MonoBehaviour
         // Check if the left mouse button is pressed
         if (Input.GetMouseButtonDown(0) && ManageGameplay.Instance.PlayerCanThrowBros)
         {
+            playerAnimator.runtimeAnimatorController =
+                gameObject.GetComponent<PlayerControllerManager>().throwAnimatorController;
             ThrowSlug(); // ThrowSlug
         }
     }

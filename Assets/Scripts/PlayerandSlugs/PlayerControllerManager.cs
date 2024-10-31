@@ -12,6 +12,8 @@ public class PlayerControllerManager : MonoBehaviour
 
     private Vector3 targetPosition;
 
+    [SerializeField] public RuntimeAnimatorController idleAnimatorController;
+    [SerializeField] public RuntimeAnimatorController throwAnimatorController;
     void Start()
     {
         aiPath = GetComponent<AIPath>(); // Get the AIPath component
