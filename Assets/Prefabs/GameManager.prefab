@@ -226,6 +226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1042096693206910869}
   - component: {fileID: 9035379249588193751}
+  - component: {fileID: 7665984268302908501}
   m_Layer: 0
   m_Name: 2_Level2Manager
   m_TagString: Untagged
@@ -262,6 +263,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_sLevelName: 
   levelTrigger: {fileID: 0}
+--- !u!114 &7665984268302908501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3807848965172573117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7a82f9d8588334f98848fb882aa10e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8358886677518826340
 GameObject:
   m_ObjectHideFlags: 0
