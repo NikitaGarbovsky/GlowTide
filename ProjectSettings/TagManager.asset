@@ -9,6 +9,7 @@ TagManager:
   - Grid
   - HUD
   - Slug
+  - Geyser
   layers:
   - Default
   - TransparentFX

@@ -52,7 +52,7 @@ public class PlayerSlugManager : MonoBehaviour
         HandleThrowing();
         if (m_lAssignedSlugs.Count != 0)
         {
-            m_HUDUI.text = m_lAssignedSlugs.Count.ToString();
+            //m_HUDUI.text = m_lAssignedSlugs.Count.ToString();
         }
     }
 
