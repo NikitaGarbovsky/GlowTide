@@ -38,6 +38,7 @@ public class PlayerSlugManager : MonoBehaviour
     void Start()
     {
         m_goPlayer = gameObject; // assigns player gameobject
+        m_HUDUI = GameObject.FindGameObjectWithTag("HUD").GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
