@@ -11811,6 +11811,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2587831932354950992, guid: 035230a8cfb702446866ecca2213c994, type: 3}
+      propertyPath: m_TagString
+      value: HUD
+      objectReference: {fileID: 0}
     - target: {fileID: 2765206725994551575, guid: 035230a8cfb702446866ecca2213c994, type: 3}
       propertyPath: m_Name
       value: 4_Level4Manager
