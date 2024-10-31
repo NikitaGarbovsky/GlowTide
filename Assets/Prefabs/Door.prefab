@@ -139,8 +139,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 772907811
+  m_SortingLayer: 3
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 3dbda4c5a7416e44ead04641826dac39, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -197,15 +197,19 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.54658324, y: 0.6490046}
-      - {x: -0.8928995, y: 0.29677063}
-      - {x: -0.8998308, y: -0.56420374}
-      - {x: -0.24543458, y: -0.8619906}
-      - {x: 0.13534492, y: -0.76927197}
-      - {x: 0.66083616, y: -0.5296857}
-      - {x: 0.9192705, y: 0.43567073}
-      - {x: 0.40210915, y: 0.8907771}
-      - {x: -0.010792911, y: 0.75851595}
+    - - {x: -0.084171355, y: 0.014725089}
+      - {x: -0.40520287, y: -0.09781003}
+      - {x: -0.8478861, y: -0.3620612}
+      - {x: -1.1085291, y: -0.4619006}
+      - {x: -0.20860559, y: -0.9847543}
+      - {x: 0.17626709, y: -0.8183776}
+      - {x: 0.35045242, y: -0.73874867}
+      - {x: 0.5815029, y: -0.63435256}
+      - {x: 0.7268715, y: -0.57776785}
+      - {x: 0.6935739, y: -0.49694878}
+      - {x: 0.56325436, y: -0.3172803}
+      - {x: 0.2261486, y: -0.087240696}
+      - {x: 0.009667218, y: 0.05876243}
   m_UseDelaunayMesh: 0
 --- !u!114 &7671322776027412173
 MonoBehaviour:
@@ -220,13 +224,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_iObjectConditionAmount: 0
-  Grid: {fileID: 0}
+  m_fDisolveDuration: 2
+  m_Grid: {fileID: 0}
   slugSpots:
   - {fileID: 8054169150592727788}
   - {fileID: 2073253529935019699}
   - {fileID: 1472952906982264051}
   - {fileID: 1150055546442856599}
   - {fileID: 2619579729001180359}
+  vfxKelpPrefab: {fileID: 5832892849370157386, guid: f6f4b5e86807aa94cbe108022d707ea9, type: 3}
 --- !u!1 &4153609687859785900
 GameObject:
   m_ObjectHideFlags: 0

@@ -46,7 +46,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Glow_Intensity: 0
-    - _UseAlbedo: 0
+    - _UseAlbedo: 1
     m_Colors:
     - _Glow_Colour: {r: 5.0594153, g: 5.992157, b: 5.8667884, a: 0}
     - _RemapAlbedoToGlow: {r: 0, g: 0, b: 0, a: 0}

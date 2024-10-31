@@ -91,7 +91,7 @@ public class SeaSlugBroFollower : MonoBehaviour
         if (m_goPlayer != null)
         {
             // Adjust position to follow slightly behind the player
-            m_v3CorrectedPlayerPosition = new Vector3(m_goPlayer.transform.position.x, m_goPlayer.transform.position.y - 0.5f);
+            m_v3CorrectedPlayerPosition = new Vector3(m_goPlayer.transform.position.x, m_goPlayer.transform.position.y);
 
             // Ensure the AIPath is enabled for pathfinding
             if (!m_aiPath.enabled)
