@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Pathfinding;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
@@ -8,6 +9,7 @@ public class Level2Triggers : LevelTriggers
 {
     private Tilemap tilemap; // Reference to the Tilemap
     private Vector3 levelCenter; // Center position of the level
+    [SerializeField] private GameObject EelBossPrefab;
     
     public override void ExecuteLevelTrigger(string _sTriggerName)
     {
@@ -19,7 +21,35 @@ public class Level2Triggers : LevelTriggers
         if (_sTriggerName == "1_EelBoss")
         {
             // Implement Eel boss functionality here. 
+            // 1. Freeze player position, remove controls.
+            ManageGameplay.Instance.RemovePlayerControl();
+            ManageGameplay.Instance.PlayerCanCallBros = false;
+            ManageGameplay.Instance.PlayerCanThrowBros = false;
             
+            // 2. Set bros position.
+            
+            // 3. Instantiate Eel boss at EelBossSpawn gameobject
+
+            // Access the GridGraph directly through AstarPath
+            var gridGraph = AstarPath.active.data.gridGraph;
+
+            // Define the world position you're interested in
+            Vector3 vEelBossSpawnWorldPosition = new Vector3(8.1f, 0.16f, 0f);
+
+            // Find the nearest node to the specified world position
+            var nearestNode = gridGraph.GetNearest(vEelBossSpawnWorldPosition).node;
+
+            // Convert the node's internal position to a Vector3 (if you need the actual world position)
+            
+            Vector3 eelSpawnPosition = (Vector3)nearestNode.position;
+
+            GameObject EelBossInstance = Instantiate(EelBossPrefab, eelSpawnPosition, Quaternion.identity);
+            // 4. Set MovetoPoint method in EelBoss object
+            // THIS IS THE END POSITION OF THE EEL, FROM THE 
+            EelBossInstance.GetComponent<BigEelController>().MovetoPoint(new Vector2(-8.63f, -10.33f));
+            // 5. When Eel boss collides with bros, bros get destroyed.
+            // 6. When Eel boss has ended movement, destroy object
+            // 7. Return movement & controls to player
         }
         if (_sTriggerName == "2_LevelTransition") 
         {
