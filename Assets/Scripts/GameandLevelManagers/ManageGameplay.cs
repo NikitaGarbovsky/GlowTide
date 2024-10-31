@@ -106,6 +106,7 @@ public sealed class ManageGameplay : MonoBehaviour
     {
         if (playerCharacter != null)
         {
+            playerCharacter.GetComponent<AIPath>().destination = playerCharacter.transform.position;
             playerCharacter.GetComponent<AIPath>().canMove = false;
             PlayerCanIssueMoveCommands = false;
         }
