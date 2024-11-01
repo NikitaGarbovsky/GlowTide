@@ -272,6 +272,7 @@ MonoBehaviour:
   m_fThrowDistance: 2
   m_fThrowSpeed: 10
   vfxNotesPrefab: {fileID: 6624332161375095230, guid: 9182ab5848c31f149b4a24ddd0235486, type: 3}
+  callVFXDuration: 2.4
   m_bHasBroSnack: 0
 --- !u!114 &5331817668393732618
 MonoBehaviour:

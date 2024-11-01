@@ -16132,7 +16132,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4662036591256240016, guid: 3a1db3e2037cd434981cbd093c301f24, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5151981776072291680, guid: 3a1db3e2037cd434981cbd093c301f24, type: 3}
       propertyPath: m_waypoints.Array.size

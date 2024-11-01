@@ -28,8 +28,9 @@ public class PlayerSlugManager : MonoBehaviour
     
     [Header("Visual Effects")]
     // The note visual effect that is played when the player calls
-    [SerializeField] private GameObject vfxNotesPrefab; 
-    
+    [SerializeField] private GameObject vfxNotesPrefab;
+
+    [SerializeField] private float callVFXDuration = 2.4f;
     // Private variables
     private GameObject m_goCallRadiusEffectInstance; // Instance of the call radius visual effect
     private GameObject m_goPlayer; // Reference to the player GameObject
@@ -134,7 +135,7 @@ public class PlayerSlugManager : MonoBehaviour
         GameObject vfxInstance = Instantiate(vfxNotesPrefab, vfxPosition, Quaternion.identity);
         // TODO change this visual effect when Esteri finds a better one
         // Destroy the visual effect after 1 second
-        Destroy(vfxInstance, 1f);
+        Destroy(vfxInstance, callVFXDuration);
         
         // Find all slugs within the call radius using the defined layer mask
         Collider2D[] aSlugsInRadius = Physics2D.OverlapCircleAll(v2MouseWorldPos, m_fCallRadius, m_lSlugLayerMask);

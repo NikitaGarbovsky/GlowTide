@@ -190,7 +190,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 740087250463829832}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 293c4de536500514891c809177971540, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -232,7 +232,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 293c4de536500514891c809177971540, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
