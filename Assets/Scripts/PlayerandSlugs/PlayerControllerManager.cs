@@ -12,15 +12,17 @@ public class PlayerControllerManager : MonoBehaviour
 
     private Vector3 targetPosition;
 
+    private Animator playerAnimator;
     [SerializeField] public RuntimeAnimatorController idleAnimatorController;
     [SerializeField] public RuntimeAnimatorController throwAnimatorController;
     void Start()
     {
+        playerAnimator = GetComponent<Animator>();
         aiPath = GetComponent<AIPath>(); // Get the AIPath component
         spriteDirectionManager = GetComponent<IsoSpriteDirectionManager>(); // Get the IsoSpriteDirectionManager component
         targetPosition = transform.position;
     }
-
+    
     private float updateInterval = 1.0f; // Interval in seconds to update the target position
     private float timeSinceLastUpdate = 0.0f; // Timer to track the interval
 
@@ -60,6 +62,17 @@ public class PlayerControllerManager : MonoBehaviour
         if (spriteDirectionManager != null)
         {
             spriteDirectionManager.UpdateSpriteDirection(direction);
+        }
+    }
+    public void SwitchToIdleAnimatorController()
+    {
+        if (playerAnimator != null && idleAnimatorController != null)
+        {
+            playerAnimator.runtimeAnimatorController = idleAnimatorController;
+        }
+        else
+        {
+            Debug.LogWarning("Player Animator or Idle Animator Controller is not assigned.");
         }
     }
 
