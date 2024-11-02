@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 983acfd6f6fe1fd408d30d59854bc940
+guid: 32e8105ba97582b44b3e74aa5fb44a6e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RiggedPlayer_Throw_02_export_Take 001_0
+      name: RiggedPlayer_Throw_02_export_NWW_0
       rect:
         serializedVersion: 2
         x: 0
@@ -105,20 +105,20 @@ TextureImporter:
         width: 2000
         height: 2000
       alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+      pivot: {x: 0.5, y: 0.17}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70975a1d6607ab14e9a99830bc73039a
-      internalID: 869661840
+      spriteID: e3e2b65101cf05947a4d896aa73d191e
+      internalID: 1912709311
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RiggedPlayer_Throw_02_export_Take 001_1
+      name: RiggedPlayer_Throw_02_export_NWW_1
       rect:
         serializedVersion: 2
         x: 2000
@@ -126,20 +126,20 @@ TextureImporter:
         width: 2000
         height: 2000
       alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+      pivot: {x: 0.5, y: 0.17}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b359ac0e0d6475740adeab3c380843a5
-      internalID: 175430372
+      spriteID: 79e85d741a33e954286ed789cd9d8e8c
+      internalID: -1148703652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RiggedPlayer_Throw_02_export_Take 001_2
+      name: RiggedPlayer_Throw_02_export_NWW_2
       rect:
         serializedVersion: 2
         x: 4000
@@ -147,20 +147,20 @@ TextureImporter:
         width: 2000
         height: 2000
       alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+      pivot: {x: 0.5, y: 0.17}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0e6cb24a6f7fc141bf5fa9360433fce
-      internalID: 1975138309
+      spriteID: 7ee65df4935666a498ee019ee16e6128
+      internalID: 1433647081
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RiggedPlayer_Throw_02_export_Take 001_3
+      name: RiggedPlayer_Throw_02_export_NWW_3
       rect:
         serializedVersion: 2
         x: 0
@@ -168,20 +168,20 @@ TextureImporter:
         width: 2000
         height: 2000
       alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+      pivot: {x: 0.5, y: 0.17}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea5d383cfe5acc1469fdd2554a4be79e
-      internalID: -306080653
+      spriteID: 7a18553c8a78abf46a9d527d70703377
+      internalID: 1413714010
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RiggedPlayer_Throw_02_export_Take 001_4
+      name: RiggedPlayer_Throw_02_export_NWW_4
       rect:
         serializedVersion: 2
         x: 2000
@@ -189,20 +189,20 @@ TextureImporter:
         width: 2000
         height: 2000
       alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+      pivot: {x: 0.5, y: 0.17}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93dd5d60276be894a929ed74798e4573
-      internalID: 1390972778
+      spriteID: 7cf9e627628cabe4d95c7df4e5faebb1
+      internalID: 1821358826
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RiggedPlayer_Throw_02_export_Take 001_5
+      name: RiggedPlayer_Throw_02_export_NWW_5
       rect:
         serializedVersion: 2
         x: 4000
@@ -210,14 +210,14 @@ TextureImporter:
         width: 2000
         height: 2000
       alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+      pivot: {x: 0.5, y: 0.17}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 675fe5175bc63e849a12255df7d77c43
-      internalID: -389274671
+      spriteID: ded42bcb8983a8d478e58cb289b05dac
+      internalID: -526570102
       vertices: []
       indices: 
       edges: []
@@ -233,12 +233,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      RiggedPlayer_Throw_02_export_Take 001_0: 869661840
-      RiggedPlayer_Throw_02_export_Take 001_1: 175430372
-      RiggedPlayer_Throw_02_export_Take 001_2: 1975138309
-      RiggedPlayer_Throw_02_export_Take 001_3: -306080653
-      RiggedPlayer_Throw_02_export_Take 001_4: 1390972778
-      RiggedPlayer_Throw_02_export_Take 001_5: -389274671
+      RiggedPlayer_Throw_02_export_NWW_0: 1912709311
+      RiggedPlayer_Throw_02_export_NWW_1: -1148703652
+      RiggedPlayer_Throw_02_export_NWW_2: 1433647081
+      RiggedPlayer_Throw_02_export_NWW_3: 1413714010
+      RiggedPlayer_Throw_02_export_NWW_4: 1821358826
+      RiggedPlayer_Throw_02_export_NWW_5: -526570102
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

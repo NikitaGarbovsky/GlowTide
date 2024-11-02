@@ -371,6 +371,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4002788588064383205, guid: 116b32d25cae78940be2a3cb5eed22d2, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f1268f188b0f4f141953ccd924d0900d, type: 2}
     - target: {fileID: 4693817167849357668, guid: 116b32d25cae78940be2a3cb5eed22d2, type: 3}
       propertyPath: m_Name
       value: Player
@@ -16128,7 +16132,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4662036591256240016, guid: 3a1db3e2037cd434981cbd093c301f24, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5151981776072291680, guid: 3a1db3e2037cd434981cbd093c301f24, type: 3}
       propertyPath: m_waypoints.Array.size
