@@ -1,0 +1,400 @@
+fileFormatVersion: 2
+guid: c69e8bbe4dbf804479b337eac31b7aa5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpritePlayer_Walk__Take 001_dir03_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6000
+        width: 2000
+        height: 2000
+      alignment: 9
+      pivot: {x: 0.5, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7319565b5fec2544a8f3682b18b630f
+      internalID: 1107190123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritePlayer_Walk__Take 001_dir03_1
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 6000
+        width: 2000
+        height: 2000
+      alignment: 9
+      pivot: {x: 0.5, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a36c893c7eeb7a249ba832c1a5a46704
+      internalID: 2147117906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritePlayer_Walk__Take 001_dir03_2
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 6000
+        width: 2000
+        height: 2000
+      alignment: 9
+      pivot: {x: 0.5, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95d3d098208b42a41b6baf6637dbcca1
+      internalID: -1871394287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritePlayer_Walk__Take 001_dir03_3
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 6000
+        width: 2000
+        height: 2000
+      alignment: 9
+      pivot: {x: 0.5, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44ecf0ab0bd04b74aa6a8d8318596f93
+      internalID: -1710812857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritePlayer_Walk__Take 001_dir03_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4000
+        width: 2000
+        height: 2000
+      alignment: 9
+      pivot: {x: 0.5, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 658d19bba6801da4b9de7ddde660e946
+      internalID: -1789420579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritePlayer_Walk__Take 001_dir03_5
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 4000
+        width: 2000
+        height: 2000
+      alignment: 9
+      pivot: {x: 0.5, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5845f1975f08a664196076c2ad5c5e2a
+      internalID: -1038109077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritePlayer_Walk__Take 001_dir03_6
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 4000
+        width: 2000
+        height: 2000
+      alignment: 9
+      pivot: {x: 0.5, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22d31de99f95a74408efdbfe88e8f2d9
+      internalID: -1324630477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritePlayer_Walk__Take 001_dir03_7
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 4000
+        width: 2000
+        height: 2000
+      alignment: 9
+      pivot: {x: 0.5, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca4c563e958bda746848ca2c007f3121
+      internalID: -262896389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritePlayer_Walk__Take 001_dir03_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2000
+        width: 2000
+        height: 2000
+      alignment: 9
+      pivot: {x: 0.5, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06c6bf9560f7ff54c838cd3aac0d0627
+      internalID: -1794394000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritePlayer_Walk__Take 001_dir03_9
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 2000
+        width: 2000
+        height: 2000
+      alignment: 9
+      pivot: {x: 0.5, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d396c16f4497d36428864a9f64a6bb82
+      internalID: 1425760569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritePlayer_Walk__Take 001_dir03_10
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 2000
+        width: 2000
+        height: 2000
+      alignment: 9
+      pivot: {x: 0.5, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 019f7b1e28f601f4aaa720d4d0d5b03a
+      internalID: -290283379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritePlayer_Walk__Take 001_dir03_11
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 2000
+        width: 2000
+        height: 2000
+      alignment: 9
+      pivot: {x: 0.5, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81b814e29599fdc4eb24de78573f32f0
+      internalID: -539643070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritePlayer_Walk__Take 001_dir03_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 2000
+        height: 2000
+      alignment: 9
+      pivot: {x: 0.5, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1503e72b6be572c4da8943476e270f51
+      internalID: -977755396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SpritePlayer_Walk__Take 001_dir03_0: 1107190123
+      SpritePlayer_Walk__Take 001_dir03_1: 2147117906
+      SpritePlayer_Walk__Take 001_dir03_10: -290283379
+      SpritePlayer_Walk__Take 001_dir03_11: -539643070
+      SpritePlayer_Walk__Take 001_dir03_12: -977755396
+      SpritePlayer_Walk__Take 001_dir03_2: -1871394287
+      SpritePlayer_Walk__Take 001_dir03_3: -1710812857
+      SpritePlayer_Walk__Take 001_dir03_4: -1789420579
+      SpritePlayer_Walk__Take 001_dir03_5: -1038109077
+      SpritePlayer_Walk__Take 001_dir03_6: -1324630477
+      SpritePlayer_Walk__Take 001_dir03_7: -262896389
+      SpritePlayer_Walk__Take 001_dir03_8: -1794394000
+      SpritePlayer_Walk__Take 001_dir03_9: 1425760569
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
