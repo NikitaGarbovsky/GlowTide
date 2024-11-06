@@ -71,7 +71,7 @@ public class IsoSpriteDirectionManager : MonoBehaviour
         }
     }
 
-    private int GetDirectionIndexForAngle(float angle)
+    public int GetDirectionIndexForAngle(float angle)
     {
         // 16-direction handling - 22.5-degree increments
         if (angle >= 348.75f || angle < 11.25f)
@@ -138,5 +138,10 @@ public class IsoSpriteDirectionManager : MonoBehaviour
     private string GetDirectionNumber(int directionIndex)
     {
         return directionIndex.ToString();
+    }
+
+    public int GetCurrentDirection()
+    {
+        return currentDirection;
     }
 }

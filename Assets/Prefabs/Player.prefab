@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 3922750595604442637}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.01, y: 0.5, z: 0}
+  m_LocalPosition: {x: -0.01, y: -0.107, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -70,10 +70,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -841161751
-  m_SortingLayer: 2
+  m_SortingLayerID: 531966131
+  m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2032026347, guid: 14ff95415ab81874582eb0cc776a24be, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ad42662771439944eaa6d6f30abda5a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!1 &4693817167849357668
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 5
-  radius: 0.5
+  radius: 0.1
   height: 2
   canMove: 1
   maxSpeed: 1
@@ -225,8 +225,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.013296604, y: -0.14695215}
-  m_Size: {x: 0.69944715, y: 0.7060957}
+  m_Offset: {x: -0.024883747, y: -0.027453542}
+  m_Size: {x: 0.78750896, y: 0.78750896}
   m_Direction: 0
 --- !u!95 &4002788588064383205
 Animator:
@@ -262,6 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_lAssignedSlugs: []
+  m_HUDUI: {fileID: 0}
   m_fCallRadius: 1
   m_fCallMaxDistance: 2
   m_lSlugLayerMask:
@@ -270,7 +271,9 @@ MonoBehaviour:
   m_goCallRadiusEffectPrefab: {fileID: 6090554775883013731, guid: 0c98a58b4b8974145a2cda4463b03e72, type: 3}
   m_fThrowDistance: 2
   m_fThrowSpeed: 10
-  vfxNotesPrefab: {fileID: 1957472036788695860, guid: 5b2a33d8361f0f84ab2d79275a5ea236, type: 3}
+  vfxNotesPrefab: {fileID: 6624332161375095230, guid: 9182ab5848c31f149b4a24ddd0235486, type: 3}
+  callVFXDuration: 2.4
+  m_bHasBroSnack: 0
 --- !u!114 &5331817668393732618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,8 +287,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  spriteTransform: {fileID: 0}
-  bobbingAmplitude: 0.2
+  spriteTransform: {fileID: 8507998248761502461}
+  bobbingAmplitude: 0
   bobbingSpeed: 0.6
 --- !u!114 &7114099419090749349
 MonoBehaviour:
@@ -299,3 +302,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f94783139c7e6e4bb503fd24d524db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleAnimatorController: {fileID: 9100000, guid: f1268f188b0f4f141953ccd924d0900d, type: 2}
+  throwAnimatorController: {fileID: 9100000, guid: e217ef8c484270742b7340e70f275ccd, type: 2}

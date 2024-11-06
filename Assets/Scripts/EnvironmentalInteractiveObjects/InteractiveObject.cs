@@ -19,10 +19,6 @@ using UnityEngine;
 
 public abstract class InteractiveObject : MonoBehaviour
 {
-    ~InteractiveObject() // Destructor
-    {
-        // When the object is destroyed we want to clear the list and reassign all seaslugs to sit idle. 
-    }
     // The condition (amount of slugs in the slug list) that is assigned from the child class then 
     protected int m_iCondition;
     // Holds all a reference to all assigned SeaSlugs to this object

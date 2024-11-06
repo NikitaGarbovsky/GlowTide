@@ -61,12 +61,14 @@ public sealed class ManageGameplay : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Debug.Log("Scene loaded: " + scene.name);
-
+        
+        GetPlayerReference();
+        
         // Activate the appropriate level manager
         ActivateLevelManager(scene.name);
         // Initializes the level.
         GetLevelManager(scene.name).GetComponent<LevelManager>().InitializeLevel();
-        GetPlayerReference();
+        
     }
     // After scene loads we call this to get a new reference to the player, (wont need this anymore if the player 
     // becomes a global object.)
@@ -104,6 +106,7 @@ public sealed class ManageGameplay : MonoBehaviour
     {
         if (playerCharacter != null)
         {
+            playerCharacter.GetComponent<AIPath>().destination = playerCharacter.transform.position;
             playerCharacter.GetComponent<AIPath>().canMove = false;
             PlayerCanIssueMoveCommands = false;
         }
