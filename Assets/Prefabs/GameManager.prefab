@@ -142,6 +142,7 @@ Transform:
   - {fileID: 8821836408881930434}
   - {fileID: 8826968043843886077}
   - {fileID: 671089843652960092}
+  - {fileID: 3448414838086530873}
   - {fileID: 7202801294570693734}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -276,6 +277,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EelBossPrefab: {fileID: 1647357637110406790, guid: 7bc24efc23ac34d4dbee40a3c3031503, type: 3}
+--- !u!1 &5961312869987737664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3448414838086530873}
+  - component: {fileID: 5969629736613089254}
+  m_Layer: 0
+  m_Name: 6_Level6Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3448414838086530873
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5961312869987737664}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7781988572552437774}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5969629736613089254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5961312869987737664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fbf96a62f6927241b0826bcee54af13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_sLevelName: 
+  levelTrigger: {fileID: 0}
 --- !u!1 &8358886677518826340
 GameObject:
   m_ObjectHideFlags: 0
