@@ -24,8 +24,13 @@ public class DoorInteractiveObject : InteractiveObject
     private List<GameObject> slugNumberVFXList = new List<GameObject>();
     // Add an event to notify when the door has been destroyed
     public event Action OnDoorDestroyed;
+
+    AudioSource m_audioSource;
+    
     private void Start()
     {
+        m_audioSource = GetComponent<AudioSource>();
+
         m_Grid = GameObject.FindWithTag("Grid"); // finds the grid gameobject in the scene and applies it.
         m_iCondition = m_iObjectConditionAmount;
         for (int i = 0; i < m_iObjectConditionAmount; i++)
@@ -46,6 +51,8 @@ public class DoorInteractiveObject : InteractiveObject
 
     private IEnumerator FadeOutAndDestroy()
     {
+        m_audioSource.Play();
+
         // Spawn the VFX once at the beginning of the fade-out
         if (vfxKelpPrefab != null)
         {

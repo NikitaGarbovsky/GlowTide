@@ -32,8 +32,11 @@ public class ScaredSlugBushManager : MonoBehaviour
 
     bool isShaking = false;
 
+    AudioSource m_audioSource;
+
     void Start()
     {
+        m_audioSource = GetComponent<AudioSource>();
         // Start the main coroutine that alternates between shaking and pausing
         StartCoroutine(ShakeAndPause());
     }
@@ -49,6 +52,7 @@ public class ScaredSlugBushManager : MonoBehaviour
             
             // Change the bush state to Unoccupied after spawning the sea slug
             _bushState = BushState.Unoccupied;
+            m_audioSource.Play();
         }
     }
 
