@@ -125,6 +125,7 @@ public class DoorInteractiveObject : InteractiveObject
         if (slugSpotIndex < slugSpots.Count)
         {
             Transform targetSpot = slugSpots[slugSpotIndex];
+            slugNumberVFXList[slugSpotIndex].SetActive(false);
             slugSpotIndex++;
 
             // Move the seaslug to the target spot immediately
@@ -162,7 +163,7 @@ public class DoorInteractiveObject : InteractiveObject
 
         // Decrease the count of slugs that have reached their spots
         slugsReachedTarget--;
-        
+        slugNumberVFXList[slugSpotIndex].SetActive(true);
         slugSpotIndex--;
     }
 }
