@@ -3,25 +3,42 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using UnityEngine.Serialization;
 
 public class DoorInteractiveObject : InteractiveObject  
 {
     [SerializeField] int m_iObjectConditionAmount = 0;
-
-    [SerializeField] GameObject Grid;
+    [SerializeField] float m_fDisolveDuration = 2;
+    [SerializeField] private GameObject m_Grid;
 
     [SerializeField] List<Transform> slugSpots = new List<Transform>();
+    
     private int slugSpotIndex = 0; // Tracks the next available slug spot
 
     private int slugsReachedTarget = 0; // Count of slugs that have reached their spots
     
+    // VFX prefab for door destruction
+    [SerializeField] private GameObject vfxKelpPrefab;
+    [SerializeField] private GameObject slugNumberVFX;
+
+    private List<GameObject> slugNumberVFXList = new List<GameObject>();
     // Add an event to notify when the door has been destroyed
     public event Action OnDoorDestroyed;
     private void Start()
     {
+        m_Grid = GameObject.FindWithTag("Grid"); // finds the grid gameobject in the scene and applies it.
         m_iCondition = m_iObjectConditionAmount;
+        for (int i = 0; i < m_iObjectConditionAmount; i++)
+        {
+            GameObject slugVFX =  Instantiate(slugNumberVFX, gameObject.transform.position, Quaternion.identity);
+            slugNumberVFXList.Add(slugVFX);
+        }
     }
 
+    ~DoorInteractiveObject()
+    {
+        
+    }
     protected override void ExecuteObjectAction()
     {
         StartCoroutine(FadeOutAndDestroy());
@@ -29,6 +46,12 @@ public class DoorInteractiveObject : InteractiveObject
 
     private IEnumerator FadeOutAndDestroy()
     {
+        // Spawn the VFX once at the beginning of the fade-out
+        if (vfxKelpPrefab != null)
+        {
+            Instantiate(vfxKelpPrefab, transform.position, Quaternion.identity);
+        }
+        
         // Before destroying the door, reset assigned SeaSlugs
         foreach (var seaSlug in m_lstAssignedSeaSlugs)
         {
@@ -46,14 +69,13 @@ public class DoorInteractiveObject : InteractiveObject
         
         // Get the sprite render for the door 
         SpriteRenderer[] renderers = GetComponents<SpriteRenderer>();
-        float duration = 2f;
         float elapsedTime = 0f;
 
         // Fade out over time
-        while (elapsedTime < duration)
+        while (elapsedTime < m_fDisolveDuration)
         {
             elapsedTime += Time.deltaTime;
-            float alpha = Mathf.Lerp(1f, 0f, elapsedTime / duration);
+            float alpha = Mathf.Lerp(1f, 0f, elapsedTime / m_fDisolveDuration);
             foreach (var sr in renderers)
             {
                 if (sr != null)
@@ -82,10 +104,15 @@ public class DoorInteractiveObject : InteractiveObject
 
         // Update the pathfinding graph
         Bounds doorBounds = collider.bounds;
-        Grid.GetComponent<AstarPath>().UpdateGraphs(doorBounds);
+        m_Grid.GetComponent<AstarPath>().UpdateGraphs(doorBounds);
 
         // Before destroying the door, invoke the event
         OnDoorDestroyed?.Invoke();
+        
+        foreach (var slugvfx in slugNumberVFXList)
+        {
+            Destroy(slugvfx);
+        }
         
         // Destroy the door GameObject
         Destroy(gameObject);

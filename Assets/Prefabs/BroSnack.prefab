@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2690684024258426484}
   - component: {fileID: 635346922713188312}
   - component: {fileID: 244007527436164699}
+  - component: {fileID: 3102525050916498990}
   m_Layer: 0
   m_Name: BroSnack
   m_TagString: Untagged
@@ -72,10 +73,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 531966131
-  m_SortingLayer: 1
+  m_SortingLayerID: 772907811
+  m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: eb2669abff0ffa94abb8be3013099a6f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9c6b2973897a76d4e9274a196124b45c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -149,7 +150,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5688889, y: 0.5688889}
+    oldSize: {x: 5.12, y: 5.12}
     newSize: {x: 5.12, y: 5.12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -158,3 +159,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5688889, y: 0.5688889}
   m_EdgeRadius: 0
+--- !u!114 &3102525050916498990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5955781303284202296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 866ffc6fcba6b9e42b1523029e139b12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

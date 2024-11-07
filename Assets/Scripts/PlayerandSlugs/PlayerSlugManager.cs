@@ -28,16 +28,21 @@ public class PlayerSlugManager : MonoBehaviour
     
     [Header("Visual Effects")]
     // The note visual effect that is played when the player calls
-    [SerializeField] private GameObject vfxNotesPrefab; 
-    
+    [SerializeField] private GameObject vfxNotesPrefab;
+
+    [SerializeField] private float callVFXDuration = 2.4f;
     // Private variables
     private GameObject m_goCallRadiusEffectInstance; // Instance of the call radius visual effect
     private GameObject m_goPlayer; // Reference to the player GameObject
 
+    [SerializeField] public bool m_bHasBroSnack;
+
+    private Animator playerAnimator;
     // Start is called before the first frame update
     void Start()
     {
         m_goPlayer = gameObject; // assigns player gameobject
+        playerAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -48,7 +53,7 @@ public class PlayerSlugManager : MonoBehaviour
         HandleThrowing();
         if (m_lAssignedSlugs.Count != 0)
         {
-            m_HUDUI.text = m_lAssignedSlugs.Count.ToString();
+            //m_HUDUI.text = m_lAssignedSlugs.Count.ToString();
         }
     }
 
@@ -130,7 +135,7 @@ public class PlayerSlugManager : MonoBehaviour
         GameObject vfxInstance = Instantiate(vfxNotesPrefab, vfxPosition, Quaternion.identity);
         // TODO change this visual effect when Esteri finds a better one
         // Destroy the visual effect after 1 second
-        Destroy(vfxInstance, 1f);
+        Destroy(vfxInstance, callVFXDuration);
         
         // Find all slugs within the call radius using the defined layer mask
         Collider2D[] aSlugsInRadius = Physics2D.OverlapCircleAll(v2MouseWorldPos, m_fCallRadius, m_lSlugLayerMask);
@@ -162,6 +167,13 @@ public class PlayerSlugManager : MonoBehaviour
         // Check if the left mouse button is pressed
         if (Input.GetMouseButtonDown(0) && ManageGameplay.Instance.PlayerCanThrowBros)
         {
+            playerAnimator.runtimeAnimatorController =
+                gameObject.GetComponent<PlayerControllerManager>().throwAnimatorController;
+            // Calculate the throw direction
+            Vector2 v2MouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 throwDirection = (v2MouseWorldPos - (Vector2)m_goPlayer.transform.position).normalized;
+            // Update the Animator's Direction parameter
+            UpdateAnimatorDirection(throwDirection);
             ThrowSlug(); // ThrowSlug
         }
     }
@@ -175,6 +187,12 @@ public class PlayerSlugManager : MonoBehaviour
         // Get the mouse position in world coordinates
         Vector2 v2MouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
+        // Calculate the direction vector from the player to the mouse position
+        Vector3 throwDirection = (v2MouseWorldPos - (Vector2)m_goPlayer.transform.position).normalized;
+
+        // Update the Animator's Direction parameter based on the throw direction
+        UpdateAnimatorDirection(throwDirection);
+        
         // Find the nearest slug to the player
         GameObject goNearestSlug = null;
         float fMinDistance = Mathf.Infinity;
@@ -208,9 +226,23 @@ public class PlayerSlugManager : MonoBehaviour
                 slugFollower.ThrowTowards(v2MouseWorldPos);
             }
         }
-
+    
         // Draw a debug line from the player's position to the target mouse position
         StartCoroutine(DrawThrowLine(m_goPlayer.transform.position, v2MouseWorldPos, 1f));
+    }
+    void UpdateAnimatorDirection(Vector3 direction)
+    {
+        if (direction.sqrMagnitude > 0.01f)
+        {
+            // Determine the angle of the throw direction
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+            // Get the direction index based on the angle
+            int directionIndex = gameObject.GetComponent<IsoSpriteDirectionManager>().GetDirectionIndexForAngle(angle);
+
+            // Update the Animator's Direction parameter
+            playerAnimator.SetInteger("Direction", directionIndex);
+        }
     }
 
     // Coroutine to draw a debug line for visualizing the slug throw

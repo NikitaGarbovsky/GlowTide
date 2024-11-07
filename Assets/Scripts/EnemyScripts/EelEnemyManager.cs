@@ -2,6 +2,7 @@ using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -11,7 +12,7 @@ using UnityEngine.UI;
 /// </summary>
 public class EelEnemyManager : MonoBehaviour
 { 
-    enum EelState
+    public enum EelState
     {
         Patrol, // Patroll Waypoint List
         Investigate, // Stop and Look at Last Player Location 
@@ -21,7 +22,7 @@ public class EelEnemyManager : MonoBehaviour
     }
 
     [Header("Eel")]
-    [SerializeField] EelState m_currentEelState; // Current State of the Eel
+    [SerializeField] public EelState m_currentEelState; // Current State of the Eel
     [SerializeField] GameObject m_eel; // Game Object of the Eel
     [SerializeField] GameObject m_player; // Refference to the Player
     [SerializeField] AIPath m_aiPath; // AIPath Component
@@ -70,6 +71,7 @@ public class EelEnemyManager : MonoBehaviour
     private void Start()
     {
         m_aiPath.enabled = false;
+        m_player = ManageGameplay.Instance.playerCharacter;
     }
 
     private void Update()
@@ -123,12 +125,12 @@ public class EelEnemyManager : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             Debug.Log("Restart Level");
         }
-
+        
         // Collide with Geyser
         Collider2D[] colliders = Physics2D.OverlapCircleAll(m_eel.transform.position, m_killDistance);
         foreach (Collider2D collider in colliders)
         {
-            if (collider.gameObject.tag == "Geyser")
+            if (collider.gameObject.CompareTag("Geyser"))
             {
                 m_currentEelState = EelState.Stunned;
                 break;

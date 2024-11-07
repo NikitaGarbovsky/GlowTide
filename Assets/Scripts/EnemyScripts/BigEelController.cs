@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,5 +28,14 @@ public class BigEelController : MonoBehaviour
     {
         m_canMove = true;
         m_point = _point;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("Eel Boss Collided with Slug");
+        if (other.CompareTag("Slug"))
+        {
+            Destroy(other.gameObject);
+        }
     }
 }
