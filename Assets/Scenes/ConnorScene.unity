@@ -721,18 +721,47 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 859770254463552474, guid: 3a1db3e2037cd434981cbd093c301f24, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 859770254463552474, guid: 3a1db3e2037cd434981cbd093c301f24, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3808344954236350963, guid: 3a1db3e2037cd434981cbd093c301f24, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 3808344954236350963, guid: 3a1db3e2037cd434981cbd093c301f24, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.48
+      objectReference: {fileID: 0}
     - target: {fileID: 4662036591256240016, guid: 3a1db3e2037cd434981cbd093c301f24, type: 3}
       propertyPath: m_Name
       value: EelOffSpringEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 4831274689041678491, guid: 3a1db3e2037cd434981cbd093c301f24, type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< Updated upstream
       value: 1.41
       objectReference: {fileID: 0}
     - target: {fileID: 4831274689041678491, guid: 3a1db3e2037cd434981cbd093c301f24, type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.89
       objectReference: {fileID: 0}
+=======
+      value: -0.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831274689041678491, guid: 3a1db3e2037cd434981cbd093c301f24, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 5048838956848167057, guid: 3a1db3e2037cd434981cbd093c301f24, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee079ae8391ae2e4db9c66770e2eb7e1, type: 3}
+>>>>>>> Stashed changes
     - target: {fileID: 5151981776072291680, guid: 3a1db3e2037cd434981cbd093c301f24, type: 3}
       propertyPath: m_player
       value: 
@@ -11962,6 +11991,14 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 615026156}
+    - target: {fileID: 4304566143339152448, guid: 035230a8cfb702446866ecca2213c994, type: 3}
+      propertyPath: m_Lens.OrthographicSize
+      value: 3.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 4877856657517448255, guid: 035230a8cfb702446866ecca2213c994, type: 3}
+      propertyPath: orthographic size
+      value: 3.86
+      objectReference: {fileID: 0}
     - target: {fileID: 5642738515946614634, guid: 035230a8cfb702446866ecca2213c994, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.19
