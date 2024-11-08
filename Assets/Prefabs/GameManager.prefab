@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8821836408881930434}
   - component: {fileID: 5119106313127388376}
+  - component: {fileID: 5189512203980808372}
   m_Layer: 0
   m_Name: 3_Level3Manager
   m_TagString: Untagged
@@ -46,6 +47,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_sLevelName: 
   levelTrigger: {fileID: 0}
+--- !u!114 &5189512203980808372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889932219495189297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2067141234d72d4cb05a974cb63cbfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1419157646771207417
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,6 +313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8826968043843886077}
   - component: {fileID: 918482633600177703}
+  - component: {fileID: 9042078619579293559}
   m_Layer: 0
   m_Name: 4_Level4Manager
   m_TagString: Untagged
@@ -336,6 +350,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_sLevelName: 
   levelTrigger: {fileID: 0}
+--- !u!114 &9042078619579293559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2765206725994551575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1f7a414836ae844db1ff95e27037772, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3807848965172573117
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,7 +556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 631ec2cfeda8f15499d8b79408c3d37b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EelBossPrefab: {fileID: 0}
+  EelBossPrefab: {fileID: 1647357637110406790, guid: 7bc24efc23ac34d4dbee40a3c3031503, type: 3}
 --- !u!1 &8358886677518826340
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,6 +629,7 @@ GameObject:
   m_Component:
   - component: {fileID: 671089843652960092}
   - component: {fileID: 6251687348665845409}
+  - component: {fileID: 8688583759855209289}
   m_Layer: 0
   m_Name: 5_Level5Manager
   m_TagString: Untagged
@@ -639,6 +666,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_sLevelName: 
   levelTrigger: {fileID: 0}
+--- !u!114 &8688583759855209289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8575911852564803885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7f3febb0e2fc9f41867d2ed1e4a60d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1140291551171689361
 PrefabInstance:
   m_ObjectHideFlags: 0
