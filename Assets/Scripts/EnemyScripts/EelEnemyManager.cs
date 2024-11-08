@@ -130,9 +130,10 @@ public class EelEnemyManager : MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapCircleAll(m_eel.transform.position, m_killDistance);
         foreach (Collider2D collider in colliders)
         {
-            if (collider.gameObject.CompareTag("Geyser"))
+            if (collider.gameObject.CompareTag("Geyser") && m_currentEelState != EelState.Stunned && m_currentEelState != EelState.Returning)
             {
                 m_currentEelState = EelState.Stunned;
+                m_aiPath.enabled = false;
                 break;
             }
         }
@@ -227,7 +228,7 @@ public class EelEnemyManager : MonoBehaviour
 
     void FindToClosestWaypoint()
     {
-        float smallestDist = 0.0f;
+        float smallestDist = -Mathf.Infinity;
         int index = 0;
         foreach (Transform waypoint in m_waypoints)
         {
@@ -247,8 +248,6 @@ public class EelEnemyManager : MonoBehaviour
         
         m_eelAngle = Mathf.Atan2(m_aiPath.velocity.normalized.y, m_aiPath.velocity.normalized.x);
         m_directionManager.UpdateSpriteDirection(m_aiPath.velocity.normalized);
-
-        Debug.Log(Vector2.Distance(m_eel.transform.position, m_waypoints[m_waypointIndex].position));
 
         if (Vector2.Distance(m_eel.transform.position, m_waypoints[m_waypointIndex].position) <= (m_aiPath.endReachedDistance + m_aiPath.slowdownDistance))
         {
