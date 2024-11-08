@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SlugSpawnPoint: {fileID: 482391002763190281}
-  SeaSlugPrefabToSpawn: {fileID: 4804877139645147846, guid: 4d1bb38df3f09fd4c8b7706cdd450353, type: 3}
+  SeaSlugPrefabToSpawn: {fileID: 740087250463829832, guid: 6b5be1658f2be644a98cb6c7c3559ffe, type: 3}
   _bushState: 0
 --- !u!60 &7430110949176986227
 PolygonCollider2D:
@@ -168,8 +168,8 @@ PolygonCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    border: {x: 0.078, y: 0.134, z: 0.076000005, w: 0.124000005}
+    pivot: {x: 0.5, y: 0.14467594}
     oldSize: {x: 0.922, y: 0.914}
     newSize: {x: 0.922, y: 0.914}
     adaptiveTilingThreshold: 0.5

@@ -48,7 +48,7 @@ Material:
     - _Glow_Intensity: 0
     - _UseAlbedo: 0
     m_Colors:
-    - _Glow_Colour: {r: 63.396233, g: 40.81005, b: 5.974514, a: 0}
+    - _Glow_Colour: {r: 0.39930737, g: 4.237095, b: 3.4576025, a: 0}
     - _RemapAlbedoToGlow: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &6240095697579758983
