@@ -12,21 +12,33 @@ public class DoorInteractiveObject : InteractiveObject
     [SerializeField] private GameObject m_Grid;
 
     [SerializeField] List<Transform> slugSpots = new List<Transform>();
+    
     private int slugSpotIndex = 0; // Tracks the next available slug spot
 
     private int slugsReachedTarget = 0; // Count of slugs that have reached their spots
     
     // VFX prefab for door destruction
     [SerializeField] private GameObject vfxKelpPrefab;
-    
+    [SerializeField] private GameObject slugNumberVFX;
+
+    private List<GameObject> slugNumberVFXList = new List<GameObject>();
     // Add an event to notify when the door has been destroyed
     public event Action OnDoorDestroyed;
     private void Start()
     {
         m_Grid = GameObject.FindWithTag("Grid"); // finds the grid gameobject in the scene and applies it.
         m_iCondition = m_iObjectConditionAmount;
+        for (int i = 0; i < m_iObjectConditionAmount; i++)
+        {
+            GameObject slugVFX =  Instantiate(slugNumberVFX, gameObject.transform.position, Quaternion.identity);
+            slugNumberVFXList.Add(slugVFX);
+        }
     }
 
+    ~DoorInteractiveObject()
+    {
+        
+    }
     protected override void ExecuteObjectAction()
     {
         StartCoroutine(FadeOutAndDestroy());
@@ -96,6 +108,11 @@ public class DoorInteractiveObject : InteractiveObject
 
         // Before destroying the door, invoke the event
         OnDoorDestroyed?.Invoke();
+        
+        foreach (var slugvfx in slugNumberVFXList)
+        {
+            Destroy(slugvfx);
+        }
         
         // Destroy the door GameObject
         Destroy(gameObject);

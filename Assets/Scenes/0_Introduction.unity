@@ -606,6 +606,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 808477338}
     - target: {fileID: 8634067906856939228, guid: 116b32d25cae78940be2a3cb5eed22d2, type: 3}
+      propertyPath: m_fCallRadius
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634067906856939228, guid: 116b32d25cae78940be2a3cb5eed22d2, type: 3}
       propertyPath: m_fThrowDistance
       value: 4
       objectReference: {fileID: 0}
