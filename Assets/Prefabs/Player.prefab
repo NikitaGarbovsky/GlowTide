@@ -263,14 +263,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_lAssignedSlugs: []
   m_HUDUI: {fileID: 0}
-  m_fCallRadius: 1
+  m_fCallRadius: 0.15
   m_fCallMaxDistance: 2
   m_lSlugLayerMask:
     serializedVersion: 2
     m_Bits: 256
   m_goCallRadiusEffectPrefab: {fileID: 6090554775883013731, guid: 0c98a58b4b8974145a2cda4463b03e72, type: 3}
   m_fThrowDistance: 2
-  m_fThrowSpeed: 10
+  m_fThrowSpeed: 5
   vfxNotesPrefab: {fileID: 6624332161375095230, guid: 9182ab5848c31f149b4a24ddd0235486, type: 3}
   callVFXDuration: 2.4
   m_bHasBroSnack: 0
