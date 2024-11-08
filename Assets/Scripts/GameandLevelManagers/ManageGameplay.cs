@@ -29,6 +29,10 @@ public sealed class ManageGameplay : MonoBehaviour
     // References to level manager GameObjects
     [SerializeField] private GameObject[] levelManagers;
     private SceneManager sceneManager;
+    
+    // This is the object that is used for the fade-out/in effect for scene loading
+    [SerializeField] private CanvasGroup fadeCanvasGroup;
+    [SerializeField] public float fadeDuration = 2f;
     private void Awake()
     {
         // Singleton pattern implementation
@@ -44,6 +48,11 @@ public sealed class ManageGameplay : MonoBehaviour
         // Gets the camera components from the child game object. (the main camera)
         virtualCamera = GetComponentInChildren<CinemachineVirtualCamera>();
         framingTransposer = virtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
+        
+        if (fadeCanvasGroup == null)
+        {
+            fadeCanvasGroup = GetComponentInChildren<CanvasGroup>();
+        }
     }
     
     private void OnEnable()
@@ -207,6 +216,65 @@ public sealed class ManageGameplay : MonoBehaviour
         // Ensure final values are set
         framingTransposer.m_TrackedObjectOffset = targetOffset;
         virtualCamera.m_Lens.OrthographicSize = targetOrthographicSize;
+    }
+    // This is the primary method that is called throughout the codebase that will load a scene with the fading effect
+    public void LoadSceneWithFade(string sceneName)
+    {
+        // Uses the passed in scene name (E.g. "1_Level1") to load the corresponding scene (with the fade effect)
+        StartCoroutine(LoadSceneWithFadeCoroutine(sceneName));
+    }
+
+    private IEnumerator LoadSceneWithFadeCoroutine(string sceneName)
+    {
+        // Start fade-out
+        yield return StartCoroutine(Fade(1f));
+
+        // Load the scene
+        if (sceneName == "reset")
+        {
+            // Reload current scene
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        else
+        {
+            SceneManager.LoadScene(sceneName);
+        }
+
+        // Wait for one frame to allow the scene to load
+        yield return null;
+
+        // Start fade-in
+        yield return StartCoroutine(Fade(0f));
+    }
+
+    private IEnumerator Fade(float targetAlpha)
+    {
+        float startAlpha = fadeCanvasGroup.alpha;
+        float elapsedTime = 0f;
+
+        // Enable interaction blocking during fade-out
+        if (targetAlpha == 1f)
+        {
+            fadeCanvasGroup.interactable = true;
+            fadeCanvasGroup.blocksRaycasts = true;
+        }
+
+        while (elapsedTime < fadeDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            float t = elapsedTime / fadeDuration;
+            fadeCanvasGroup.alpha = Mathf.Lerp(startAlpha, targetAlpha, t);
+            yield return null;
+        }
+
+        fadeCanvasGroup.alpha = targetAlpha;
+
+        // Disable interaction blocking after fade-in
+        if (targetAlpha == 0f)
+        {
+            fadeCanvasGroup.interactable = false;
+            fadeCanvasGroup.blocksRaycasts = false;
+        }
     }
 
 

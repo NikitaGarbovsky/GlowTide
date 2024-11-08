@@ -14,6 +14,42 @@ public class Level6Triggers : LevelTriggers
         {
             StartCoroutine(ZoomOutAndShowLevel());
         }
+        if (_sTriggerName == "1_EelBoss")
+        {
+            
+        }
+        if (_sTriggerName == "2_EelBoss")
+        {
+            
+        }
+        if (_sTriggerName == "3_EelBoss")
+        {
+            
+        }
+        if (_sTriggerName == "4_EelBoss")
+        {
+            
+        }
+        if (_sTriggerName == "5_EelBoss")
+        {
+            
+        }
+        if (_sTriggerName == "6_EelBoss")
+        {
+            
+        }
+        if (_sTriggerName == "7_EelBoss")
+        {
+            
+        }
+        if (_sTriggerName == "8_EelBoss")
+        {
+            
+        }
+        if (_sTriggerName == "9_LevelTransition")
+        {
+            
+        }
     }
     private IEnumerator ZoomOutAndShowLevel()
     {
@@ -26,7 +62,7 @@ public class Level6Triggers : LevelTriggers
         Vector2 targetOffset = levelCenter - ManageGameplay.Instance.playerCharacter.transform.position;
 
         // 3. Camera pans to the level center while zooming out
-        float zoomOutSize = 10f; // Adjust this value based on your level size
+        float zoomOutSize = 10f; // Adjust this value based on the levels size
         float panDuration = 2f;
         yield return StartCoroutine(ManageGameplay.Instance.PanAndZoomCamera(targetOffset, zoomOutSize, panDuration));
 
