@@ -171,6 +171,7 @@ MonoBehaviour:
   - {fileID: 889932219495189297}
   - {fileID: 2765206725994551575}
   - {fileID: 8575911852564803885}
+  - {fileID: 5961312869987737664}
 --- !u!1 &2765206725994551575
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,6 +288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3448414838086530873}
   - component: {fileID: 5969629736613089254}
+  - component: {fileID: 3651590226624323160}
   m_Layer: 0
   m_Name: 6_Level6Manager
   m_TagString: Untagged
@@ -323,6 +325,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_sLevelName: 
   levelTrigger: {fileID: 0}
+--- !u!114 &3651590226624323160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5961312869987737664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 631ec2cfeda8f15499d8b79408c3d37b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EelBossPrefab: {fileID: 0}
 --- !u!1 &8358886677518826340
 GameObject:
   m_ObjectHideFlags: 0
