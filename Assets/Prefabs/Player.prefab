@@ -303,6 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f94783139c7e6e4bb503fd24d524db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_destinationObject: {fileID: 0}
   idleAnimatorController: {fileID: 9100000, guid: f1268f188b0f4f141953ccd924d0900d, type: 2}
   throwAnimatorController: {fileID: 9100000, guid: e217ef8c484270742b7340e70f275ccd, type: 2}
 --- !u!82 &7275227552309675768
