@@ -1,52 +1,56 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
-/// <summary>
-/// This class inherited from the LevelTriggers class, it executes functionality related to individual triggers
-/// associated with the first level of the game.
-/// </summary>
-public class Level1Triggers : LevelTriggers
+
+public class Level6Triggers : LevelTriggers
 {
     private Tilemap tilemap; // Reference to the Tilemap
     private Vector3 levelCenter; // Center position of the level
+    [SerializeField] private GameObject EelBossPrefab;
     public override void ExecuteLevelTrigger(string _sTriggerName)
     {
         if (_sTriggerName == "0_ZoomOutAndShowLevel") // This is the name of the gameobject that is being triggered.
         {
             StartCoroutine(ZoomOutAndShowLevel());
         }
-        if (_sTriggerName == "1_LevelTransition") 
+        if (_sTriggerName == "1_EelBoss")
         {
-            // This is where the level transition trigger occurs
-            Debug.Log("Level of level triggered");
-            // Loads the next scene
-            ManageGameplay.Instance.LoadSceneWithFade("2_Level2");
+            
+        }
+        if (_sTriggerName == "2_EelBoss")
+        {
+            
+        }
+        if (_sTriggerName == "3_EelBoss")
+        {
+            
+        }
+        if (_sTriggerName == "4_EelBoss")
+        {
+            
+        }
+        if (_sTriggerName == "5_EelBoss")
+        {
+            
+        }
+        if (_sTriggerName == "6_EelBoss")
+        {
+            
+        }
+        if (_sTriggerName == "7_EelBoss")
+        {
+            
+        }
+        if (_sTriggerName == "8_EelBoss")
+        {
+            
+        }
+        if (_sTriggerName == "9_LevelTransition")
+        {
+            
         }
     }
-
-    private void Start()
-    {
-        // Find the Tilemap in the scene (assuming there's only one)
-        tilemap = FindObjectOfType<Tilemap>();
-
-        if (tilemap != null)
-        {
-            // Calculate the bounds of the Tilemap
-            Bounds tilemapBounds = tilemap.localBounds;
-
-            // Get the center position of the level
-            levelCenter = tilemapBounds.center;
-        }
-        else
-        {
-            Debug.LogError("Tilemap not found in the scene.");
-            // Set a default center position if needed
-            levelCenter = Vector3.zero;
-        }
-    }
-
     private IEnumerator ZoomOutAndShowLevel()
     {
         // 1. Remove all controls from the player
@@ -74,5 +78,4 @@ public class Level1Triggers : LevelTriggers
         ManageGameplay.Instance.PlayerCanCallBros = true;
         ManageGameplay.Instance.PlayerCanThrowBros = true;
     }
-
 }
