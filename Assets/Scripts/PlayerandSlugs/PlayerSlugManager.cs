@@ -38,11 +38,14 @@ public class PlayerSlugManager : MonoBehaviour
     [SerializeField] public bool m_bHasBroSnack;
 
     private Animator playerAnimator;
+
+    AudioSource m_audioSource;
     // Start is called before the first frame update
     void Start()
     {
         m_goPlayer = gameObject; // assigns player gameobject
         playerAnimator = GetComponent<Animator>();
+        m_audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -93,6 +96,7 @@ public class PlayerSlugManager : MonoBehaviour
                 {
                     // Call slugs
                     CallSlugs(v3MouseWorldPos);
+                    m_audioSource.Play();
                 }
             }
         }

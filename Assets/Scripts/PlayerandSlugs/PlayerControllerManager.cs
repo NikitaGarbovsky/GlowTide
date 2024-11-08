@@ -11,6 +11,7 @@ public class PlayerControllerManager : MonoBehaviour
     private IsoSpriteDirectionManager spriteDirectionManager; // Reference to IsoSpriteDirectionManager
 
     private Vector3 targetPosition;
+    [SerializeField] GameObject m_destinationObject;
 
     private Animator playerAnimator;
     [SerializeField] public RuntimeAnimatorController idleAnimatorController;
@@ -46,6 +47,7 @@ public class PlayerControllerManager : MonoBehaviour
 
                 // Set the target position for the A* pathfinding system
                 targetPosition = mousePosition;
+                if (m_destinationObject != null) m_destinationObject.transform.position = targetPosition;
                 aiPath.destination = targetPosition; // Tell A* where to move
             }
         }

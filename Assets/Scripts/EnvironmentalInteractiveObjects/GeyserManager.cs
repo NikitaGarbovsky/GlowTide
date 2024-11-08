@@ -8,9 +8,18 @@ public class GeyserManager : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f; // Speed of movement towards the target
 
      public bool m_bActive = true;
+
+    AudioSource m_audioSource;
+
+    private void Start()
+    {
+        m_audioSource = GetComponent<AudioSource>();
+    }
+
     // 1. Object Collides with Geyser
     private void OnTriggerEnter2D(Collider2D other)
     {
+        m_audioSource.Play();
         if (other.gameObject.CompareTag("Player") && m_bActive)
         {
             // 2. Disable pathfinding and collisions
