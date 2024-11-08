@@ -34,7 +34,7 @@ public class EelEnemyManager : MonoBehaviour
     [SerializeField] Vector2 m_imageOffset; // offset from the Eel Center
     [SerializeField] Sprite m_investigatingSprite; // Sprite for Investigating
     [SerializeField] Sprite m_chaseSprite; // Sprite for Chaseing
-    [SerializeField] Sprite m_stunnedSprite; // Sprite for Stunned
+    [SerializeField] GameObject m_stunnedVFX; // Sprite for Stunned
 
     [Header("Patrol")]
     [SerializeField, Min(0.0f)] float m_speed; // Movement Speed
@@ -72,6 +72,7 @@ public class EelEnemyManager : MonoBehaviour
     {
         m_aiPath.enabled = false;
         m_player = ManageGameplay.Instance.playerCharacter;
+        m_stunnedVFX.SetActive(false);
     }
 
     private void Update()
@@ -100,8 +101,8 @@ public class EelEnemyManager : MonoBehaviour
             case EelState.Stunned:
                 m_canSee = false;
                 Stunned();
-                m_UIImage.enabled = true;
-                m_UIImage.sprite = m_stunnedSprite;
+                m_UIImage.enabled = false;
+                m_stunnedVFX.SetActive(true);
                 break;
             case EelState.Returning:
                 m_canSee = false;
@@ -252,6 +253,7 @@ public class EelEnemyManager : MonoBehaviour
         if (Vector2.Distance(m_eel.transform.position, m_waypoints[m_waypointIndex].position) <= (m_aiPath.endReachedDistance + m_aiPath.slowdownDistance))
         {
             m_aiPath.enabled = false;
+            m_stunnedVFX.SetActive(false);
             // Increment m_waypointIndex
             m_waypointIndex++;
             // Stop m_waypointIndex from going out of bounds
