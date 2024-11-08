@@ -234,11 +234,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3149615787120449118, guid: 8e356972ef8efb042b04d7fd584420b5, type: 3}
       propertyPath: m_ChunkCullingBounds.x
-      value: 0.924
+      value: 4.6318517
       objectReference: {fileID: 0}
     - target: {fileID: 3149615787120449118, guid: 8e356972ef8efb042b04d7fd584420b5, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 2.0062401
+      value: 6.0303698
+      objectReference: {fileID: 0}
+    - target: {fileID: 3999228297054483399, guid: 8e356972ef8efb042b04d7fd584420b5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4045315551138652549, guid: 8e356972ef8efb042b04d7fd584420b5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18781,7 +18785,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
