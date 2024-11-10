@@ -678,6 +678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7f3febb0e2fc9f41867d2ed1e4a60d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EelBossPrefab: {fileID: 1647357637110406790, guid: 7bc24efc23ac34d4dbee40a3c3031503, type: 3}
 --- !u!1001 &1140291551171689361
 PrefabInstance:
   m_ObjectHideFlags: 0
