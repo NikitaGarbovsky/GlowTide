@@ -262,6 +262,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4313226872931705859, guid: 05a84d5cc07359f4e9f45690541dbed2, type: 3}
   m_PrefabInstance: {fileID: 172739832}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &240041439
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 240041440}
+  m_Layer: 0
+  m_Name: 2_EelBossDespawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &240041440
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240041439}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.01, y: -20.44, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1001276565}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &295825453
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20617,13 +20648,33 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1190160751245544018, guid: 593bf234994eb2e4499c31fe30449218, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 964544513}
   m_SourcePrefab: {fileID: 100100000, guid: 593bf234994eb2e4499c31fe30449218, type: 3}
 --- !u!4 &964544511 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1275803238459255255, guid: 593bf234994eb2e4499c31fe30449218, type: 3}
   m_PrefabInstance: {fileID: 964544510}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &964544512 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1190160751245544018, guid: 593bf234994eb2e4499c31fe30449218, type: 3}
+  m_PrefabInstance: {fileID: 964544510}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &964544513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964544512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8f42696f9746b8468bc879b29b78b4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1001276564
 GameObject:
   m_ObjectHideFlags: 0
@@ -20655,6 +20706,8 @@ Transform:
   m_Children:
   - {fileID: 964544511}
   - {fileID: 1629357443}
+  - {fileID: 1514047674}
+  - {fileID: 240041440}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1005778256
@@ -21190,6 +21243,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b5be1658f2be644a98cb6c7c3559ffe, type: 3}
+--- !u!1 &1514047673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1514047674}
+  m_Layer: 0
+  m_Name: 1_EelBossSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1514047674
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514047673}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.01, y: 18.39, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1001276565}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1554143902
 PrefabInstance:
   m_ObjectHideFlags: 0
