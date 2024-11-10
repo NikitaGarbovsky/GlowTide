@@ -21,8 +21,8 @@ public class Level1Triggers : LevelTriggers
         {
             // This is where the level transition trigger occurs
             Debug.Log("Level of level triggered");
-            // TODO add a fade out for level transitions.
-            SceneManager.LoadScene("2_Level2");
+            // Loads the next scene
+            ManageGameplay.Instance.LoadSceneWithFade("2_Level2");
         }
     }
 
@@ -58,7 +58,7 @@ public class Level1Triggers : LevelTriggers
         Vector2 targetOffset = levelCenter - ManageGameplay.Instance.playerCharacter.transform.position;
 
         // 3. Camera pans to the level center while zooming out
-        float zoomOutSize = 10f; // Adjust this value based on your level size
+        float zoomOutSize = 10f; // Adjust this value based on the levels size
         float panDuration = 2f;
         yield return StartCoroutine(ManageGameplay.Instance.PanAndZoomCamera(targetOffset, zoomOutSize, panDuration));
 
