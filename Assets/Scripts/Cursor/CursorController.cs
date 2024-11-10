@@ -19,6 +19,7 @@ public class CursorController : MonoBehaviour
     [SerializeField] Texture2D m_cursorHoverTexture;
     [SerializeField] Vector2 m_cursorPosition = Vector2.zero;
     [SerializeField] GameObject m_cursorVFX;
+    float m_holdDownTimer;
 
     private void Awake()
     {
@@ -42,11 +43,16 @@ public class CursorController : MonoBehaviour
     {
         if (Input.GetMouseButton(1) || Input.GetMouseButton(0))
         {
-            m_cursorVFX.SetActive(true);
             m_cursorVFX.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition + Vector3.forward);
+            m_holdDownTimer += Time.deltaTime;
+            if (m_holdDownTimer > 1f)
+            { 
+                m_cursorVFX.SetActive(true);
+            }
         }
         else 
         {
+            m_holdDownTimer = 0f;
             m_cursorVFX.SetActive(false); 
         }
     }
@@ -56,7 +62,7 @@ public class CursorController : MonoBehaviour
         switch (_mode)
         {
             case CursorModeEnum.Default:
-                Cursor.SetCursor(m_cursorHoverTexture, m_cursorPosition, CursorMode.Auto);
+                Cursor.SetCursor(m_cursorTexture, m_cursorPosition, CursorMode.Auto);
                 break;
             case CursorModeEnum.Hover:
                 Cursor.SetCursor(m_cursorHoverTexture, m_cursorPosition, CursorMode.Auto);
