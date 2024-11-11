@@ -49,8 +49,8 @@ public class SeaSlugBroFollower : MonoBehaviour
 
     private Vector2 m_v2ThrownTargetPosition;    // The target position when the slug is thrown
 
-    // Event triggered when the slug reaches its target object
-    public event Action<SeaSlugBroFollower> OnReachedTarget;
+    // Flag to see if the seaslug bro is within a trigger box (this is used in later levels with the Eel Boss)
+    public bool m_bIsInVulnerableZone = false; 
 
     private void Start()
     {

@@ -264,7 +264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_lAssignedSlugs: []
   m_HUDUI: {fileID: 0}
-  m_fCallRadius: 0.15
+  m_fCallRadius: 1
   m_fCallMaxDistance: 2
   m_lSlugLayerMask:
     serializedVersion: 2

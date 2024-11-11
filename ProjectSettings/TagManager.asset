@@ -10,6 +10,7 @@ TagManager:
   - HUD
   - Slug
   - Geyser
+  - EelBossSpawns
   layers:
   - Default
   - TransparentFX
