@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 437328936343593880}
   - component: {fileID: 3124780315490298394}
   m_Layer: 0
-  m_Name: PS_Interactable
+  m_Name: PS_ScaredBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -116,7 +116,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 5
+      scalar: 3
       minScalar: 2
       maxCurve:
         serializedVersion: 2
@@ -226,7 +226,7 @@ ParticleSystem:
       maxColor: {r: 0.6658326, g: 0.3254717, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.559813, g: 0, b: 0.745283, a: 0}
+        key0: {r: 0.8490566, g: 0.27659962, b: 0, a: 0}
         key1: {r: 0.8934288, g: 0.5707547, b: 1, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 1}
         key3: {r: 0, g: 0, b: 0, a: 0}
@@ -751,7 +751,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.25
+      value: 0.5
       mode: 0
       spread: 0
       speed:
@@ -870,7 +870,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 15
+      scalar: 3
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4795,8 +4795,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 531966131
-  m_SortingLayer: 1
+  m_SortingLayerID: 483626029
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
