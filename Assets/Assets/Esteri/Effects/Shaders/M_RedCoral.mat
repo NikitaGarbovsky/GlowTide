@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Glow_AmbientLevel
+  m_Name: M_RedCoral
   m_Shader: {fileID: -6465566751694194690, guid: 47446852b91cba843a5d57d851c2a7d4, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -19,16 +19,16 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
-  m_LockedProperties: _UseAlbedo
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _Glow_Map:
-        m_Texture: {fileID: 2800000, guid: 51a490b955ce99d4f8b8085916080b2a, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 51a490b955ce99d4f8b8085916080b2a, type: 3}
+        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -45,13 +45,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Glow_Intensity: 0
     - _UseAlbedo: 0
     m_Colors:
-    - _Glow_Colour: {r: 0.45916444, g: 19.468575, b: 16.880907, a: 0}
+    - _Glow_Colour: {r: 30.188683, g: 11.024757, b: 0, a: 0}
     - _RemapAlbedoToGlow: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &6240095697579758983
+--- !u!114 &1600566801737444805
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
