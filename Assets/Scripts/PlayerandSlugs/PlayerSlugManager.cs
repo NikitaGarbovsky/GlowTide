@@ -171,16 +171,27 @@ public class PlayerSlugManager : MonoBehaviour
         // Check if the left mouse button is pressed
         if (Input.GetMouseButtonDown(0) && ManageGameplay.Instance.PlayerCanThrowBros)
         {
-            playerAnimator.runtimeAnimatorController =
-                gameObject.GetComponent<PlayerControllerManager>().throwAnimatorController;
             // Calculate the throw direction
             Vector2 v2MouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3 throwDirection = (v2MouseWorldPos - (Vector2)m_goPlayer.transform.position).normalized;
+
             // Update the Animator's Direction parameter
-            UpdateAnimatorDirection(throwDirection);
-            ThrowSlug(); // ThrowSlug
+            int directionIndex = GetComponent<IsoSpriteDirectionManager>().UpdateAnimatorDirection(throwDirection);
+            
+            // Switch to the throw animator controller
+            playerAnimator.runtimeAnimatorController = gameObject.GetComponent<PlayerControllerManager>().throwAnimatorController;
+
+            // Play the specific animation based on direction index
+            string animationName = directionIndex + "_PlayerThrow_" + GetComponent<IsoSpriteDirectionManager>().GetDirectionName(directionIndex);
+            playerAnimator.Play(animationName, 0, 0f); // Start at beginning of animation
+            
+            // Sets the direction after the 
+            GetComponent<IsoSpriteDirectionManager>().SetDirection(directionIndex);
+            // Proceed to throw the slug
+            ThrowSlug();
         }
     }
+
 
     // Throws the nearest slug towards the mouse position
     void ThrowSlug()
@@ -190,12 +201,6 @@ public class PlayerSlugManager : MonoBehaviour
 
         // Get the mouse position in world coordinates
         Vector2 v2MouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        // Calculate the direction vector from the player to the mouse position
-        Vector3 throwDirection = (v2MouseWorldPos - (Vector2)m_goPlayer.transform.position).normalized;
-
-        // Update the Animator's Direction parameter based on the throw direction
-        UpdateAnimatorDirection(throwDirection);
         
         // Find the nearest slug to the player
         GameObject goNearestSlug = null;
