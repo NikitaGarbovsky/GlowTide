@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 41989cc8604e38740b60c159c96bd8fe
+guid: 1e1b84f7c44b1f04a9641b7d2b8ddd96
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Avenir LT Std
+  - Cinzel Decorative
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
