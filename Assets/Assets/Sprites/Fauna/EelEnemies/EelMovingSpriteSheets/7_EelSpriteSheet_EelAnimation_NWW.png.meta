@@ -1,0 +1,642 @@
+fileFormatVersion: 2
+guid: af862fc17e6c1494aa33b217d2acd890
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 7_EelSpriteSheet_EelAnimation_NWW_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5600
+        width: 2500
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcf3e9b524b84d7488719e14b0f57c58
+      internalID: 2060261670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7_EelSpriteSheet_EelAnimation_NWW_1
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 5600
+        width: 2500
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d748f3b8c22a840a7fca16eea7fd50
+      internalID: 1174414554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7_EelSpriteSheet_EelAnimation_NWW_2
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 5600
+        width: 2500
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0edb6bd3aceb83549a98d1634f3fb7fb
+      internalID: 118694651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7_EelSpriteSheet_EelAnimation_NWW_3
+      rect:
+        serializedVersion: 2
+        x: 7500
+        y: 5600
+        width: 2500
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31e7d11abf226f3408002a388e934734
+      internalID: -316504572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7_EelSpriteSheet_EelAnimation_NWW_4
+      rect:
+        serializedVersion: 2
+        x: 10000
+        y: 5600
+        width: 2500
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b710045874d3bd44bdf3b696080199b
+      internalID: 1091103351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7_EelSpriteSheet_EelAnimation_NWW_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4200
+        width: 2500
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed984e00fff2f0c4aa019af6eec6a382
+      internalID: 580718189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7_EelSpriteSheet_EelAnimation_NWW_6
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 4200
+        width: 2500
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b00588a427b088b4097168fd0b35e509
+      internalID: -2111338875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7_EelSpriteSheet_EelAnimation_NWW_7
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 4200
+        width: 2500
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eaed27c6e890a74fb888aad110538ca
+      internalID: 446496864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7_EelSpriteSheet_EelAnimation_NWW_8
+      rect:
+        serializedVersion: 2
+        x: 7500
+        y: 4200
+        width: 2500
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab03913959f5d8c4eafe4457a64c8e1d
+      internalID: -1431604869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7_EelSpriteSheet_EelAnimation_NWW_9
+      rect:
+        serializedVersion: 2
+        x: 10000
+        y: 4200
+        width: 2500
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dc98ddfe51654546a65436f57146ed9
+      internalID: 1949201757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7_EelSpriteSheet_EelAnimation_NWW_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2800
+        width: 2500
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6252603e2d8866d41bc4c4f9189ca405
+      internalID: 842011800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7_EelSpriteSheet_EelAnimation_NWW_11
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 2800
+        width: 2500
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38d8b839ed36de74080b8b93eb12c9ad
+      internalID: 223369567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7_EelSpriteSheet_EelAnimation_NWW_12
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 2800
+        width: 2500
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 302122f36cc928943aed21704f72cd47
+      internalID: 461488770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7_EelSpriteSheet_EelAnimation_NWW_13
+      rect:
+        serializedVersion: 2
+        x: 7500
+        y: 2800
+        width: 2500
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aafc2227ffbeb541b2a4bb6b4fc74a8
+      internalID: -1920561624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7_EelSpriteSheet_EelAnimation_NWW_14
+      rect:
+        serializedVersion: 2
+        x: 10000
+        y: 2800
+        width: 2500
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03edbd42eea83d84d887ab13d55573de
+      internalID: -1320493102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7_EelSpriteSheet_EelAnimation_NWW_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1400
+        width: 2500
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02499569ae8f54d43b1f58fa2e82863e
+      internalID: 1174206943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7_EelSpriteSheet_EelAnimation_NWW_16
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 1400
+        width: 2500
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eb8842224aa5e640ab4a31c2648cc2d
+      internalID: -1724387121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7_EelSpriteSheet_EelAnimation_NWW_17
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 1400
+        width: 2500
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ad845b3b6a42f94bbfc9e5a3a6670e2
+      internalID: 1464795439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7_EelSpriteSheet_EelAnimation_NWW_18
+      rect:
+        serializedVersion: 2
+        x: 7500
+        y: 1400
+        width: 2500
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 667abf3e05c341448999bf94ef809b9a
+      internalID: 1677208088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7_EelSpriteSheet_EelAnimation_NWW_19
+      rect:
+        serializedVersion: 2
+        x: 10000
+        y: 1400
+        width: 2500
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13df859e0fb854641b500f74c1251679
+      internalID: -1136891996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7_EelSpriteSheet_EelAnimation_NWW_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 2500
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0125fe596accf9b4bbd1f30a99850710
+      internalID: 600338584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7_EelSpriteSheet_EelAnimation_NWW_21
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 0
+        width: 2500
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca00183792274634793c77e1e9734ec6
+      internalID: 1168698448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7_EelSpriteSheet_EelAnimation_NWW_22
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 0
+        width: 2500
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d717268691f2874186a8b04e60f6520
+      internalID: 11324411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7_EelSpriteSheet_EelAnimation_NWW_23
+      rect:
+        serializedVersion: 2
+        x: 7500
+        y: 0
+        width: 2500
+        height: 1400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed4531592323bbb4d9c06b7cf490172e
+      internalID: 346486250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      7_EelSpriteSheet_EelAnimation_NWW_0: 2060261670
+      7_EelSpriteSheet_EelAnimation_NWW_1: 1174414554
+      7_EelSpriteSheet_EelAnimation_NWW_10: 842011800
+      7_EelSpriteSheet_EelAnimation_NWW_11: 223369567
+      7_EelSpriteSheet_EelAnimation_NWW_12: 461488770
+      7_EelSpriteSheet_EelAnimation_NWW_13: -1920561624
+      7_EelSpriteSheet_EelAnimation_NWW_14: -1320493102
+      7_EelSpriteSheet_EelAnimation_NWW_15: 1174206943
+      7_EelSpriteSheet_EelAnimation_NWW_16: -1724387121
+      7_EelSpriteSheet_EelAnimation_NWW_17: 1464795439
+      7_EelSpriteSheet_EelAnimation_NWW_18: 1677208088
+      7_EelSpriteSheet_EelAnimation_NWW_19: -1136891996
+      7_EelSpriteSheet_EelAnimation_NWW_2: 118694651
+      7_EelSpriteSheet_EelAnimation_NWW_20: 600338584
+      7_EelSpriteSheet_EelAnimation_NWW_21: 1168698448
+      7_EelSpriteSheet_EelAnimation_NWW_22: 11324411
+      7_EelSpriteSheet_EelAnimation_NWW_23: 346486250
+      7_EelSpriteSheet_EelAnimation_NWW_3: -316504572
+      7_EelSpriteSheet_EelAnimation_NWW_4: 1091103351
+      7_EelSpriteSheet_EelAnimation_NWW_5: 580718189
+      7_EelSpriteSheet_EelAnimation_NWW_6: -2111338875
+      7_EelSpriteSheet_EelAnimation_NWW_7: 446496864
+      7_EelSpriteSheet_EelAnimation_NWW_8: -1431604869
+      7_EelSpriteSheet_EelAnimation_NWW_9: 1949201757
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
