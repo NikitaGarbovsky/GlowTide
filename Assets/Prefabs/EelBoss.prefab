@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_canMove: 0
-  m_point: {x: -2, y: -3}
+  m_point: {x: 0, y: 0}
   m_speed: 6
 --- !u!50 &3276465482014367427
 Rigidbody2D:

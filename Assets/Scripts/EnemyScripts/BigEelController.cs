@@ -7,7 +7,7 @@ public class BigEelController : MonoBehaviour
 {
     [SerializeField] bool m_canMove; // If the Eel can Move
     [SerializeField] Vector2 m_point; // Point to Move to
-    [SerializeField] float m_speed; // Move Speed
+    [SerializeField] public float m_speed; // Move Speed
 
     private void Update()
     {
