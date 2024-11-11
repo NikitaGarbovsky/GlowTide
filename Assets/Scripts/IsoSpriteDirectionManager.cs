@@ -16,6 +16,11 @@ public class IsoSpriteDirectionManager : MonoBehaviour
     private Vector3 spriteInitialLocalPosition;
     private int currentDirection = -1; // Track the current direction index (0-15)
 
+    public void SetDirection(int _iDirection)
+    {
+        currentDirection = _iDirection;
+        animator.SetInteger("Direction",_iDirection);
+    }
     private void Start()
     {
         if (animator == null)
@@ -111,7 +116,32 @@ public class IsoSpriteDirectionManager : MonoBehaviour
         return 0; // Default to East if something goes wrong
     }
 
-    private string GetDirectionName(int directionIndex)
+    public int UpdateAnimatorDirection(Vector3 direction)
+    {
+        if (direction.sqrMagnitude > 0.01f)
+        {
+            // Determine the angle of the throw direction
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+            // Normalize angle to be between 0 and 360 degrees
+            if (angle < 0) angle += 360f;
+
+            // Get the direction index based on the normalized angle
+            int directionIndex = GetDirectionIndexForAngle(angle);
+
+            // Update the Animator's Direction parameter
+            gameObject.GetComponent<Animator>().SetInteger("Direction", directionIndex);
+
+            // Return the direction index to use it in other logic
+            return directionIndex;
+        }
+
+        // Return a default value if no direction is detected
+        return 0;
+    }
+
+
+    public string GetDirectionName(int directionIndex)
     {
         switch (directionIndex)
         {

@@ -67,16 +67,22 @@ public class PlayerControllerManager : MonoBehaviour
             spriteDirectionManager.UpdateSpriteDirection(direction);
         }
     }
-    public void SwitchToIdleAnimatorController()
+    public void SwitchToMoveAnimatorController()
     {
         if (playerAnimator != null && moveAnimatorController != null)
         {
+            int direction = spriteDirectionManager.GetCurrentDirection();
             playerAnimator.runtimeAnimatorController = moveAnimatorController;
+            
+            string animationName = spriteDirectionManager.GetCurrentDirection() + "_JELLYFISH_" + 
+                                   GetComponent<IsoSpriteDirectionManager>().GetDirectionName(spriteDirectionManager.GetCurrentDirection());
+            playerAnimator.Play(animationName, 0, 0f); // Start at beginning of animation
+            
+            spriteDirectionManager.SetDirection(direction);
         }
         else
         {
             Debug.LogWarning("Player Animator or Idle Animator Controller is not assigned.");
         }
     }
-
 }
