@@ -1,5 +1,6 @@
 using UnityEngine;
 using Pathfinding;
+using UnityEngine.Serialization;
 
 /// <summary>
 /// This class manages the player controller, primarily the input and movement of the player. It utilizes the
@@ -14,7 +15,7 @@ public class PlayerControllerManager : MonoBehaviour
     [SerializeField] GameObject m_destinationObject;
 
     private Animator playerAnimator;
-    [SerializeField] public RuntimeAnimatorController idleAnimatorController;
+    [SerializeField] public RuntimeAnimatorController moveAnimatorController;
     [SerializeField] public RuntimeAnimatorController throwAnimatorController;
     void Start()
     {
@@ -68,9 +69,9 @@ public class PlayerControllerManager : MonoBehaviour
     }
     public void SwitchToIdleAnimatorController()
     {
-        if (playerAnimator != null && idleAnimatorController != null)
+        if (playerAnimator != null && moveAnimatorController != null)
         {
-            playerAnimator.runtimeAnimatorController = idleAnimatorController;
+            playerAnimator.runtimeAnimatorController = moveAnimatorController;
         }
         else
         {
