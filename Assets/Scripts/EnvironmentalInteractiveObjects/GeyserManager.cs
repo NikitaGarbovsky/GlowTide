@@ -20,6 +20,7 @@ public class GeyserManager : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         m_audioSource.Play();
+        other.gameObject.GetComponentInChildren<SpriteRenderer>().sortingLayerName = "2Up"; 
         if (other.gameObject.CompareTag("Player") && m_bActive)
         {
             // 2. Disable pathfinding and collisions
@@ -70,6 +71,7 @@ public class GeyserManager : MonoBehaviour
         
         if (_obToMove.gameObject.CompareTag("Slug"))
         {
+            _obToMove.gameObject.GetComponentInChildren<SpriteRenderer>().sortingLayerName = "Ground"; 
             _obToMove.gameObject.GetComponent<CircleCollider2D>().enabled = true;
             _obToMove.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             aiPath.enabled = true;
@@ -82,6 +84,7 @@ public class GeyserManager : MonoBehaviour
         }
         else
         {
+            _obToMove.gameObject.GetComponentInChildren<SpriteRenderer>().sortingLayerName = "1Up"; 
             _obToMove.GetComponent<CapsuleCollider2D>().enabled = true;
             if (aiPath != null)
             {
