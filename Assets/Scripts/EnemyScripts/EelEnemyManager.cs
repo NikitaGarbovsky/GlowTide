@@ -100,7 +100,7 @@ public class EelEnemyManager : MonoBehaviour
                 break;
             case EelState.Stunned:
                 m_canSee = false;
-                Stunned();
+                //Stunned();
                 m_UIImage.enabled = false;
                 m_stunnedVFX.SetActive(true);
                 break;

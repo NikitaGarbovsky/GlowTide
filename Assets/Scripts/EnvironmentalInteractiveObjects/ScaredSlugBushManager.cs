@@ -23,6 +23,7 @@ public class ScaredSlugBushManager : MonoBehaviour
     // Holds the location the scared bro will spawn when this bush is brought a bro snack. 
     [SerializeField] public GameObject SlugSpawnPoint;
     [SerializeField] public GameObject SeaSlugPrefabToSpawn;
+    [SerializeField] public GameObject m_VFX;
     public BushState _bushState = BushState.Occupied;
 
     float shakeAngle = 5f; // Maximum rotation angle for shaking
@@ -53,6 +54,8 @@ public class ScaredSlugBushManager : MonoBehaviour
             other.GetComponent<PlayerSlugManager>().m_bHasBroSnack = false;
             // Change the bush state to Unoccupied after spawning the sea slug
             _bushState = BushState.Unoccupied;
+            m_VFX.GetComponent<ParticleSystem>().Stop();
+            //m_VFX.SetActive(false);
             m_audioSource.Play();
         }
     }

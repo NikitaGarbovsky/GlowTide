@@ -1056,6 +1056,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51a20966ac3caf94f8acc7f47c4c5077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_currentEelState: 0
+  m_eel: {fileID: 0}
+  m_player: {fileID: 0}
+  m_aiPath: {fileID: 0}
+  m_directionManager: {fileID: 0}
+  m_ShowGizmos: 0
+  m_UIImage: {fileID: 0}
+  m_imageOffset: {x: 0, y: 0}
+  m_investigatingSprite: {fileID: 0}
+  m_chaseSprite: {fileID: 0}
+  m_stunnedVFX: {fileID: 0}
+  m_speed: 0
+  m_waypoints: []
+  m_rotationTime: 0
+  m_investigationTime: 0
+  m_chaseSpeedModifier: 0
+  m_killDistance: 0
+  m_killCircleOffset: 0
+  m_stunTime: 0
+  m_sightRadius: 0
+  m_hardSightAngle: 0
+  m_softSightAngle: 0
 --- !u!1 &2077731081
 GameObject:
   m_ObjectHideFlags: 0
