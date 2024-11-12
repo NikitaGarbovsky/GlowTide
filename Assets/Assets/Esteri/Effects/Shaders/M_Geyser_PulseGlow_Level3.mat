@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6695491957209963025
+--- !u!114 &-2960459775006375841
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_ThrowTrail
-  m_Shader: {fileID: -6465566751694194690, guid: 47446852b91cba843a5d57d851c2a7d4, type: 3}
+  m_Name: M_Geyser_PulseGlow_Level3
+  m_Shader: {fileID: -6465566751694194690, guid: b83bada91aec6ef47856bb88e449c775, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -37,7 +37,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Glow_Map:
-        m_Texture: {fileID: 2800000, guid: 51a490b955ce99d4f8b8085916080b2a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 36763e70c31b4e34eb8dde16611e3b20, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -60,6 +60,6 @@ Material:
     m_Floats:
     - _UseAlbedo: 0
     m_Colors:
-    - _Glow_Colour: {r: 0.1377491, g: 8.136294, b: 9.734288, a: 0}
+    - _Glow_Colour: {r: 0.7298932, g: 1.6711696, b: 0, a: 1}
     - _RemapAlbedoToGlow: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
