@@ -1375,63 +1375,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5205539592768105609, guid: 0aa4f7a947d775242b5298b2a6ad0e47, type: 3}
   m_PrefabInstance: {fileID: 225875827}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &722411751
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2139587142547989808, guid: 058f44854fdac7b47855def0df5ae30f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.807
-      objectReference: {fileID: 0}
-    - target: {fileID: 2139587142547989808, guid: 058f44854fdac7b47855def0df5ae30f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.274
-      objectReference: {fileID: 0}
-    - target: {fileID: 2139587142547989808, guid: 058f44854fdac7b47855def0df5ae30f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 2139587142547989808, guid: 058f44854fdac7b47855def0df5ae30f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 2139587142547989808, guid: 058f44854fdac7b47855def0df5ae30f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 2139587142547989808, guid: 058f44854fdac7b47855def0df5ae30f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2139587142547989808, guid: 058f44854fdac7b47855def0df5ae30f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2139587142547989808, guid: 058f44854fdac7b47855def0df5ae30f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 2139587142547989808, guid: 058f44854fdac7b47855def0df5ae30f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2139587142547989808, guid: 058f44854fdac7b47855def0df5ae30f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6456545660745827885, guid: 058f44854fdac7b47855def0df5ae30f, type: 3}
-      propertyPath: m_Name
-      value: PS_ScaredBush
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 058f44854fdac7b47855def0df5ae30f, type: 3}
 --- !u!1001 &742209063
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30514,4 +30457,3 @@ SceneRoots:
   - {fileID: 1942053356}
   - {fileID: 1334537270}
   - {fileID: 2071119521}
-  - {fileID: 722411751}
