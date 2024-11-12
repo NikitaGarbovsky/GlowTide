@@ -55,7 +55,7 @@ public class SeaSlugBroFollower : MonoBehaviour
 
     private IsoSpriteDirectionManager isoSpriteDirectionManager; // Reference to IsoSpriteDirectionManager component
     private Animator animator; // Reference to Animator component
-    private RuntimeAnimatorController currentAnimatorController; // (Tracks the current animator controller)
+    public RuntimeAnimatorController currentAnimatorController; // (Tracks the current animator controller)
     
     [Header("Eel Boss Flag")]
     // Flag to see if the seaslug bro is within a trigger box (this is used in later levels with the Eel Boss)
