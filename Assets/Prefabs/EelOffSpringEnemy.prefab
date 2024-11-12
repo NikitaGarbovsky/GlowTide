@@ -567,7 +567,7 @@ MonoBehaviour:
   m_directionManager: {fileID: 5765947618630402615}
   m_ShowGizmos: 0
   m_UIImage: {fileID: 5021387772263246340}
-  m_imageOffset: {x: 1.2, y: 0.8}
+  m_imageOffset: {x: 0.2, y: 0}
   m_investigatingSprite: {fileID: 21300000, guid: 7cda08b1d0e91044dae2e77dcda1ba57, type: 3}
   m_chaseSprite: {fileID: 21300000, guid: 095e5e457db4ec54795d82ae8d0c8ee9, type: 3}
   m_stunnedVFX: {fileID: 4310342257545960576}
