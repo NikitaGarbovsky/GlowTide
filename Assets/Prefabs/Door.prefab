@@ -285,6 +285,7 @@ MonoBehaviour:
   - {fileID: 1677212414150191265}
   - {fileID: 4476619948649923261}
   - {fileID: 717860325203883663}
+  doorSpriteRenderer: {fileID: 194038826004557187}
   vfxKelpPrefab: {fileID: 5832892849370157386, guid: f6f4b5e86807aa94cbe108022d707ea9, type: 3}
   slugNumberVFX: {fileID: 4263792703310819172, guid: fcc80ae6bbe518b4e88f26daf53262c5, type: 3}
 --- !u!82 &1058496633552680486
