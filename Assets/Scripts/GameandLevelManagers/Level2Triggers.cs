@@ -91,12 +91,12 @@ public class Level2Triggers : LevelTriggers
         // 4. Instantiate the Eel Boss at the spawn position
         Vector3 vEelBossSpawnWorldPosition = new Vector3(12.91f, -0.21f, 0f);
         GameObject EelBossInstance = Instantiate(EelBossPrefab, vEelBossSpawnWorldPosition, Quaternion.identity);
-
+        
         // 5. Command the Eel Boss to move to the target point
         BigEelController eelBossController = EelBossInstance.GetComponent<BigEelController>();
         Vector2 eelBossTargetPosition = new Vector2(-5.7f, -11.96f);
         eelBossController.MovetoPoint(eelBossTargetPosition);
-
+        eelBossController.SetDirectionForMovement(10, "SW"); // Sets the correct movement animation direction
         // Variables to check Eel Boss's progress
         Vector2 slugDestroyPosition = new Vector2(7.409231f, -3.683079f);
         bool slugsDestroyed = false;
