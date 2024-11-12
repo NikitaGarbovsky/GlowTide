@@ -187,9 +187,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 602653150}
     m_Modifications:
+    - target: {fileID: 482391002763190281, guid: 806df68b87833e840abe571f5ba6a6d2, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2308171318612586712, guid: 806df68b87833e840abe571f5ba6a6d2, type: 3}
       propertyPath: m_Name
       value: ScaredSlugBush
+      objectReference: {fileID: 0}
+    - target: {fileID: 2308171318612586712, guid: 806df68b87833e840abe571f5ba6a6d2, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5778843544017757900, guid: 806df68b87833e840abe571f5ba6a6d2, type: 3}
       propertyPath: m_AngularDrag
@@ -202,6 +210,22 @@ PrefabInstance:
     - target: {fileID: 5778843544017757900, guid: 806df68b87833e840abe571f5ba6a6d2, type: 3}
       propertyPath: m_GravityScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7430110949176986227, guid: 806df68b87833e840abe571f5ba6a6d2, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[39].x
+      value: 0.36104542
+      objectReference: {fileID: 0}
+    - target: {fileID: 7430110949176986227, guid: 806df68b87833e840abe571f5ba6a6d2, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[39].y
+      value: 0.392536
+      objectReference: {fileID: 0}
+    - target: {fileID: 7430110949176986227, guid: 806df68b87833e840abe571f5ba6a6d2, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[40].x
+      value: 0.2387641
+      objectReference: {fileID: 0}
+    - target: {fileID: 7430110949176986227, guid: 806df68b87833e840abe571f5ba6a6d2, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[40].y
+      value: 0.47367662
       objectReference: {fileID: 0}
     - target: {fileID: 8588289340483140218, guid: 806df68b87833e840abe571f5ba6a6d2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -832,7 +856,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7378531347077023905, guid: 6b5be1658f2be644a98cb6c7c3559ffe, type: 3}
       propertyPath: m_eCurrentState
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -29468,7 +29492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7378531347077023905, guid: 6b5be1658f2be644a98cb6c7c3559ffe, type: 3}
       propertyPath: m_eCurrentState
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -29534,7 +29558,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7378531347077023905, guid: 6b5be1658f2be644a98cb6c7c3559ffe, type: 3}
       propertyPath: m_eCurrentState
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -30022,7 +30046,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7378531347077023905, guid: 6b5be1658f2be644a98cb6c7c3559ffe, type: 3}
       propertyPath: m_eCurrentState
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -30174,7 +30198,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7378531347077023905, guid: 6b5be1658f2be644a98cb6c7c3559ffe, type: 3}
       propertyPath: m_eCurrentState
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -30357,6 +30381,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7114099419090749349, guid: 116b32d25cae78940be2a3cb5eed22d2, type: 3}
+      propertyPath: moveAnimatorController
+      value: 
+      objectReference: {fileID: 9100000, guid: f1268f188b0f4f141953ccd924d0900d, type: 2}
     - target: {fileID: 8634067906856939228, guid: 116b32d25cae78940be2a3cb5eed22d2, type: 3}
       propertyPath: callVFXDuration
       value: 2.4
