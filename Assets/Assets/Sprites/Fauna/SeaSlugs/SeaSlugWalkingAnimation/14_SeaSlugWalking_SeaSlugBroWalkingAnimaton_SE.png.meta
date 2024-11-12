@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5115f346b24d02543adf1ced87011708
+guid: ceb72bf684b87d3419712809e8b37218
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1300
+  spritePixelsToUnits: 600
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_0
+      name: 14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 134723a7f23cc3843b165a56a199b6b3
-      internalID: 1107714015
+      spriteID: 573c677939503a049ad0117db7ba4d0f
+      internalID: -1373686196
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_1
+      name: 14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_1
       rect:
         serializedVersion: 2
         x: 1000
@@ -132,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15703d9717808784aa423b3f933222d2
-      internalID: -1550538393
+      spriteID: 9f78da870c3004e4891de8facb106f73
+      internalID: 533673817
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_2
+      name: 14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_2
       rect:
         serializedVersion: 2
         x: 2000
@@ -153,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bcf019c5ee3cf74d833b9f167432aac
-      internalID: 853135839
+      spriteID: 681a0bc41a695af4980c603a1332f9cd
+      internalID: 1524555411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_3
+      name: 14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_3
       rect:
         serializedVersion: 2
         x: 3000
@@ -174,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd64ee33023c0234e8947e03d500b046
-      internalID: 345201335
+      spriteID: b96fc78634057934d97133b56cafc23c
+      internalID: 1044183419
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_4
+      name: 14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_4
       rect:
         serializedVersion: 2
         x: 4000
@@ -195,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36dff1c14cd33954d924ea0e3ea000cf
-      internalID: -803614767
+      spriteID: a12becfd2fa0ed744b7aee2e603a604d
+      internalID: 1579996034
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_5
+      name: 14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_5
       rect:
         serializedVersion: 2
         x: 5000
@@ -216,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24924c869f9e92846bac9cbdfbd8b11c
-      internalID: 723805826
+      spriteID: a0be7b3dfe6e2bb4c83c37c87653d985
+      internalID: 1885289766
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_6
+      name: 14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_6
       rect:
         serializedVersion: 2
         x: 0
@@ -237,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37d6112bd9d7e46469ee9796d4f56bcb
-      internalID: -1168244087
+      spriteID: ac6bab1486c29cf4a946621f86e28e6a
+      internalID: 1282047792
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_7
+      name: 14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_7
       rect:
         serializedVersion: 2
         x: 1000
@@ -258,14 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3028647210f8e249a15a67c2ad8fb9f
-      internalID: -2049500351
+      spriteID: 501b310a0426b9740bf40cbabe87ad9c
+      internalID: 2059858674
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_8
+      name: 14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_8
       rect:
         serializedVersion: 2
         x: 2000
@@ -279,14 +279,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53b4bb4d8d317ec4ca156730b3c28c7d
-      internalID: -703524834
+      spriteID: 1e78581cab4d7314a92394c975304170
+      internalID: -1026989718
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_9
+      name: 14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_9
       rect:
         serializedVersion: 2
         x: 3000
@@ -300,14 +300,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7243ca3b1eae1d743a1c8ffb525b752e
-      internalID: -1756915432
+      spriteID: 19ef0ac4a6cbfa547a6bf834b780cf7f
+      internalID: -1555436025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_10
+      name: 14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_10
       rect:
         serializedVersion: 2
         x: 4000
@@ -321,14 +321,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f529012717bb0814f9b1d3d6fb504971
-      internalID: 160152542
+      spriteID: 73e2edcbfb3fa7143920c2b971809dc8
+      internalID: -787175652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_11
+      name: 14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_11
       rect:
         serializedVersion: 2
         x: 5000
@@ -342,14 +342,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06c155c0d46c31f4f9c17c3076ab8ddd
-      internalID: 980100025
+      spriteID: 716c95c23389d464dbbc801f170dc2a1
+      internalID: 583403184
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_12
+      name: 14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_12
       rect:
         serializedVersion: 2
         x: 0
@@ -363,14 +363,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03aed0cec7bcc02498995ddcac434c16
-      internalID: 1892929627
+      spriteID: 6735dd65add446f498ccca630dde1fb9
+      internalID: 1706590953
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_13
+      name: 14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_13
       rect:
         serializedVersion: 2
         x: 1000
@@ -384,14 +384,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee998ab20f77ad64a8763c39e0eab245
-      internalID: 97565658
+      spriteID: 04107f9deee7d864896cfbceeede0ed9
+      internalID: 1736397848
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_14
+      name: 14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_14
       rect:
         serializedVersion: 2
         x: 2000
@@ -405,14 +405,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a9d9adc9b9143145b3c71b5932678aa
-      internalID: 1038793420
+      spriteID: 97a70610a86bd614daadf6ab1397a0f3
+      internalID: 751167687
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_15
+      name: 14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_15
       rect:
         serializedVersion: 2
         x: 3000
@@ -426,14 +426,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6d48fd6908362f42b278c63d64e3cbc
-      internalID: -1881861315
+      spriteID: 5f424b1a89b0e1a43a4b18dd8978fd62
+      internalID: 206862182
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_16
+      name: 14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_16
       rect:
         serializedVersion: 2
         x: 4000
@@ -447,14 +447,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81e7d4a7411a06f4abb7db4f1a59ef98
-      internalID: -156017297
+      spriteID: 5731c492ca40196469963ec509ef77c7
+      internalID: -129405581
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_17
+      name: 14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_17
       rect:
         serializedVersion: 2
         x: 5000
@@ -468,14 +468,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db05b1d4a6509d54596e3438a38f808f
-      internalID: -583214880
+      spriteID: da741808319ec5a419e84beda1ea9c8a
+      internalID: 1172859325
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_18
+      name: 14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_18
       rect:
         serializedVersion: 2
         x: 0
@@ -489,14 +489,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4180f00222f0ab245aca0206c08e5632
-      internalID: -1475001789
+      spriteID: 5d1bd9e1889bf244c913b08c14239088
+      internalID: -1101483132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_19
+      name: 14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_19
       rect:
         serializedVersion: 2
         x: 1000
@@ -510,14 +510,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0a9b9b6e5721b54dabff073f75db151
-      internalID: -885762702
+      spriteID: c240811b8ad0ddd4dac6f1359ef6d780
+      internalID: 65625724
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_20
+      name: 14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_20
       rect:
         serializedVersion: 2
         x: 2000
@@ -531,14 +531,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a074c823bf431d846891ce3b6d8e6638
-      internalID: 1034176145
+      spriteID: 36bcc925484883a44b10f54619b560fa
+      internalID: -549326362
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_21
+      name: 14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_21
       rect:
         serializedVersion: 2
         x: 3000
@@ -552,14 +552,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8c465793a6f79d4c8070660ab3ea45e
-      internalID: 39899031
+      spriteID: bcf80998a1683724190291b755ffdf98
+      internalID: 308101525
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_22
+      name: 14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_22
       rect:
         serializedVersion: 2
         x: 4000
@@ -573,14 +573,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a74b78e104dca4b49aa0c123c5d629ce
-      internalID: 569846491
+      spriteID: c46a6684af1fa0444bc2bb0aace302e6
+      internalID: 490392920
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_23
+      name: 14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_23
       rect:
         serializedVersion: 2
         x: 5000
@@ -594,14 +594,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d3bf3b066823294e9f6459614122fb9
-      internalID: -1560182193
+      spriteID: 9ac68af67b58b5943a325508ae3b9ad3
+      internalID: 1198943663
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_24
+      name: 14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_24
       rect:
         serializedVersion: 2
         x: 0
@@ -615,14 +615,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ebb415dac2ec7a4196912efce0783b2
-      internalID: 1476791028
+      spriteID: 24ba89b3ec1ce9c48ba89c61365cbd68
+      internalID: -271851153
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_25
+      name: 14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_25
       rect:
         serializedVersion: 2
         x: 1000
@@ -636,14 +636,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 293bb5e6f40696744b0d093a950f6a06
-      internalID: -1006350328
+      spriteID: 0c39c0a6349e5ee4db4b8598c194923e
+      internalID: 1786567630
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_26
+      name: 14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_26
       rect:
         serializedVersion: 2
         x: 2000
@@ -657,14 +657,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4cd7d34f3af677e428a53fbee79e77d4
-      internalID: -1279170389
+      spriteID: bf66f4c527302cd4eb71a18df0b300b4
+      internalID: -1617050012
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_27
+      name: 14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_27
       rect:
         serializedVersion: 2
         x: 3000
@@ -678,14 +678,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f53e986772ebba8438a0ea7d006d6f51
-      internalID: 700292795
+      spriteID: ddd56ef668904e743ade2b02f75c503b
+      internalID: 1373648815
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_28
+      name: 14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_28
       rect:
         serializedVersion: 2
         x: 4000
@@ -699,14 +699,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 471e76b8eabb49d46835bf95b863ba5c
-      internalID: 1370994175
+      spriteID: 89577778285e4fc449254134cecaffdc
+      internalID: 392410818
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_29
+      name: 14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_29
       rect:
         serializedVersion: 2
         x: 5000
@@ -720,14 +720,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4683f15f4f23c3e4bbf4a901fdf4131e
-      internalID: 190202176
+      spriteID: f302dae97cd1540478d607badec95da4
+      internalID: 683605866
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_30
+      name: 14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_30
       rect:
         serializedVersion: 2
         x: 0
@@ -741,8 +741,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d9d7d1eab7416f41a26f2679c7c60b9
-      internalID: -413685002
+      spriteID: 9cd4fdc8b86a2424094ba2a3ed9d972f
+      internalID: 630502880
       vertices: []
       indices: 
       edges: []
@@ -758,37 +758,37 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_0: 1107714015
-      5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_1: -1550538393
-      5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_10: 160152542
-      5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_11: 980100025
-      5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_12: 1892929627
-      5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_13: 97565658
-      5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_14: 1038793420
-      5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_15: -1881861315
-      5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_16: -156017297
-      5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_17: -583214880
-      5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_18: -1475001789
-      5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_19: -885762702
-      5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_2: 853135839
-      5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_20: 1034176145
-      5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_21: 39899031
-      5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_22: 569846491
-      5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_23: -1560182193
-      5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_24: 1476791028
-      5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_25: -1006350328
-      5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_26: -1279170389
-      5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_27: 700292795
-      5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_28: 1370994175
-      5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_29: 190202176
-      5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_3: 345201335
-      5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_30: -413685002
-      5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_4: -803614767
-      5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_5: 723805826
-      5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_6: -1168244087
-      5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_7: -2049500351
-      5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_8: -703524834
-      5_SeaSlugWalking_SeaSlugBroWalkingAnimaton_NNW_9: -1756915432
+      14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_0: -1373686196
+      14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_1: 533673817
+      14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_10: -787175652
+      14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_11: 583403184
+      14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_12: 1706590953
+      14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_13: 1736397848
+      14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_14: 751167687
+      14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_15: 206862182
+      14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_16: -129405581
+      14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_17: 1172859325
+      14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_18: -1101483132
+      14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_19: 65625724
+      14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_2: 1524555411
+      14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_20: -549326362
+      14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_21: 308101525
+      14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_22: 490392920
+      14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_23: 1198943663
+      14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_24: -271851153
+      14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_25: 1786567630
+      14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_26: -1617050012
+      14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_27: 1373648815
+      14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_28: 392410818
+      14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_29: 683605866
+      14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_3: 1044183419
+      14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_30: 630502880
+      14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_4: 1579996034
+      14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_5: 1885289766
+      14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_6: 1282047792
+      14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_7: 2059858674
+      14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_8: -1026989718
+      14_SeaSlugWalking_SeaSlugBroWalkingAnimaton_SE_9: -1555436025
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
