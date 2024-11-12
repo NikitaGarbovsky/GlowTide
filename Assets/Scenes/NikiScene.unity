@@ -449,6 +449,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SeaSlugBro (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1253205221210208180, guid: 6b5be1658f2be644a98cb6c7c3559ffe, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -271851153, guid: ceb72bf684b87d3419712809e8b37218, type: 3}
     - target: {fileID: 3557355496399265425, guid: 6b5be1658f2be644a98cb6c7c3559ffe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.99164236
