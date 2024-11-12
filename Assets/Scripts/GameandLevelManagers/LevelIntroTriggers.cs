@@ -30,8 +30,8 @@ public class LevelIntroTriggers : LevelTriggers
         {
             // This is where the level transition trigger occurs
             Debug.Log("Level of level triggered");
-            // TODO add a fade out for level transitions.
-            SceneManager.LoadScene("1_Level1");
+
+            ManageGameplay.Instance.LoadSceneWithFade("1_Level1");
         }
         
     }

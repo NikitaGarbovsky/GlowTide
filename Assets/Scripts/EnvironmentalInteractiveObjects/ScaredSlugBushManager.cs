@@ -23,7 +23,26 @@ public class ScaredSlugBushManager : MonoBehaviour
     // Holds the location the scared bro will spawn when this bush is brought a bro snack. 
     [SerializeField] public GameObject SlugSpawnPoint;
     [SerializeField] public GameObject SeaSlugPrefabToSpawn;
+    [SerializeField] public GameObject m_VFX;
     public BushState _bushState = BushState.Occupied;
+
+    float shakeAngle = 5f; // Maximum rotation angle for shaking
+    float shakeSpeed = 10f; // Speed of shake
+    float shakeDuration = 1f; // Duration to shake in seconds
+    float pauseDuration = 4f; // Duration to pause in seconds
+
+    bool isShaking = false;
+
+    AudioSource m_audioSource;
+
+    void Start()
+    {
+        m_audioSource = GetComponent<AudioSource>();
+        // Start the main coroutine that alternates between shaking and pausing
+        StartCoroutine(ShakeAndPause());
+    }
+
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Check if the player triggered this event and the bush is occupied
@@ -31,9 +50,41 @@ public class ScaredSlugBushManager : MonoBehaviour
         {
             // Spawn the sea slug at the spawn point's position and rotation
             Instantiate(SeaSlugPrefabToSpawn, SlugSpawnPoint.transform.position, SlugSpawnPoint.transform.rotation);
-            
+
+            other.GetComponent<PlayerSlugManager>().m_bHasBroSnack = false;
             // Change the bush state to Unoccupied after spawning the sea slug
             _bushState = BushState.Unoccupied;
+            m_VFX.GetComponent<ParticleSystem>().Stop();
+            //m_VFX.SetActive(false);
+            m_audioSource.Play();
+        }
+    }
+
+    IEnumerator ShakeAndPause()
+    {
+        while (_bushState == BushState.Occupied)
+        {
+            // Start shaking
+            isShaking = true;
+            float shakeEndTime = Time.time + shakeDuration;
+
+            while (Time.time < shakeEndTime)
+            {
+                if (isShaking)
+                {
+                    // Rotate back and forth
+                    float shake = Mathf.Sin(Time.time * shakeSpeed) * shakeAngle;
+                    transform.rotation = Quaternion.Euler(0, 0, shake);
+                }
+                yield return null; // Wait for the next frame
+            }
+
+            // Stop shaking
+            transform.rotation = Quaternion.identity;
+            isShaking = false;
+
+            // Wait for pause duration
+            yield return new WaitForSeconds(pauseDuration);
         }
     }
 }

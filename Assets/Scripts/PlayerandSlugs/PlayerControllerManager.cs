@@ -1,5 +1,6 @@
 using UnityEngine;
 using Pathfinding;
+using UnityEngine.Serialization;
 
 /// <summary>
 /// This class manages the player controller, primarily the input and movement of the player. It utilizes the
@@ -11,9 +12,10 @@ public class PlayerControllerManager : MonoBehaviour
     private IsoSpriteDirectionManager spriteDirectionManager; // Reference to IsoSpriteDirectionManager
 
     private Vector3 targetPosition;
+    [SerializeField] GameObject m_destinationObject;
 
     private Animator playerAnimator;
-    [SerializeField] public RuntimeAnimatorController idleAnimatorController;
+    [SerializeField] public RuntimeAnimatorController moveAnimatorController;
     [SerializeField] public RuntimeAnimatorController throwAnimatorController;
     void Start()
     {
@@ -46,6 +48,7 @@ public class PlayerControllerManager : MonoBehaviour
 
                 // Set the target position for the A* pathfinding system
                 targetPosition = mousePosition;
+                if (m_destinationObject != null) m_destinationObject.transform.position = targetPosition;
                 aiPath.destination = targetPosition; // Tell A* where to move
             }
         }
@@ -64,16 +67,22 @@ public class PlayerControllerManager : MonoBehaviour
             spriteDirectionManager.UpdateSpriteDirection(direction);
         }
     }
-    public void SwitchToIdleAnimatorController()
+    public void SwitchToMoveAnimatorController()
     {
-        if (playerAnimator != null && idleAnimatorController != null)
+        if (playerAnimator != null && moveAnimatorController != null)
         {
-            playerAnimator.runtimeAnimatorController = idleAnimatorController;
+            int direction = spriteDirectionManager.GetCurrentDirection();
+            playerAnimator.runtimeAnimatorController = moveAnimatorController;
+            
+            string animationName = spriteDirectionManager.GetCurrentDirection() + "_JELLYFISH_" + 
+                                   GetComponent<IsoSpriteDirectionManager>().GetDirectionName(spriteDirectionManager.GetCurrentDirection());
+            playerAnimator.Play(animationName, 0, 0f); // Start at beginning of animation
+            
+            spriteDirectionManager.SetDirection(direction);
         }
         else
         {
             Debug.LogWarning("Player Animator or Idle Animator Controller is not assigned.");
         }
     }
-
 }

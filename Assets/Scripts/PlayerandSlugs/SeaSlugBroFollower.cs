@@ -34,6 +34,7 @@ public class SeaSlugBroFollower : MonoBehaviour
     public float m_fWanderSpeed = 1f;  // Speed when wandering
     public float m_fMoveSpeed = 5f;    // Speed when moving toward an object
     public float m_fThrowSpeed = 10f;  // Speed when thrown
+    public bool m_bCanWander = true;
 
     [Header("Throwing Settings")]
     public float m_fThrowDistance = 10f;  // Maximum distance the slug can be thrown
@@ -48,8 +49,8 @@ public class SeaSlugBroFollower : MonoBehaviour
 
     private Vector2 m_v2ThrownTargetPosition;    // The target position when the slug is thrown
 
-    // Event triggered when the slug reaches its target object
-    public event Action<SeaSlugBroFollower> OnReachedTarget;
+    // Flag to see if the seaslug bro is within a trigger box (this is used in later levels with the Eel Boss)
+    public bool m_bIsInVulnerableZone = false; 
 
     private void Start()
     {
@@ -118,22 +119,25 @@ public class SeaSlugBroFollower : MonoBehaviour
     // Function to randomly wander when idle
     private void Wander()
     {
-        if (m_fWaitTime <= 0)
+        if (m_bCanWander)
         {
-            // Randomly choose a nearby position to move toward
-            float fXPos = Random.Range(-0.5f, 0.5f);
-            float fYPos = Random.Range(-0.5f, 0.5f);
-            m_aiPath.destination = new Vector3(transform.position.x + fXPos, transform.position.y + fYPos);
+            if (m_fWaitTime <= 0)
+            {
+                // Randomly choose a nearby position to move toward
+                float fXPos = Random.Range(-0.5f, 0.5f);
+                float fYPos = Random.Range(-0.5f, 0.5f);
+                m_aiPath.destination = new Vector3(transform.position.x + fXPos, transform.position.y + fYPos);
 
-            // Set wait time for the next random move
-            m_fWaitTime = Random.Range(5, 7);
+                // Set wait time for the next random move
+                m_fWaitTime = Random.Range(5, 7);
+            }
+
+            // Decrease wait time each frame
+            m_fWaitTime -= Time.deltaTime;
+
+            // Set wandering speed
+            m_aiPath.maxSpeed = m_fWanderSpeed;
         }
-
-        // Decrease wait time each frame
-        m_fWaitTime -= Time.deltaTime;
-
-        // Set wandering speed
-        m_aiPath.maxSpeed = m_fWanderSpeed;
     }
 
     // Function to start following the player
