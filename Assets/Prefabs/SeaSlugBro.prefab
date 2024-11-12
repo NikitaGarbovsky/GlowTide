@@ -57,11 +57,13 @@ MonoBehaviour:
   m_rbSlug: {fileID: 0}
   m_fChaseSpeed: 3
   m_fWanderSpeed: 1
-  m_fMoveSpeed: 5
   m_fThrowSpeed: 10
   m_bCanWander: 1
   m_fThrowDistance: 10
   trailBubblesPrefab: {fileID: 4909856430915467350, guid: a2c6d5c9ee9171943952627d5a1b774c, type: 3}
+  walkingAnimatorController: {fileID: 9100000, guid: 0c3a06f14213ddc47ad64187ec5abfa8, type: 2}
+  idleAnimatorController: {fileID: 0}
+  throwAnimatorController: {fileID: 9100000, guid: ee9df73b9ed089e4fb2c0bda23f4e558, type: 2}
   m_bIsInVulnerableZone: 0
 --- !u!114 &21066700126059804
 MonoBehaviour:
@@ -205,7 +207,7 @@ Animator:
   m_GameObject: {fileID: 740087250463829832}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0c3a06f14213ddc47ad64187ec5abfa8, type: 2}
+  m_Controller: {fileID: 9100000, guid: 358ce9726edc0954f91b7be143886e7d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -230,7 +232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   spriteTransform: {fileID: 9018617722996150532}
-  bobbingAmplitude: 0.5
+  bobbingAmplitude: 0
   bobbingSpeed: 2
 --- !u!1 &8901542377281822913
 GameObject:

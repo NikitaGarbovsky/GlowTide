@@ -32,7 +32,6 @@ public class SeaSlugBroFollower : MonoBehaviour
     [Header("Movement Speeds")]
     public float m_fChaseSpeed = 3f;   // Speed when chasing the player
     public float m_fWanderSpeed = 1f;  // Speed when wandering
-    public float m_fMoveSpeed = 5f;    // Speed when moving toward an object
     public float m_fThrowSpeed = 10f;  // Speed when thrown
     public bool m_bCanWander = true;
 
@@ -48,19 +47,36 @@ public class SeaSlugBroFollower : MonoBehaviour
     private Vector3 m_v3CorrectedPlayerPosition; // Adjusted position slightly behind the player
 
     private Vector2 m_v2ThrownTargetPosition;    // The target position when the slug is thrown
+    
+    [Header("Animator Controllers")]
+    public RuntimeAnimatorController walkingAnimatorController;
+    public RuntimeAnimatorController idleAnimatorController;
+    public RuntimeAnimatorController throwAnimatorController;
 
+    private IsoSpriteDirectionManager isoSpriteDirectionManager; // Reference to IsoSpriteDirectionManager component
+    private Animator animator; // Reference to Animator component
+    private RuntimeAnimatorController currentAnimatorController; // (Tracks the current animator controller)
+    
+    [Header("Eel Boss Flag")]
     // Flag to see if the seaslug bro is within a trigger box (this is used in later levels with the Eel Boss)
-    public bool m_bIsInVulnerableZone = false; 
-
+    public bool m_bIsInVulnerableZone = false;
     private void Start()
     {
         // Grab the reference to the player through the gamemanager 
         m_goPlayer = ManageGameplay.Instance.playerCharacter;
 
-        // Initialize references to the AIPath component and Rigidbody2D
+        // Initialize references of components on this game object.
         m_aiPath = GetComponent<AIPath>();
         m_rbSlug = GetComponent<Rigidbody2D>();
+        
+        // Get references to Animator and IsoSpriteDirectionManager
+        animator = GetComponent<Animator>();
+        isoSpriteDirectionManager = GetComponent<IsoSpriteDirectionManager>();
 
+        // Sets the initial animator controller to idle
+        currentAnimatorController = idleAnimatorController;
+        animator.runtimeAnimatorController = idleAnimatorController;
+        
         // Initialize wait time to 0
         m_fWaitTime = 0;
     }
@@ -113,6 +129,27 @@ public class SeaSlugBroFollower : MonoBehaviour
             {
                 m_aiPath.maxSpeed = m_fWanderSpeed;
             }
+            
+            // Update sprite direction
+            Vector3 movementDirection = m_aiPath.desiredVelocity.normalized;
+
+            if (movementDirection.sqrMagnitude > 0.01f)
+            {
+                if (currentAnimatorController != walkingAnimatorController)
+                {
+                    currentAnimatorController = walkingAnimatorController;
+                    animator.runtimeAnimatorController = walkingAnimatorController;
+                }
+                isoSpriteDirectionManager.UpdateSpriteDirection(movementDirection);
+            }
+            else
+            {
+                if (currentAnimatorController != idleAnimatorController)
+                {
+                    currentAnimatorController = idleAnimatorController;
+                    animator.runtimeAnimatorController = idleAnimatorController;
+                }
+            }
         }
     }
 
@@ -137,6 +174,27 @@ public class SeaSlugBroFollower : MonoBehaviour
 
             // Set wandering speed
             m_aiPath.maxSpeed = m_fWanderSpeed;
+            
+            // Update sprite direction
+            Vector3 movementDirection = m_aiPath.desiredVelocity.normalized;
+
+            if (movementDirection.sqrMagnitude > 0.01f)
+            {
+                if (currentAnimatorController != walkingAnimatorController)
+                {
+                    currentAnimatorController = walkingAnimatorController;
+                    animator.runtimeAnimatorController = walkingAnimatorController;
+                }
+                isoSpriteDirectionManager.UpdateSpriteDirection(movementDirection);
+            }
+            else
+            {
+                if (currentAnimatorController != idleAnimatorController)
+                {
+                    currentAnimatorController = idleAnimatorController;
+                    animator.runtimeAnimatorController = idleAnimatorController;
+                }
+            }
         }
     }
 
@@ -152,6 +210,13 @@ public class SeaSlugBroFollower : MonoBehaviour
 
         m_eCurrentState = ESlugState.FollowingPlayer;
 
+        // Set animator controller to walking
+        if (currentAnimatorController != walkingAnimatorController)
+        {
+            currentAnimatorController = walkingAnimatorController;
+            animator.runtimeAnimatorController = walkingAnimatorController;
+        }
+        
         // Re-enable AIPath
         if (!m_aiPath.enabled)
             m_aiPath.enabled = true;
@@ -171,6 +236,13 @@ public class SeaSlugBroFollower : MonoBehaviour
     public void StopFollowingPlayer()
     {
         m_eCurrentState = ESlugState.Idle;
+        
+        // Set animator controller to idle
+        if (currentAnimatorController != idleAnimatorController)
+        {
+            currentAnimatorController = idleAnimatorController;
+            animator.runtimeAnimatorController = idleAnimatorController;
+        }
     }
     
     // Handle collisions while the slug is in the thrown state
@@ -196,6 +268,13 @@ public class SeaSlugBroFollower : MonoBehaviour
                 // Change the slug's state to Assigned
                 m_eCurrentState = ESlugState.Assigned;
                 
+                // Set animator controller to idle
+                if (currentAnimatorController != idleAnimatorController)
+                {
+                    currentAnimatorController = idleAnimatorController;
+                    animator.runtimeAnimatorController = idleAnimatorController;
+                }
+                
                 // Revert the slug's layer back to "Slug"
                 gameObject.layer = LayerMask.NameToLayer("Slug");
                 
@@ -206,6 +285,9 @@ public class SeaSlugBroFollower : MonoBehaviour
                 m_aiPath.enabled = false;
                 m_rbSlug.velocity = Vector2.zero;
                 m_rbSlug.isKinematic = true;
+                
+                // Update sprite direction to last known
+                isoSpriteDirectionManager.UpdateSpriteDirection(Vector3.zero);
             }
             else
             {
@@ -226,6 +308,15 @@ public class SeaSlugBroFollower : MonoBehaviour
                 // Re-enable the AIPath component
                 m_aiPath.enabled = true;
                 m_aiPath.destination = gameObject.transform.position;
+                
+                // Set animator controller to idle
+                if (currentAnimatorController != idleAnimatorController)
+                {
+                    currentAnimatorController = idleAnimatorController;
+                    animator.runtimeAnimatorController = idleAnimatorController;
+                }
+                // Update sprite direction to last known
+                isoSpriteDirectionManager.UpdateSpriteDirection(Vector3.zero);
             }
         }
     }
@@ -261,6 +352,24 @@ public class SeaSlugBroFollower : MonoBehaviour
 
         // Reset the velocity to prevent unwanted movement
         m_rbSlug.velocity = Vector2.zero;
+        
+        // Set animator controller to throw
+        if (currentAnimatorController != throwAnimatorController)
+        {
+            currentAnimatorController = throwAnimatorController;
+            animator.runtimeAnimatorController = throwAnimatorController;
+        }
+        
+        // Update sprite direction
+        Vector3 movementDirection = new Vector3(v2Direction.x, v2Direction.y, 0f);
+        isoSpriteDirectionManager.UpdateSpriteDirection(movementDirection);
+
+        // Play the specific throw animation based on direction index
+        float angle = Mathf.Atan2(movementDirection.y, movementDirection.x) * Mathf.Rad2Deg;
+        if (angle < 0) angle += 360f;
+        int directionIndex = isoSpriteDirectionManager.GetDirectionIndexForAngle(angle);
+        string animationName = directionIndex + "_SeaSlugBro_Throw_" + isoSpriteDirectionManager.GetDirectionName(directionIndex);
+        animator.Play(animationName, 0, 0f); // Start at beginning of animation
     }
 
     // Function to handle movement while the slug is thrown
@@ -271,6 +380,13 @@ public class SeaSlugBroFollower : MonoBehaviour
         float fDistanceToTarget = Vector2.Distance(v2CurrentPosition, m_v2ThrownTargetPosition);
         float fMoveDistance = m_fThrowSpeed * Time.fixedDeltaTime;
 
+        // Update sprite direction
+        Vector3 movementDirection = new Vector3(v2Direction.x, v2Direction.y, 0f);
+        if (movementDirection.sqrMagnitude > 0.01f)
+        {
+            isoSpriteDirectionManager.UpdateSpriteDirection(movementDirection);
+        }
+        
         // Check if the slug has reached or overshot the target
         if (fMoveDistance >= fDistanceToTarget)
         {
@@ -308,5 +424,15 @@ public class SeaSlugBroFollower : MonoBehaviour
         // When they've reached their destination after being thrown,
         // set the aiPath destination to it (so they stay in place)
         m_aiPath.destination = transform.position;
+        
+        // Set animator controller to idle
+        if (currentAnimatorController != idleAnimatorController)
+        {
+            currentAnimatorController = idleAnimatorController;
+            animator.runtimeAnimatorController = idleAnimatorController;
+        }
+
+        // Update sprite direction to last known
+        isoSpriteDirectionManager.UpdateSpriteDirection(Vector3.zero);
     }
 }
