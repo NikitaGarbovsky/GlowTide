@@ -49,7 +49,8 @@ public class ScaredSlugBushManager : MonoBehaviour
         {
             // Spawn the sea slug at the spawn point's position and rotation
             Instantiate(SeaSlugPrefabToSpawn, SlugSpawnPoint.transform.position, SlugSpawnPoint.transform.rotation);
-            
+
+            other.GetComponent<PlayerSlugManager>().m_bHasBroSnack = false;
             // Change the bush state to Unoccupied after spawning the sea slug
             _bushState = BushState.Unoccupied;
             m_audioSource.Play();

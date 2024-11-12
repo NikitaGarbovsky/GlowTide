@@ -491,6 +491,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 772907811
       objectReference: {fileID: 0}
+    - target: {fileID: 7114099419090749349, guid: 116b32d25cae78940be2a3cb5eed22d2, type: 3}
+      propertyPath: moveAnimatorController
+      value: 
+      objectReference: {fileID: 9100000, guid: f1268f188b0f4f141953ccd924d0900d, type: 2}
     - target: {fileID: 7275227552309675768, guid: 116b32d25cae78940be2a3cb5eed22d2, type: 3}
       propertyPath: m_Volume
       value: 0.5
