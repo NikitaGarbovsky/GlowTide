@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_PlayerTrail
+  m_Name: M_IdleBro_FX2
   m_Shader: {fileID: -6465566751694194690, guid: 47446852b91cba843a5d57d851c2a7d4, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -47,10 +47,10 @@ Material:
     m_Floats:
     - _UseAlbedo: 0
     m_Colors:
-    - _Glow_Colour: {r: 10.223775, g: 9.100705, b: 3.5204506, a: 0}
+    - _Glow_Colour: {r: 7.1698112, g: 5.8705926, b: 0, a: 0}
     - _RemapAlbedoToGlow: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &7895310199371344165
+--- !u!114 &8738279490127811427
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
