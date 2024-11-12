@@ -390,6 +390,10 @@ PrefabInstance:
       propertyPath: InitialModule.startSize.minScalar
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 8079855878194694328, guid: 0aa4f7a947d775242b5298b2a6ad0e47, type: 3}
+      propertyPath: InitialModule.startColor.maxGradient.atime1
+      value: 21010
+      objectReference: {fileID: 0}
     - target: {fileID: 8953127637475625064, guid: 0aa4f7a947d775242b5298b2a6ad0e47, type: 3}
       propertyPath: m_Name
       value: PS_SeaweedWisps
@@ -39486,6 +39490,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7275227552309675768, guid: 116b32d25cae78940be2a3cb5eed22d2, type: 3}
+      propertyPath: m_Volume
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 7275227552309675768, guid: 116b32d25cae78940be2a3cb5eed22d2, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a59995972f29f5a4fa96af0d73674f5f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -39862,7 +39874,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.47
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.36
+  m_Intensity: 0.7
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000b328b51fe9e3dccd
@@ -40127,6 +40139,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -1.92
       objectReference: {fileID: 0}
+    - target: {fileID: 1716701664348546268, guid: c849529eeb4267d47a92680d8b7c7d91, type: 3}
+      propertyPath: m_Intensity
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1986385395446494822, guid: c849529eeb4267d47a92680d8b7c7d91, type: 3}
+      propertyPath: m_Intensity
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2118441284137707783, guid: c849529eeb4267d47a92680d8b7c7d91, type: 3}
+      propertyPath: m_Intensity
+      value: 0.45
+      objectReference: {fileID: 0}
     - target: {fileID: 3149582816484654752, guid: c849529eeb4267d47a92680d8b7c7d91, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.922
@@ -40137,11 +40161,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4402392184547653063, guid: c849529eeb4267d47a92680d8b7c7d91, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.08
+      value: -13.24
       objectReference: {fileID: 0}
     - target: {fileID: 4402392184547653063, guid: c849529eeb4267d47a92680d8b7c7d91, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.72
+      value: 1.316
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969030254105405017, guid: c849529eeb4267d47a92680d8b7c7d91, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.572
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969030254105405017, guid: c849529eeb4267d47a92680d8b7c7d91, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.715
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979766725337970587, guid: c849529eeb4267d47a92680d8b7c7d91, type: 3}
+      propertyPath: m_Intensity
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 6628229814969523685, guid: c849529eeb4267d47a92680d8b7c7d91, type: 3}
       propertyPath: m_Name
