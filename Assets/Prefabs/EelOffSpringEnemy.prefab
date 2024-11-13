@@ -582,6 +582,7 @@ MonoBehaviour:
   m_chaseSpeedModifier: 2
   m_killDistance: 0.4
   m_killCircleOffset: 0.4
+  m_eelUpdateTime: 1
   m_stunTime: 3
   m_sightRadius: 2
   m_hardSightAngle: 0.1

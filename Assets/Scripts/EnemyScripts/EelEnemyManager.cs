@@ -51,6 +51,8 @@ public class EelEnemyManager : MonoBehaviour
     [SerializeField] float m_chaseSpeedModifier; // Increase the Speed while Chasing
     [SerializeField, Min(0.0f)] float m_killDistance; // Distance to Kill Player (Restart Level)
     [SerializeField] float m_killCircleOffset; // Distance to Kill Player (Restart Level)
+    [SerializeField] float m_eelUpdateTime;
+    float m_eelUpdateTimer;
     Vector2 m_killCirclePosition; // Poistion of kill circle
 
     [Header("Stunned")]
@@ -165,7 +167,7 @@ public class EelEnemyManager : MonoBehaviour
 
     void CheckForPlayerInSight()
     {
-        if (m_canSee)
+        if (m_canSee && Vector2.Distance(m_player.transform.position, m_eel.transform.position) < m_sightRadius + 4)
         {
             // Update m_angleToPlayer
             m_angleToPlayer = Mathf.Atan2(m_player.transform.position.y - m_eel.transform.position.y,
@@ -178,6 +180,8 @@ public class EelEnemyManager : MonoBehaviour
                 if (m_angleToPlayer <= m_eelAngle + m_hardSightAngle && m_angleToPlayer >= m_eelAngle - m_hardSightAngle)
                 {
                     m_currentEelState = EelState.Chase;
+                    m_aiPath.enabled = true;
+                    m_aiPath.maxSpeed = m_speed * m_chaseSpeedModifier;
                 }
                 // Soft Sight --- Investigate
                 else if (m_angleToPlayer <= m_eelAngle + m_softSightAngle && m_angleToPlayer >= m_eelAngle - m_softSightAngle)
@@ -209,10 +213,13 @@ public class EelEnemyManager : MonoBehaviour
 
     void ChasePlayer()
     {
-        m_aiPath.enabled = true;
-        m_aiPath.destination = new Vector3(m_player.transform.position.x, m_player.transform.position.y, 0);
+        m_eelUpdateTimer += Time.deltaTime;
+        if (m_eelUpdateTimer > m_eelUpdateTime)
+        {
+            m_eelUpdateTimer = 0;
+            m_aiPath.destination = new Vector3(m_player.transform.position.x, m_player.transform.position.y, 0);
+        }
         m_eelAngle = Mathf.Atan2(m_aiPath.velocity.normalized.y, m_aiPath.velocity.normalized.x);
-        m_aiPath.maxSpeed = m_speed * m_chaseSpeedModifier;
         m_directionManager.UpdateSpriteDirection(m_aiPath.velocity.normalized);
     }
 
