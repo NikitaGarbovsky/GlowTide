@@ -15,7 +15,7 @@ public class PlayerSlugManager : MonoBehaviour
     // List to hold currently assigned slugs
     public List<GameObject> m_lAssignedSlugs = new List<GameObject>();
 
-    public List<Image> m_HUDUI; // Amount of available slugs to throw
+    
 
     // Adjustable variables
     [Header("Calling Settings")]
@@ -268,13 +268,4 @@ public class PlayerSlugManager : MonoBehaviour
         }
     }
 
-    private void AddGameObjectsToList()
-    {
-        for (int i = 0; i < 10; i++)
-        {
-            m_HUDUI.Add(GameObject.FindGameObjectWithTag("HUD").GetComponentInChildren<Image>());
-        }
-
-        Debug.Log("10 GameObjects have been added to the list.");
-    }
 }
