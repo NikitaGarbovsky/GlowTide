@@ -75,7 +75,7 @@ public sealed class ManageGameplay : MonoBehaviour
         Debug.Log("Scene loaded: " + scene.name);
         
         GetPlayerReference();
-        
+        GetComponentInChildren<UIManager>().m_slugManager = playerCharacter.GetComponent<PlayerSlugManager>();
         // Activate the appropriate level manager
         ActivateLevelManager(scene.name);
         // Initializes the level.

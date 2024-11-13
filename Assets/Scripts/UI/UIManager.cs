@@ -8,19 +8,14 @@ public class UIManager : MonoBehaviour
 {
 
     [SerializeField] public List<GameObject> m_HUDUI; // Amount of available slugs to throw
-    private GameObject m_player;
-    private PlayerSlugManager m_slugManager;
+    public PlayerSlugManager m_slugManager;
     private int m_playerSlugCount;
     
-
-
     // Start is called before the first frame update
     void Start()
     {
-        m_player = ManageGameplay.Instance.playerCharacter;
-        m_slugManager = m_player.GetComponent<PlayerSlugManager>();
-    }
 
+    }
     // Update is called once per frame
     void Update()
     {
