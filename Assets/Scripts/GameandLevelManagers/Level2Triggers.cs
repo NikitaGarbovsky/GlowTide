@@ -10,6 +10,7 @@ public class Level2Triggers : LevelTriggers
     private Vector3 levelCenter; // Center position of the level
     [SerializeField] private GameObject EelBossPrefab;
     [SerializeField] public GameObject BroSnackGO;
+    [SerializeField] public AudioSource audioSource;
     public override void ExecuteLevelTrigger(string _sTriggerName)
     {
         if (_sTriggerName == "0_ZoomOutAndShowLevel") // This is the name of the gameobject that is being triggered.
@@ -130,6 +131,7 @@ public class Level2Triggers : LevelTriggers
 
                     slugManager.m_lAssignedSlugs.Clear();
                     slugManager.m_lAssignedSlugs.Add(slugToKeep);
+                    audioSource.Play();
                 }
                 slugsDestroyed = true;
             }

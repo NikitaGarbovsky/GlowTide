@@ -702,6 +702,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EelBossPrefab: {fileID: 1647357637110406790, guid: 7bc24efc23ac34d4dbee40a3c3031503, type: 3}
   BroSnackGO: {fileID: 103267904987843710}
+  audioSource: {fileID: 0}
 --- !u!1 &5190437215754437066
 GameObject:
   m_ObjectHideFlags: 0

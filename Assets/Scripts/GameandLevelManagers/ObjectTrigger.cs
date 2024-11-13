@@ -7,6 +7,8 @@ public class ObjectTrigger : MonoBehaviour
     private bool m_bHasBeenTriggered = false;
     public string m_sTriggerObjectPurpose;
     private PlayerSlugManager playerSlugManager;
+
+    [SerializeField] private AudioSource audioSource;
     // This method will be called when another collider enters this collider
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -18,6 +20,7 @@ public class ObjectTrigger : MonoBehaviour
                 {
                     Destroy(slug);
                     playerSlugManager.m_lAssignedSlugs.Remove(slug);
+                    audioSource.Play();
                 }
             }
         }
