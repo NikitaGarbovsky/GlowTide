@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 using Random = UnityEngine.Random;
@@ -62,6 +63,9 @@ public class SeaSlugBroFollower : MonoBehaviour
 
     [SerializeField] private GameObject slugIdleVFX;
     public bool m_bIsInVulnerableZone = false;
+
+    [SerializeField] private List<AudioClip> SqueakSounds;
+    [SerializeField] private AudioSource audioSource; 
     private void Start()
     {
         // Grab the reference to the player through the gamemanager 
@@ -254,6 +258,16 @@ public class SeaSlugBroFollower : MonoBehaviour
     // Handle collisions while the slug is in the thrown state
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (!collision.gameObject.CompareTag("Slug")) // only play the sound effect if the collision is not to another slug.
+        {
+            // Select a random clip from the list
+            AudioClip selectedClip = SqueakSounds[Random.Range(0, SqueakSounds.Count)];
+
+            // Set the selected clip to the audio source and play it
+            audioSource.clip = selectedClip;
+            audioSource.Play();
+        }
+        
         if (m_eCurrentState == ESlugState.Thrown)
         {
             if (trailBubblesInstance != null)
@@ -411,6 +425,12 @@ public class SeaSlugBroFollower : MonoBehaviour
     // Function triggered when the slug reaches the thrown target position
     private void OnReachThrownTarget()
     {
+        // Select a random clip from the list
+        AudioClip selectedClip = SqueakSounds[Random.Range(0, SqueakSounds.Count)];
+
+        // Set the selected clip to the audio source and play it
+        audioSource.clip = selectedClip;
+        audioSource.Play();
         if (trailBubblesInstance != null)
         {
             // Deactivate the bubbles when the target has reached location.

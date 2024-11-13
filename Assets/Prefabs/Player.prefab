@@ -265,7 +265,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_lAssignedSlugs: []
-  m_HUDUI: {fileID: 0}
   m_fCallRadius: 1
   m_fCallMaxDistance: 2
   m_lSlugLayerMask:
@@ -277,6 +276,14 @@ MonoBehaviour:
   vfxNotesPrefab: {fileID: 6624332161375095230, guid: 9182ab5848c31f149b4a24ddd0235486, type: 3}
   callVFXDuration: 2.4
   m_bHasBroSnack: 0
+  CallSound: {fileID: 8300000, guid: a59995972f29f5a4fa96af0d73674f5f, type: 3}
+  ThrowSound:
+  - {fileID: 8300000, guid: ff855b710084f2346a11dec5f1443cdf, type: 3}
+  - {fileID: 8300000, guid: 7e5da3508dfec79458da6acc2e22c276, type: 3}
+  - {fileID: 8300000, guid: b292a51c18b2d6e4fb1c94b8ad31a082, type: 3}
+  - {fileID: 8300000, guid: 29857d1e576e36c45a8f06d45c681ac5, type: 3}
+  - {fileID: 8300000, guid: c1b4656eb15ab4a4e8220caf4b28f26a, type: 3}
+  - {fileID: 8300000, guid: c5fc53339f312ca409760716dbcc56df, type: 3}
 --- !u!114 &5331817668393732618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,7 +327,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 25fc56b96e39e3c4ba238eb2e3c3e407, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.03
   m_Pitch: 1
   Loop: 0
   Mute: 0

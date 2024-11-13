@@ -42,6 +42,10 @@ public class PlayerSlugManager : MonoBehaviour
     private Animator playerAnimator;
 
     AudioSource m_audioSource;
+
+    [SerializeField] private AudioClip CallSound;
+    [SerializeField] private List<AudioClip> ThrowSound;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -98,6 +102,7 @@ public class PlayerSlugManager : MonoBehaviour
                 {
                     // Call slugs
                     CallSlugs(v3MouseWorldPos);
+                    m_audioSource.clip = CallSound;
                     m_audioSource.Play();
                 }
             }
@@ -173,6 +178,13 @@ public class PlayerSlugManager : MonoBehaviour
         // Check if the left mouse button is pressed
         if (Input.GetKeyDown(KeyCode.Space) && ManageGameplay.Instance.PlayerCanThrowBros)
         {
+            // Select a random clip from the list
+            AudioClip selectedClip = ThrowSound[Random.Range(0, ThrowSound.Count)];
+
+            // Set the selected clip to the audio source and play it
+            m_audioSource.clip = selectedClip;
+            m_audioSource.Play();
+            
             // Calculate the throw direction
             Vector2 v2MouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3 throwDirection = (v2MouseWorldPos - (Vector2)m_goPlayer.transform.position).normalized;
