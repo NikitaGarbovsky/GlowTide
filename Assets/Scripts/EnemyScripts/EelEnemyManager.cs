@@ -79,65 +79,69 @@ public class EelEnemyManager : MonoBehaviour
 
     private void Update()
     {
-        switch (m_currentEelState)
+        if (!ManageGameplay.Instance.m_HasLevelTransitionBeenTriggered)
         {
-            case EelState.Patrol:
-                m_canSee = true;
-                PatrolPoints();
-                CheckForPlayerInSight();
-                m_UIImage.enabled = false;
-                break;
-            case EelState.Investigate:
-                m_canSee = true;
-                LookForPlayer();
-                CheckForPlayerInSight();
-                m_UIImage.enabled = true;
-                m_UIImage.sprite = m_investigatingSprite;
-                break;
-            case EelState.Chase:
-                m_canSee = true;
-                ChasePlayer();
-                m_UIImage.enabled = true;
-                m_UIImage.sprite = m_chaseSprite;
-                break;
-            case EelState.Stunned:
-                m_canSee = false;
-                //Stunned();
-                m_UIImage.enabled = false;
-                m_stunnedVFX.SetActive(true);
-                break;
-            case EelState.Returning:
-                m_canSee = false;
-                Returning();
-                break;
-            default:
-                break;
-        }
-
-        // Update UI Position
-        float spriteAngle = ((float)m_directionManager.GetCurrentDirection() / 16.0f) * (2 * Mathf.PI);
-        m_UIImage.transform.position = new Vector2(m_eel.transform.position.x + (m_imageOffset.x * Mathf.Cos(spriteAngle)) ,
-                                                   m_eel.transform.position.y + (m_imageOffset.y * Mathf.Sin(spriteAngle) + 0.5f));
-
-        // Update Kill Position
-        m_killCirclePosition = new Vector2(m_eel.transform.position.x + (m_killCircleOffset * Mathf.Cos(m_eelAngle)),
-                                           m_eel.transform.position.y + (m_killCircleOffset * Mathf.Sin(m_eelAngle)));
-        // Kill Player
-        if (Vector2.Distance(m_player.transform.position, m_killCirclePosition) <= m_killDistance && m_canSee && m_currentEelState == EelState.Chase) // Player can only die if they're being chased.
-        {
-            ManageGameplay.Instance.LoadSceneWithFade("reset"); // Fades out and resets the level upon death
-            Debug.Log("Restart Level");
-        }
-        
-        // Collide with Geyser
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(m_eel.transform.position, m_killDistance);
-        foreach (Collider2D collider in colliders)
-        {
-            if (collider.gameObject.CompareTag("Geyser") && m_currentEelState != EelState.Stunned && m_currentEelState != EelState.Returning)
+            switch (m_currentEelState)
             {
-                m_currentEelState = EelState.Stunned;
-                m_aiPath.enabled = false;
-                break;
+                case EelState.Patrol:
+                    m_canSee = true;
+                    PatrolPoints();
+                    CheckForPlayerInSight();
+                    m_UIImage.enabled = false;
+                    break;
+                case EelState.Investigate:
+                    m_canSee = true;
+                    LookForPlayer();
+                    CheckForPlayerInSight();
+                    m_UIImage.enabled = true;
+                    m_UIImage.sprite = m_investigatingSprite;
+                    break;
+                case EelState.Chase:
+                    m_canSee = true;
+                    ChasePlayer();
+                    m_UIImage.enabled = true;
+                    m_UIImage.sprite = m_chaseSprite;
+                    break;
+                case EelState.Stunned:
+                    m_canSee = false;
+                    //Stunned();
+                    m_UIImage.enabled = false;
+                    m_stunnedVFX.SetActive(true);
+                    break;
+                case EelState.Returning:
+                    m_canSee = false;
+                    Returning();
+                    break;
+                default:
+                    break;
+            }
+
+            // Update UI Position
+            float spriteAngle = ((float)m_directionManager.GetCurrentDirection() / 16.0f) * (2 * Mathf.PI);
+            m_UIImage.transform.position = new Vector2(m_eel.transform.position.x + (m_imageOffset.x * Mathf.Cos(spriteAngle)) ,
+                                                       m_eel.transform.position.y + (m_imageOffset.y * Mathf.Sin(spriteAngle) + 0.5f));
+
+            // Update Kill Position
+            m_killCirclePosition = new Vector2(m_eel.transform.position.x + (m_killCircleOffset * Mathf.Cos(m_eelAngle)),
+                                               m_eel.transform.position.y + (m_killCircleOffset * Mathf.Sin(m_eelAngle)));
+            // Kill Player
+            if (Vector2.Distance(m_player.transform.position, m_killCirclePosition) <= m_killDistance && m_canSee && m_currentEelState == EelState.Chase && !ManageGameplay.Instance.m_HasLevelTransitionBeenTriggered) // Player can only die if they're being chased.
+            {
+                ManageGameplay.Instance.m_HasLevelTransitionBeenTriggered = true;
+                ManageGameplay.Instance.LoadSceneWithFade("reset"); // Fades out and resets the level upon death
+                Debug.Log("Restart Level");
+            }
+            
+            // Collide with Geyser
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(m_eel.transform.position, m_killDistance);
+            foreach (Collider2D collider in colliders)
+            {
+                if (collider.gameObject.CompareTag("Geyser") && m_currentEelState != EelState.Stunned && m_currentEelState != EelState.Returning)
+                {
+                    m_currentEelState = EelState.Stunned;
+                    m_aiPath.enabled = false;
+                    break;
+                }
             }
         }
     }

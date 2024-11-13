@@ -11,8 +11,6 @@ public class EelEnemyCollision : MonoBehaviour
         {
             Debug.Log("EelEnemy Stunned on Geyser Triggered!!!!");
             gameObject.GetComponentInParent<EelEnemyManager>().m_currentEelState = EelEnemyManager.EelState.Stunned;
-            // Turns off the Geyser
-            other.gameObject.GetComponent<GeyserManager>().m_bActive = false;
         }
     }
 }

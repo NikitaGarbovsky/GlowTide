@@ -33,6 +33,8 @@ public sealed class ManageGameplay : MonoBehaviour
     // This is the object that is used for the fade-out/in effect for scene loading
     [SerializeField] private CanvasGroup fadeCanvasGroup;
     [SerializeField] public float fadeDuration = 2f;
+
+    public bool m_HasLevelTransitionBeenTriggered;
     private void Awake()
     {
         // Singleton pattern implementation
@@ -69,6 +71,7 @@ public sealed class ManageGameplay : MonoBehaviour
     // This is called when a scene is loaded 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        m_HasLevelTransitionBeenTriggered = false;
         Debug.Log("Scene loaded: " + scene.name);
         
         GetPlayerReference();
@@ -220,6 +223,7 @@ public sealed class ManageGameplay : MonoBehaviour
     // This is the primary method that is called throughout the codebase that will load a scene with the fading effect
     public void LoadSceneWithFade(string sceneName)
     {
+        m_HasLevelTransitionBeenTriggered = true;
         // Uses the passed in scene name (E.g. "1_Level1") to load the corresponding scene (with the fade effect)
         StartCoroutine(LoadSceneWithFadeCoroutine(sceneName));
     }
