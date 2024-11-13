@@ -171,7 +171,7 @@ public class PlayerSlugManager : MonoBehaviour
     void HandleThrowing()
     {
         // Check if the left mouse button is pressed
-        if (Input.GetMouseButtonDown(0) && ManageGameplay.Instance.PlayerCanThrowBros)
+        if (Input.GetKeyDown(KeyCode.Space) && ManageGameplay.Instance.PlayerCanThrowBros)
         {
             // Calculate the throw direction
             Vector2 v2MouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
