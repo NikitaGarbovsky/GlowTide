@@ -41,7 +41,8 @@ public sealed class ManageGameplay : MonoBehaviour
     [SerializeField] public AudioClip EelMusicTheme;
 
     public AudioSource m_AudioSource;
-    
+
+    [SerializeField] private GameObject ResetButton;
     private void Awake()
     {
         // Singleton pattern implementation
@@ -62,6 +63,7 @@ public sealed class ManageGameplay : MonoBehaviour
         {
             fadeCanvasGroup = GetComponentInChildren<CanvasGroup>();
         }
+        fadeCanvasGroup.blocksRaycasts = false;
     }
     
     private void OnEnable()
@@ -81,8 +83,9 @@ public sealed class ManageGameplay : MonoBehaviour
         m_HasLevelTransitionBeenTriggered = false;
         Debug.Log("Scene loaded: " + scene.name);
         
-        if (scene.name == "3_Level3" || scene.name == "4_Level4" || scene.name == "5_Level5" || scene.name == "6_Level6") 
+        if (scene.name == "3_Level3" || scene.name == "4_Level4" || scene.name == "5_Level5" || scene.name == "6_Level6")
         {
+            ResetButton.SetActive(true);
             m_AudioSource.clip = EelMusicTheme; // Play the Eel theme.
             m_AudioSource.Play();
             m_AudioSource.volume = 0.02f;
@@ -99,7 +102,7 @@ public sealed class ManageGameplay : MonoBehaviour
         ActivateLevelManager(scene.name);
         // Initializes the level.
         GetLevelManager(scene.name).GetComponent<LevelManager>().InitializeLevel();
-        
+        fadeCanvasGroup.blocksRaycasts = false;
     }
     // After scene loads we call this to get a new reference to the player, (wont need this anymore if the player 
     // becomes a global object.)
@@ -250,12 +253,13 @@ public sealed class ManageGameplay : MonoBehaviour
     private IEnumerator LoadSceneWithFadeCoroutine(string sceneName)
     {
         // Start fade-out
-        yield return StartCoroutine(Fade(1f));
+        yield return StartCoroutine(Fade(2f));
 
         // Load the scene
         if (sceneName == "reset")
         {
             // Reload current scene
+            Debug.Log("Reload Triggered");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         else
