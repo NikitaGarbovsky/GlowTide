@@ -12,7 +12,8 @@ public class PlayerControllerManager : MonoBehaviour
     private IsoSpriteDirectionManager spriteDirectionManager; // Reference to IsoSpriteDirectionManager
 
     private Vector3 targetPosition;
-    [SerializeField] GameObject m_destinationObject;
+    [SerializeField] GameObject m_destinationObject; // Object that shows the player where theyre moving
+    float m_destinationOpacity;
 
     private Animator playerAnimator;
     [SerializeField] public RuntimeAnimatorController moveAnimatorController;
@@ -39,6 +40,7 @@ public class PlayerControllerManager : MonoBehaviour
             // If the right mouse button was just pressed or the update interval has passed
             if (Input.GetMouseButtonDown(1) || timeSinceLastUpdate >= updateInterval)
             {
+                m_destinationOpacity = 3f;
                 // Reset the timer
                 timeSinceLastUpdate = 0.0f;
 
@@ -48,7 +50,6 @@ public class PlayerControllerManager : MonoBehaviour
 
                 // Set the target position for the A* pathfinding system
                 targetPosition = mousePosition;
-                if (m_destinationObject != null) m_destinationObject.transform.position = targetPosition;
                 aiPath.destination = targetPosition; // Tell A* where to move
             }
         }
@@ -56,6 +57,18 @@ public class PlayerControllerManager : MonoBehaviour
         {
             // Reset the timer when the mouse button is not held
             timeSinceLastUpdate = 0.0f;
+        }
+
+        if (m_destinationObject != null)
+        {
+            m_destinationOpacity -= Time.deltaTime;
+            if (m_destinationOpacity < 0) m_destinationOpacity = 0;
+            m_destinationObject.transform.position = targetPosition;
+            SpriteRenderer renderer = m_destinationObject.GetComponent<SpriteRenderer>();
+            if (renderer != null)
+            {
+                renderer.color = new Color(1, 1, 1, m_destinationOpacity);
+            }
         }
 
         // Get movement direction
