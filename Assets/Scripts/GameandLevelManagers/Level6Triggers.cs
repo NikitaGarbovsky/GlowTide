@@ -10,75 +10,87 @@ public class Level6Triggers : LevelTriggers
     private Vector3 levelCenter; // Center position of the level
     [SerializeField] private GameObject EelBossPrefab;
 
+
+    float threshold = 0.5f;
     private GameObject EelBossSpawnsObject;
-    // YUMMY HARDCODED VALUES YAYYYYYY
     private bool spawnedInFirstPosition = false;
-    private Vector3 eelBossTargetPosition1 = new Vector3();
+    private Vector3 eelBossTargetPosition1;
     private bool spawnedInSecondPosition = false;
-    private Vector3 eelBossTargetPosition2 = new Vector3();
+    private Vector3 eelBossTargetPosition2;
     private bool spawnedInThirdPosition = false;
-    private Vector3 eelBossTargetPosition3 = new Vector3();
+    private Vector3 eelBossTargetPosition3;
     private bool spawnedInFourthosition = false;
-    private Vector3 eelBossTargetPosition4 = new Vector3();
+    private Vector3 eelBossTargetPosition4;
     private bool spawnedInFifthPosition = false;
-    private Vector3 eelBossTargetPosition5 = new Vector3();
+    private Vector3 eelBossTargetPosition5;
     private bool spawnedInSixthPosition = false;
     private bool spawnedInSeventhPosition = false;
 
     private void Start()
     {
         EelBossSpawnsObject = GameObject.FindWithTag("EelBossSpawns");
-        eelBossTargetPosition1 = EelBossSpawnsObject.GetComponentInChildren<Transform>().transform.Find("EelBossSpawn1").position;
-        eelBossTargetPosition2 = EelBossSpawnsObject.GetComponentInChildren<Transform>().transform.Find("EelBossSpawn2").position;
-        eelBossTargetPosition3 = EelBossSpawnsObject.GetComponentInChildren<Transform>().transform.Find("EelBossSpawn3").position;
-        eelBossTargetPosition4 = EelBossSpawnsObject.GetComponentInChildren<Transform>().transform.Find("EelBossSpawn4").position;
-        eelBossTargetPosition5 = EelBossSpawnsObject.GetComponentInChildren<Transform>().transform.Find("EelBossSpawn5").position;
+        eelBossTargetPosition1 = EelBossSpawnsObject.GetComponentInChildren<Transform>().transform.Find("EelBossSpawn1")
+            .position;
+        eelBossTargetPosition2 = EelBossSpawnsObject.GetComponentInChildren<Transform>().transform.Find("EelBossSpawn2")
+            .position;
+        eelBossTargetPosition3 = EelBossSpawnsObject.GetComponentInChildren<Transform>().transform.Find("EelBossSpawn3")
+            .position;
+        eelBossTargetPosition4 = EelBossSpawnsObject.GetComponentInChildren<Transform>().transform.Find("EelBossSpawn4")
+            .position;
+        eelBossTargetPosition5 = EelBossSpawnsObject.GetComponentInChildren<Transform>().transform.Find("EelBossSpawn5")
+            .position;
+
     }
 
     private GameObject EelBossInstance;
+
     public override void ExecuteLevelTrigger(string _sTriggerName)
     {
         if (_sTriggerName == "0_ZoomOutAndShowLevel") // This is the name of the gameobject that is being triggered.
         {
             StartCoroutine(ZoomOutAndShowLevel());
         }
+
         if (_sTriggerName == "1_EelBoss") // First spawning position for the Eel Boss
         {
             spawnedInFirstPosition = true;
             // Spawn at the first position,
             EelBossInstance = Instantiate(EelBossPrefab, eelBossTargetPosition1, Quaternion.identity);
-            
+
             BigEelController eelBossController = EelBossInstance.GetComponent<BigEelController>();
-            
+
             eelBossController.SetDirectionForMovement(1, "NEE");
             // Then move to the second position.
             eelBossController.MovetoPoint(eelBossTargetPosition2);
             eelBossController.m_speed = 12;
         }
+
         if (_sTriggerName == "2_EelBoss") // Second spawning position for the Eel Boss
         {
             spawnedInSecondPosition = true;
             // Spawn at the second position,
             EelBossInstance = Instantiate(EelBossPrefab, eelBossTargetPosition2, Quaternion.identity);
-            
+
             BigEelController eelBossController = EelBossInstance.GetComponent<BigEelController>();
             eelBossController.m_speed = 12;
             eelBossController.SetDirectionForMovement(9, "SWW");
             // Then move to the first position.
             eelBossController.MovetoPoint(eelBossTargetPosition1);
         }
+
         if (_sTriggerName == "3_EelBoss") // Third spawning position for the Eel Boss
         {
             spawnedInThirdPosition = true;
-            
+
             EelBossInstance = Instantiate(EelBossPrefab, eelBossTargetPosition3, Quaternion.identity);
 
-            
+
             BigEelController eelBossController = EelBossInstance.GetComponent<BigEelController>();
             eelBossController.m_speed = 12;
             eelBossController.SetDirectionForMovement(15, "SEE");
             eelBossController.MovetoPoint(eelBossTargetPosition4);
         }
+
         if (_sTriggerName == "4_EelBoss") // Fourth spawning position for the Eel Boss
         {
             spawnedInFourthosition = true;
@@ -90,6 +102,7 @@ public class Level6Triggers : LevelTriggers
             eelBossController.SetDirectionForMovement(7, "NWW");
             eelBossController.MovetoPoint(eelBossTargetPosition3);
         }
+
         if (_sTriggerName == "5_EelBoss") // Fifth spawning position for the Eel Boss
         {
             spawnedInFifthPosition = true;
@@ -101,6 +114,7 @@ public class Level6Triggers : LevelTriggers
             eelBossController.SetDirectionForMovement(0, "E");
             eelBossController.MovetoPoint(eelBossTargetPosition5);
         }
+
         if (_sTriggerName == "6_EelBoss") // Sixth spawning position for the Eel Boss
         {
             spawnedInSixthPosition = true;
@@ -112,6 +126,7 @@ public class Level6Triggers : LevelTriggers
             eelBossController.SetDirectionForMovement(8, "W");
             eelBossController.MovetoPoint(eelBossTargetPosition1);
         }
+
         if (_sTriggerName == "7_EelBoss") // Seventh spawning position for the Eel Boss
         {
             spawnedInSeventhPosition = true;
@@ -123,9 +138,10 @@ public class Level6Triggers : LevelTriggers
             eelBossController.SetDirectionForMovement(9, "SWW");
             eelBossController.MovetoPoint(eelBossTargetPosition3);
         }
+
         if (_sTriggerName == "8_LevelTransition")
         {
-            
+
         }
     }
 
@@ -205,31 +221,37 @@ public class Level6Triggers : LevelTriggers
     private int ReturnWhichEelSpawnCount()
     {
         int iSpawnedCount = 0;
-        if(spawnedInFirstPosition)
+        if (spawnedInFirstPosition)
         {
             iSpawnedCount++;
         }
-        if(spawnedInSecondPosition)
+
+        if (spawnedInSecondPosition)
         {
             iSpawnedCount++;
         }
-        if(spawnedInThirdPosition)
+
+        if (spawnedInThirdPosition)
         {
             iSpawnedCount++;
         }
-        if(spawnedInFourthosition)
+
+        if (spawnedInFourthosition)
         {
             iSpawnedCount++;
         }
-        if(spawnedInFifthPosition)
+
+        if (spawnedInFifthPosition)
         {
             iSpawnedCount++;
         }
-        if(spawnedInSixthPosition)
+
+        if (spawnedInSixthPosition)
         {
             iSpawnedCount++;
         }
-        if(spawnedInSeventhPosition)
+
+        if (spawnedInSeventhPosition)
         {
             iSpawnedCount++;
         }

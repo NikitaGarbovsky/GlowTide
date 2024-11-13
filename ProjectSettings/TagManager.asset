@@ -11,6 +11,7 @@ TagManager:
   - Slug
   - Geyser
   - EelBossSpawns
+  - EelBoss
   layers:
   - Default
   - TransparentFX
