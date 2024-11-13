@@ -50,6 +50,7 @@ public class Level6Triggers : LevelTriggers
             
             BigEelController eelBossController = EelBossInstance.GetComponent<BigEelController>();
             
+            eelBossController.SetDirectionForMovement(1, "NEE");
             // Then move to the second position.
             eelBossController.MovetoPoint(eelBossTargetPosition2);
             eelBossController.m_speed = 12;
@@ -62,7 +63,7 @@ public class Level6Triggers : LevelTriggers
             
             BigEelController eelBossController = EelBossInstance.GetComponent<BigEelController>();
             eelBossController.m_speed = 12;
-            
+            eelBossController.SetDirectionForMovement(9, "SWW");
             // Then move to the first position.
             eelBossController.MovetoPoint(eelBossTargetPosition1);
         }
@@ -75,6 +76,7 @@ public class Level6Triggers : LevelTriggers
             
             BigEelController eelBossController = EelBossInstance.GetComponent<BigEelController>();
             eelBossController.m_speed = 12;
+            eelBossController.SetDirectionForMovement(15, "SEE");
             eelBossController.MovetoPoint(eelBossTargetPosition4);
         }
         if (_sTriggerName == "4_EelBoss") // Fourth spawning position for the Eel Boss
@@ -85,6 +87,7 @@ public class Level6Triggers : LevelTriggers
             // 2. Command the Eel Boss to move to the target point
             BigEelController eelBossController = EelBossInstance.GetComponent<BigEelController>();
             eelBossController.m_speed = 12;
+            eelBossController.SetDirectionForMovement(7, "NWW");
             eelBossController.MovetoPoint(eelBossTargetPosition3);
         }
         if (_sTriggerName == "5_EelBoss") // Fifth spawning position for the Eel Boss
@@ -95,6 +98,7 @@ public class Level6Triggers : LevelTriggers
             // 2. Command the Eel Boss to move to the target point
             BigEelController eelBossController = EelBossInstance.GetComponent<BigEelController>();
             eelBossController.m_speed = 12;
+            eelBossController.SetDirectionForMovement(0, "E");
             eelBossController.MovetoPoint(eelBossTargetPosition5);
         }
         if (_sTriggerName == "6_EelBoss") // Sixth spawning position for the Eel Boss
@@ -105,6 +109,7 @@ public class Level6Triggers : LevelTriggers
             // 2. Command the Eel Boss to move to the target point
             BigEelController eelBossController = EelBossInstance.GetComponent<BigEelController>();
             eelBossController.m_speed = 12;
+            eelBossController.SetDirectionForMovement(8, "W");
             eelBossController.MovetoPoint(eelBossTargetPosition1);
         }
         if (_sTriggerName == "7_EelBoss") // Seventh spawning position for the Eel Boss
@@ -115,6 +120,7 @@ public class Level6Triggers : LevelTriggers
             // 2. Command the Eel Boss to move to the target point
             BigEelController eelBossController = EelBossInstance.GetComponent<BigEelController>();
             eelBossController.m_speed = 12;
+            eelBossController.SetDirectionForMovement(9, "SWW");
             eelBossController.MovetoPoint(eelBossTargetPosition3);
         }
         if (_sTriggerName == "8_LevelTransition")

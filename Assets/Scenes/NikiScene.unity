@@ -449,6 +449,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SeaSlugBro (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1253205221210208180, guid: 6b5be1658f2be644a98cb6c7c3559ffe, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -271851153, guid: ceb72bf684b87d3419712809e8b37218, type: 3}
     - target: {fileID: 3557355496399265425, guid: 6b5be1658f2be644a98cb6c7c3559ffe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.99164236
@@ -489,6 +493,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5957625589242670881, guid: 6b5be1658f2be644a98cb6c7c3559ffe, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 0c3a06f14213ddc47ad64187ec5abfa8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1056,6 +1064,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51a20966ac3caf94f8acc7f47c4c5077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_currentEelState: 0
+  m_eel: {fileID: 0}
+  m_player: {fileID: 0}
+  m_aiPath: {fileID: 0}
+  m_directionManager: {fileID: 0}
+  m_ShowGizmos: 0
+  m_UIImage: {fileID: 0}
+  m_imageOffset: {x: 0, y: 0}
+  m_investigatingSprite: {fileID: 0}
+  m_chaseSprite: {fileID: 0}
+  m_stunnedVFX: {fileID: 0}
+  m_speed: 0
+  m_waypoints: []
+  m_rotationTime: 0
+  m_investigationTime: 0
+  m_chaseSpeedModifier: 0
+  m_killDistance: 0
+  m_killCircleOffset: 0
+  m_stunTime: 0
+  m_sightRadius: 0
+  m_hardSightAngle: 0
+  m_softSightAngle: 0
 --- !u!1 &2077731081
 GameObject:
   m_ObjectHideFlags: 0
@@ -2834,6 +2864,10 @@ PrefabInstance:
     - target: {fileID: 3437247932198125528, guid: 8e356972ef8efb042b04d7fd584420b5, type: 3}
       propertyPath: m_SortingLayerID
       value: 531966131
+      objectReference: {fileID: 0}
+    - target: {fileID: 3999228297054483399, guid: 8e356972ef8efb042b04d7fd584420b5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5805888331724861479, guid: 8e356972ef8efb042b04d7fd584420b5, type: 3}
       propertyPath: m_IsActive

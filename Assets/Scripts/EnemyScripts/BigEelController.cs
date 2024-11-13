@@ -8,7 +8,9 @@ public class BigEelController : MonoBehaviour
     [SerializeField] bool m_canMove; // If the Eel can Move
     [SerializeField] Vector2 m_point; // Point to Move to
     [SerializeField] public float m_speed; // Move Speed
-
+    private IsoSpriteDirectionManager isoSpriteDirectionManager;
+    private Animator animator;
+    private AudioSource audioSource;
     private void Update()
     {
         if (m_canMove)
@@ -21,6 +23,13 @@ public class BigEelController : MonoBehaviour
                 m_canMove = false; 
             }
         }
+    }
+    
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+        audioSource.Play();
+        animator = GetComponent<Animator>();
     }
 
     // Sets the Move to Point
@@ -37,5 +46,12 @@ public class BigEelController : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
+    }
+
+    public void SetDirectionForMovement(int _iDirection, string _DirectionName)
+    {
+        string animationName = _iDirection + "_Eel_" + _DirectionName;
+        animator.SetInteger("Direction", _iDirection);
+        animator.Play(animationName, 0, 0);
     }
 }

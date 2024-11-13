@@ -12,7 +12,7 @@ public class DoorInteractiveObject : InteractiveObject
     [SerializeField] private GameObject m_Grid;
 
     [SerializeField] List<Transform> slugSpots = new List<Transform>();
-    
+    [SerializeField] private SpriteRenderer doorSpriteRenderer; // the spriterenderer child object
     private int slugSpotIndex = 0; // Tracks the next available slug spot
 
     private int slugsReachedTarget = 0; // Count of slugs that have reached their spots
@@ -75,7 +75,6 @@ public class DoorInteractiveObject : InteractiveObject
         
         
         // Get the sprite render for the door 
-        SpriteRenderer[] renderers = GetComponents<SpriteRenderer>();
         float elapsedTime = 0f;
 
         // Fade out over time
@@ -83,27 +82,23 @@ public class DoorInteractiveObject : InteractiveObject
         {
             elapsedTime += Time.deltaTime;
             float alpha = Mathf.Lerp(1f, 0f, elapsedTime / m_fDisolveDuration);
-            foreach (var sr in renderers)
+            
+            if (doorSpriteRenderer != null)
             {
-                if (sr != null)
-                {
-                    Color color = sr.color;
-                    color.a = alpha;
-                    sr.color = color;
-                }
+                Color color = doorSpriteRenderer.color;
+                color.a = alpha;
+                doorSpriteRenderer.color = color;
             }
+            
             yield return null;
         }
 
         // Ensure alpha is set to 0
-        foreach (var sr in renderers)
+        if (doorSpriteRenderer != null)
         {
-            if (sr != null)
-            {
-                Color color = sr.color;
-                color.a = 0f;
-                sr.color = color;
-            }
+            Color color = doorSpriteRenderer.color;
+            color.a = 0f;
+            doorSpriteRenderer.color = color;
         }
 
         // Grab the polygon collider of the door

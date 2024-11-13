@@ -7,8 +7,9 @@ public class GeyserManager : MonoBehaviour
     [SerializeField] private Transform positionToMoveTo;
     [SerializeField] private float moveSpeed = 5f; // Speed of movement towards the target
 
-     public bool m_bActive = true;
+    public bool m_bActive = true;
 
+    [SerializeField] private int directionToAnimateThrow = 0;
     AudioSource m_audioSource;
 
     private void Start()
@@ -20,6 +21,8 @@ public class GeyserManager : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         m_audioSource.Play();
+        other.gameObject.GetComponentInChildren<SpriteRenderer>().sortingLayerName = "2Up"; 
+        other.gameObject.GetComponent<Animator>().SetInteger("Direction",directionToAnimateThrow);
         if (other.gameObject.CompareTag("Player") && m_bActive)
         {
             // 2. Disable pathfinding and collisions
@@ -36,6 +39,9 @@ public class GeyserManager : MonoBehaviour
 
         if (other.gameObject.CompareTag("Slug") && m_bActive)
         {
+            other.gameObject.GetComponent<SeaSlugBroFollower>().m_eCurrentState = SeaSlugBroFollower.ESlugState.Thrown;
+            other.gameObject.GetComponent<Animator>().runtimeAnimatorController =
+                other.gameObject.GetComponent<SeaSlugBroFollower>().throwAnimatorController;
             // 2. Disable pathfinding and collisions
             AIPath aiPath = other.gameObject.GetComponent<AIPath>();
             if (aiPath != null)
@@ -70,6 +76,8 @@ public class GeyserManager : MonoBehaviour
         
         if (_obToMove.gameObject.CompareTag("Slug"))
         {
+            _obToMove.gameObject.GetComponent<SeaSlugBroFollower>().m_eCurrentState = SeaSlugBroFollower.ESlugState.Idle;
+            _obToMove.gameObject.GetComponentInChildren<SpriteRenderer>().sortingLayerName = "Ground"; 
             _obToMove.gameObject.GetComponent<CircleCollider2D>().enabled = true;
             _obToMove.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             aiPath.enabled = true;
@@ -82,6 +90,7 @@ public class GeyserManager : MonoBehaviour
         }
         else
         {
+            _obToMove.gameObject.GetComponentInChildren<SpriteRenderer>().sortingLayerName = "1Up"; 
             _obToMove.GetComponent<CapsuleCollider2D>().enabled = true;
             if (aiPath != null)
             {

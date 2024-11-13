@@ -121,9 +121,9 @@ public class EelEnemyManager : MonoBehaviour
         m_killCirclePosition = new Vector2(m_eel.transform.position.x + (m_killCircleOffset * Mathf.Cos(m_eelAngle)),
                                            m_eel.transform.position.y + (m_killCircleOffset * Mathf.Sin(m_eelAngle)));
         // Kill Player
-        if (Vector2.Distance(m_player.transform.position, m_killCirclePosition) <= m_killDistance && m_canSee)
+        if (Vector2.Distance(m_player.transform.position, m_killCirclePosition) <= m_killDistance && m_canSee && m_currentEelState == EelState.Chase) // Player can only die if they're being chased.
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            ManageGameplay.Instance.LoadSceneWithFade("reset"); // Fades out and resets the level upon death
             Debug.Log("Restart Level");
         }
         

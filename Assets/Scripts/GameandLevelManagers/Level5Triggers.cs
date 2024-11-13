@@ -12,19 +12,20 @@ public class Level5Triggers : LevelTriggers
 
     private GameObject EelBossInstance;
     
-    Vector2 eelBossTargetPosition = new Vector2(-13.01f, -20.44f);
+    Vector2 eelBossTargetPosition = new Vector2(-11.01f, -20.44f);
     // Variables to check Eel Boss's progress
     public override void ExecuteLevelTrigger(string _sTriggerName)
     {
         if (_sTriggerName == "0_ZoomOutAndShowLevel") // This is the name of the gameobject that is being triggered.
         {
             // 1. Instantiate the Eel Boss at the spawn position
-            Vector3 vEelBossSpawnWorldPosition = new Vector3(-13.01f, 18.38f, 0f);
+            Vector3 vEelBossSpawnWorldPosition = new Vector3(-11.01f, 18.38f, 0f);
             EelBossInstance = Instantiate(EelBossPrefab, vEelBossSpawnWorldPosition, Quaternion.identity);
 
             // 2. Command the Eel Boss to move to the target point
             BigEelController eelBossController = EelBossInstance.GetComponent<BigEelController>();
 
+            eelBossController.SetDirectionForMovement(12, "S");
             eelBossController.MovetoPoint(eelBossTargetPosition);
             
             StartCoroutine(ZoomOutAndShowLevel());
