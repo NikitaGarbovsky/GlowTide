@@ -9,9 +9,7 @@ public class Level6Triggers : LevelTriggers
     private Tilemap tilemap; // Reference to the Tilemap
     private Vector3 levelCenter; // Center position of the level
     [SerializeField] private GameObject EelBossPrefab;
-
-
-    float threshold = 0.5f;
+    
     private GameObject EelBossSpawnsObject;
     private bool spawnedInFirstPosition = false;
     private Vector3 eelBossTargetPosition1;
