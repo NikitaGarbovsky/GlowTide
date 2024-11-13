@@ -12,6 +12,7 @@ TagManager:
   - Geyser
   - EelBossSpawns
   - EelBoss
+  - GameManager
   layers:
   - Default
   - TransparentFX

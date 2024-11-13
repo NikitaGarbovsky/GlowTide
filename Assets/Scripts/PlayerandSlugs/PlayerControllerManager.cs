@@ -31,6 +31,10 @@ public class PlayerControllerManager : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            ManageGameplay.Instance.LoadSceneWithFade("MainMenu");
+        }
         // Check if the right mouse button is held down or has been clicked
         if (Input.GetMouseButton(1) && ManageGameplay.Instance.PlayerCanIssueMoveCommands)
         {

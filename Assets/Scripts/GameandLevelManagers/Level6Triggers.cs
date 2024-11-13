@@ -141,7 +141,7 @@ public class Level6Triggers : LevelTriggers
 
         if (_sTriggerName == "8_LevelTransition")
         {
-
+            ManageGameplay.Instance.LoadSceneWithFade("MainMenu");
         }
     }
 

@@ -103,6 +103,7 @@ public sealed class ManageGameplay : MonoBehaviour
         // Initializes the level.
         GetLevelManager(scene.name).GetComponent<LevelManager>().InitializeLevel();
         fadeCanvasGroup.blocksRaycasts = false;
+        
     }
     // After scene loads we call this to get a new reference to the player, (wont need this anymore if the player 
     // becomes a global object.)
@@ -303,6 +304,4 @@ public sealed class ManageGameplay : MonoBehaviour
             fadeCanvasGroup.blocksRaycasts = false;
         }
     }
-
-
 }
