@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using Pathfinding;
 using UnityEngine;
 
@@ -33,6 +34,11 @@ public class GeyserManager : MonoBehaviour
             }
             other.gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
 
+            // Changes all the assigned slugs to idle when the player uses the Geyser.
+            foreach (GameObject slug in other.gameObject.GetComponent<PlayerSlugManager>().m_lAssignedSlugs)
+            {
+                slug.gameObject.GetComponent<SeaSlugBroFollower>().m_eCurrentState = SeaSlugBroFollower.ESlugState.Idle;
+            }
             // 3. Start moving the player directly towards the target position
             StartCoroutine(MoveToPosition(other.gameObject, positionToMoveTo.position));
         }
@@ -90,7 +96,7 @@ public class GeyserManager : MonoBehaviour
         }
         else
         {
-            _obToMove.gameObject.GetComponentInChildren<SpriteRenderer>().sortingLayerName = "1Up"; 
+            _obToMove.gameObject.GetComponentInChildren<SpriteRenderer>().sortingLayerName = "Ground"; 
             _obToMove.GetComponent<CapsuleCollider2D>().enabled = true;
             if (aiPath != null)
             {
