@@ -9,7 +9,7 @@ public class Level2Triggers : LevelTriggers
     private Tilemap tilemap; // Reference to the Tilemap
     private Vector3 levelCenter; // Center position of the level
     [SerializeField] private GameObject EelBossPrefab;
-    
+    [SerializeField] public GameObject BroSnackGO;
     public override void ExecuteLevelTrigger(string _sTriggerName)
     {
         if (_sTriggerName == "0_ZoomOutAndShowLevel") // This is the name of the gameobject that is being triggered.
@@ -75,6 +75,9 @@ public class Level2Triggers : LevelTriggers
         ManageGameplay.Instance.ReturnPlayerControl();
         ManageGameplay.Instance.PlayerCanCallBros = true;
         ManageGameplay.Instance.PlayerCanThrowBros = true;
+
+        BroSnackGO.SetActive(true);
+        Invoke("RemoveBroSnackTutorialText", 10.0f);
     }
     private IEnumerator EelBossSequence()
     {
@@ -143,5 +146,10 @@ public class Level2Triggers : LevelTriggers
 
         // Pan the camera back to the player
         yield return StartCoroutine(ManageGameplay.Instance.PanCamera(Vector2.zero, 2f));
+    }
+
+    private void RemoveBroSnackTutorialText()
+    {
+        BroSnackGO.SetActive(false);
     }
 }

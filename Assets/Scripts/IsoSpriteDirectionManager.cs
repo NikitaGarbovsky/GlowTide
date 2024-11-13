@@ -41,7 +41,7 @@ public class IsoSpriteDirectionManager : MonoBehaviour
         {
             // Determine the angle of movement
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
+            //Debug.Log("Angle: " + angle);
             // Set animation based on angle
             SetAnimationBasedOnAngle(angle);
         }
@@ -66,9 +66,42 @@ public class IsoSpriteDirectionManager : MonoBehaviour
             // Get the current animation state and its normalized time
             AnimatorStateInfo currentState = animator.GetCurrentAnimatorStateInfo(0);
             float currentNormalizedTime = currentState.normalizedTime % 1; // Keep it between 0 and 1
-
+            string animationName = "";
             // Update the Animator parameter with normalized time to continue from the same frame
-            string animationName = GetDirectionNumber(newDirection) + "_JELLYFISH_" + GetDirectionName(newDirection);
+            if (gameObject.CompareTag("Slug"))
+            {
+                if (animator.runtimeAnimatorController.name == "SeaSlugIdleAnimatorController")
+                {
+                    animationName = GetDirectionNumber(newDirection) + "_SeaSlugIdle_" + GetDirectionName(newDirection);
+                }
+                else if(animator.runtimeAnimatorController.name == "SeaSlugThrowAnimatorController")
+                {
+                    animationName = GetDirectionNumber(newDirection) + "_SeaSlugBroThrow_" + GetDirectionName(newDirection);
+                }
+                else if(animator.runtimeAnimatorController.name == "SeaSlugWalkingAnimatorController")
+                {
+                    animationName = GetDirectionNumber(newDirection) + "_SeaSlugWalk_" + GetDirectionName(newDirection);
+                }
+            }
+            else if (gameObject.CompareTag("Player"))
+            {
+                if (animator.runtimeAnimatorController.name == "Player_MoveAnimController")
+                {
+                    animationName = GetDirectionNumber(newDirection) + "_JELLYFISH_" + GetDirectionName(newDirection);
+                }
+                else
+                {
+                    animationName = GetDirectionNumber(newDirection) + "_PlayerThrow_" + GetDirectionName(newDirection);
+                }
+            }
+            else
+            {
+                if (animator.runtimeAnimatorController.name == "EelAnimationController")
+                {
+                    animationName = GetDirectionNumber(newDirection) + "_Eel_" + GetDirectionName(newDirection);
+                }
+            }
+            
             animator.Play(animationName, 0, currentNormalizedTime);
 
             // Update the current direction tracker

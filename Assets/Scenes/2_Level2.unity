@@ -326,11 +326,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5642738515946614634, guid: 035230a8cfb702446866ecca2213c994, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.27
+      value: -1.96
       objectReference: {fileID: 0}
     - target: {fileID: 5642738515946614634, guid: 035230a8cfb702446866ecca2213c994, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.39
+      value: -2.99
       objectReference: {fileID: 0}
     - target: {fileID: 5891856029392739897, guid: 035230a8cfb702446866ecca2213c994, type: 3}
       propertyPath: m_IsActive
@@ -30874,6 +30874,10 @@ PrefabInstance:
     - target: {fileID: 4693817167849357668, guid: 116b32d25cae78940be2a3cb5eed22d2, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693817167849357668, guid: 116b32d25cae78940be2a3cb5eed22d2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7114099419090749349, guid: 116b32d25cae78940be2a3cb5eed22d2, type: 3}
       propertyPath: moveAnimatorController

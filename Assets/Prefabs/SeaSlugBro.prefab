@@ -63,7 +63,7 @@ MonoBehaviour:
   m_fThrowDistance: 10
   trailBubblesPrefab: {fileID: 4909856430915467350, guid: a2c6d5c9ee9171943952627d5a1b774c, type: 3}
   walkingAnimatorController: {fileID: 9100000, guid: 0c3a06f14213ddc47ad64187ec5abfa8, type: 2}
-  idleAnimatorController: {fileID: 0}
+  idleAnimatorController: {fileID: 9100000, guid: 358ce9726edc0954f91b7be143886e7d, type: 2}
   throwAnimatorController: {fileID: 9100000, guid: ee9df73b9ed089e4fb2c0bda23f4e558, type: 2}
   currentAnimatorController: {fileID: 0}
   slugIdleVFX: {fileID: 7242872471501477989}

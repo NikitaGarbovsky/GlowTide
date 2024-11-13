@@ -555,6 +555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EelBossPrefab: {fileID: 1647357637110406790, guid: 7bc24efc23ac34d4dbee40a3c3031503, type: 3}
+  BroSnackGO: {fileID: 103267904987843710}
 --- !u!1 &5190437215754437066
 GameObject:
   m_ObjectHideFlags: 0
@@ -848,6 +849,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 865427715494063494, guid: 53b5d3a45ca793e4fa5e56c45cdb941a, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 7da84a30242cedf4c8da7d1ab96a4272, type: 2}
+    - target: {fileID: 865427715494063494, guid: 53b5d3a45ca793e4fa5e56c45cdb941a, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1286553407676327211, guid: 53b5d3a45ca793e4fa5e56c45cdb941a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -894,6 +903,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2113935255525337478, guid: 53b5d3a45ca793e4fa5e56c45cdb941a, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2312697870153883438, guid: 53b5d3a45ca793e4fa5e56c45cdb941a, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 7da84a30242cedf4c8da7d1ab96a4272, type: 2}
+    - target: {fileID: 2312697870153883438, guid: 53b5d3a45ca793e4fa5e56c45cdb941a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6761431631774637074, guid: 7da84a30242cedf4c8da7d1ab96a4272, type: 2}
+    - target: {fileID: 2312697870153883438, guid: 53b5d3a45ca793e4fa5e56c45cdb941a, type: 3}
+      propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2539845035977200323, guid: 53b5d3a45ca793e4fa5e56c45cdb941a, type: 3}
@@ -978,6 +999,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5488544615601679877, guid: 53b5d3a45ca793e4fa5e56c45cdb941a, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967639495851433348, guid: 53b5d3a45ca793e4fa5e56c45cdb941a, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 7da84a30242cedf4c8da7d1ab96a4272, type: 2}
+    - target: {fileID: 5967639495851433348, guid: 53b5d3a45ca793e4fa5e56c45cdb941a, type: 3}
+      propertyPath: m_hasFontAssetChanged
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6268868357849100651, guid: 53b5d3a45ca793e4fa5e56c45cdb941a, type: 3}
@@ -1201,6 +1230,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53b5d3a45ca793e4fa5e56c45cdb941a, type: 3}
+--- !u!1 &103267904987843710 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1062216756112160751, guid: 53b5d3a45ca793e4fa5e56c45cdb941a, type: 3}
+  m_PrefabInstance: {fileID: 1140291551171689361}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7202801294570693734 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7793017919858515959, guid: 53b5d3a45ca793e4fa5e56c45cdb941a, type: 3}

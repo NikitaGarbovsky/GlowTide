@@ -190,6 +190,7 @@ public class SeaSlugBroFollower : MonoBehaviour
                     currentAnimatorController = walkingAnimatorController;
                     animator.runtimeAnimatorController = walkingAnimatorController;
                 }
+                //Debug.Log("Movement Direction: " + movementDirection);
                 isoSpriteDirectionManager.UpdateSpriteDirection(movementDirection);
             }
             else
