@@ -56,9 +56,11 @@ public class SeaSlugBroFollower : MonoBehaviour
     private IsoSpriteDirectionManager isoSpriteDirectionManager; // Reference to IsoSpriteDirectionManager component
     private Animator animator; // Reference to Animator component
     public RuntimeAnimatorController currentAnimatorController; // (Tracks the current animator controller)
-    
+
     [Header("Eel Boss Flag")]
     // Flag to see if the seaslug bro is within a trigger box (this is used in later levels with the Eel Boss)
+
+    [SerializeField] private GameObject slugIdleVFX;
     public bool m_bIsInVulnerableZone = false;
     private void Start()
     {
@@ -97,6 +99,7 @@ public class SeaSlugBroFollower : MonoBehaviour
                 Wander();
                 break;
             case ESlugState.Assigned:
+                slugIdleVFX.SetActive(false);
                 // Do nothing; the seaslug remains at its assigned spot
                 break;
         }
@@ -105,6 +108,7 @@ public class SeaSlugBroFollower : MonoBehaviour
     // Function to follow the player
     private void FollowPlayer()
     {
+        slugIdleVFX.SetActive(false);
         if (m_goPlayer != null)
         {
             // Adjust position to follow slightly behind the player
@@ -156,6 +160,7 @@ public class SeaSlugBroFollower : MonoBehaviour
     // Function to randomly wander when idle
     private void Wander()
     {
+        slugIdleVFX.SetActive(true);
         if (m_bCanWander)
         {
             if (m_fWaitTime <= 0)

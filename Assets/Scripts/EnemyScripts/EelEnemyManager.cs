@@ -30,11 +30,11 @@ public class EelEnemyManager : MonoBehaviour
     [SerializeField] bool m_ShowGizmos = false;
 
     [Header("UI")]
-    [SerializeField] Image m_UIImage; // Canvas Image for worldspace ui
+    [SerializeField] GameObject m_VFXPoint; // Point for Particles
     [SerializeField] Vector2 m_imageOffset; // offset from the Eel Center
-    [SerializeField] Sprite m_investigatingSprite; // Sprite for Investigating
-    [SerializeField] Sprite m_chaseSprite; // Sprite for Chaseing
-    [SerializeField] GameObject m_stunnedVFX; // Sprite for Stunned
+    [SerializeField] GameObject m_investigatingVFX; // Particle System for Investigating
+    [SerializeField] GameObject m_chaseVFX; // Particle System for Chasing
+    [SerializeField] GameObject m_stunnedVFX; // Particle System for Stunned
 
     [Header("Patrol")]
     [SerializeField, Min(0.0f)] float m_speed; // Movement Speed
@@ -75,6 +75,8 @@ public class EelEnemyManager : MonoBehaviour
         m_aiPath.enabled = false;
         m_player = ManageGameplay.Instance.playerCharacter;
         m_stunnedVFX.SetActive(false);
+        m_investigatingVFX.SetActive(false);
+        m_chaseVFX.SetActive(false);
     }
 
     private void Update()
@@ -87,26 +89,32 @@ public class EelEnemyManager : MonoBehaviour
                     m_canSee = true;
                     PatrolPoints();
                     CheckForPlayerInSight();
-                    m_UIImage.enabled = false;
+                    m_VFXPoint.SetActive(false);
                     break;
                 case EelState.Investigate:
                     m_canSee = true;
                     LookForPlayer();
                     CheckForPlayerInSight();
-                    m_UIImage.enabled = true;
-                    m_UIImage.sprite = m_investigatingSprite;
+                    m_VFXPoint.SetActive(true);
+                    m_investigatingVFX.SetActive(true);
+                    m_stunnedVFX.SetActive(false);
+                    m_chaseVFX.SetActive(false);
                     break;
                 case EelState.Chase:
                     m_canSee = true;
                     ChasePlayer();
-                    m_UIImage.enabled = true;
-                    m_UIImage.sprite = m_chaseSprite;
+                    m_VFXPoint.SetActive(true);
+                    m_chaseVFX.SetActive(true);
+                    m_stunnedVFX.SetActive(false);
+                    m_investigatingVFX.SetActive(false);
                     break;
                 case EelState.Stunned:
                     m_canSee = false;
                     //Stunned();
-                    m_UIImage.enabled = false;
+                    m_VFXPoint.SetActive(true);
                     m_stunnedVFX.SetActive(true);
+                    m_investigatingVFX.SetActive(false);
+                    m_chaseVFX.SetActive(false);
                     break;
                 case EelState.Returning:
                     m_canSee = false;
@@ -118,7 +126,7 @@ public class EelEnemyManager : MonoBehaviour
 
             // Update UI Position
             float spriteAngle = ((float)m_directionManager.GetCurrentDirection() / 16.0f) * (2 * Mathf.PI);
-            m_UIImage.transform.position = new Vector2(m_eel.transform.position.x + (m_imageOffset.x * Mathf.Cos(spriteAngle)) ,
+            m_VFXPoint.transform.position = new Vector2(m_eel.transform.position.x + (m_imageOffset.x * Mathf.Cos(spriteAngle)) ,
                                                        m_eel.transform.position.y + (m_imageOffset.y * Mathf.Sin(spriteAngle) + 0.5f));
 
             // Update Kill Position

@@ -19,6 +19,7 @@ public class CursorController : MonoBehaviour
     [SerializeField] Texture2D m_cursorHoverTexture;
     [SerializeField] Vector2 m_cursorPosition = Vector2.zero;
     [SerializeField] GameObject m_cursorVFX;
+    [SerializeField, Min(0f)] float m_holdDownTime;
     float m_holdDownTimer;
 
     private void Awake()
@@ -45,7 +46,7 @@ public class CursorController : MonoBehaviour
         {
             m_cursorVFX.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition + Vector3.forward);
             m_holdDownTimer += Time.deltaTime;
-            if (m_holdDownTimer > 1f)
+            if (m_holdDownTimer > m_holdDownTime)
             { 
                 m_cursorVFX.SetActive(true);
             }
