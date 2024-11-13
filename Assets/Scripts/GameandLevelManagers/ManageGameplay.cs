@@ -33,8 +33,15 @@ public sealed class ManageGameplay : MonoBehaviour
     // This is the object that is used for the fade-out/in effect for scene loading
     [SerializeField] private CanvasGroup fadeCanvasGroup;
     [SerializeField] public float fadeDuration = 2f;
-
+    
     public bool m_HasLevelTransitionBeenTriggered;
+    
+    [Header("Music Tracks")]
+    [SerializeField] public AudioClip IntroMusicTheme;
+    [SerializeField] public AudioClip EelMusicTheme;
+
+    public AudioSource m_AudioSource;
+    
     private void Awake()
     {
         // Singleton pattern implementation
@@ -50,7 +57,7 @@ public sealed class ManageGameplay : MonoBehaviour
         // Gets the camera components from the child game object. (the main camera)
         virtualCamera = GetComponentInChildren<CinemachineVirtualCamera>();
         framingTransposer = virtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
-        
+        m_AudioSource = GetComponentInChildren<AudioSource>();
         if (fadeCanvasGroup == null)
         {
             fadeCanvasGroup = GetComponentInChildren<CanvasGroup>();
@@ -74,6 +81,18 @@ public sealed class ManageGameplay : MonoBehaviour
         m_HasLevelTransitionBeenTriggered = false;
         Debug.Log("Scene loaded: " + scene.name);
         
+        if (scene.name == "3_Level3" || scene.name == "4_Level4" || scene.name == "5_Level5" || scene.name == "6_Level6") 
+        {
+            m_AudioSource.clip = EelMusicTheme; // Play the Eel theme.
+            m_AudioSource.Play();
+            m_AudioSource.volume = 0.02f;
+        }
+        else if (scene.name == "0_Introduction" || scene.name == "1_Level1" || scene.name == "2_Level2") // If we're loading into the intro levels
+        {
+            m_AudioSource.clip = IntroMusicTheme;
+            m_AudioSource.Play();
+            m_AudioSource.volume = 0.02f;
+        }
         GetPlayerReference();
         GetComponentInChildren<UIManager>().m_slugManager = playerCharacter.GetComponent<PlayerSlugManager>();
         // Activate the appropriate level manager

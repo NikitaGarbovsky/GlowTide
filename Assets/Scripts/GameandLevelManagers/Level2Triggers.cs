@@ -78,6 +78,8 @@ public class Level2Triggers : LevelTriggers
     }
     private IEnumerator EelBossSequence()
     {
+        ManageGameplay.Instance.m_AudioSource.clip = null; // kill the audio
+        
         // 1. Freeze player position, remove controls
         ManageGameplay.Instance.RemovePlayerControl();
         ManageGameplay.Instance.PlayerCanCallBros = false;
