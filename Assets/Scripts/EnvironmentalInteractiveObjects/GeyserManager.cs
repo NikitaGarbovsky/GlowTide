@@ -90,7 +90,7 @@ public class GeyserManager : MonoBehaviour
         }
         else
         {
-            _obToMove.gameObject.GetComponentInChildren<SpriteRenderer>().sortingLayerName = "1Up"; 
+            _obToMove.gameObject.GetComponentInChildren<SpriteRenderer>().sortingLayerName = "Ground"; 
             _obToMove.GetComponent<CapsuleCollider2D>().enabled = true;
             if (aiPath != null)
             {
