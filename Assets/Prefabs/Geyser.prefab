@@ -53,6 +53,7 @@ MonoBehaviour:
   positionToMoveTo: {fileID: 1327929082239943624}
   moveSpeed: 5
   m_bActive: 1
+  directionToAnimateThrow: 0
 --- !u!212 &8246958569384547374
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -137,9 +138,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.001629591, y: 0}
   serializedVersion: 2
-  m_Radius: 0.32
+  m_Radius: 0.17171216
 --- !u!50 &128563205318868350
 Rigidbody2D:
   serializedVersion: 4
