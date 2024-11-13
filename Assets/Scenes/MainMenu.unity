@@ -179,7 +179,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: START
+  m_text: start
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7da84a30242cedf4c8da7d1ab96a4272, type: 2}
   m_sharedMaterial: {fileID: 6761431631774637074, guid: 7da84a30242cedf4c8da7d1ab96a4272, type: 2}
@@ -1141,7 +1141,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: CREDITS
+  m_text: credits
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7da84a30242cedf4c8da7d1ab96a4272, type: 2}
   m_sharedMaterial: {fileID: 6761431631774637074, guid: 7da84a30242cedf4c8da7d1ab96a4272, type: 2}
@@ -1447,7 +1447,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: QUIT
+  m_text: quit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7da84a30242cedf4c8da7d1ab96a4272, type: 2}
   m_sharedMaterial: {fileID: 6761431631774637074, guid: 7da84a30242cedf4c8da7d1ab96a4272, type: 2}
@@ -2006,17 +2006,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Niki
+  m_text: 'niki
 
-    Esteri
+    esteri
 
-    Myrna
+    myrna
 
-    Connor
+    connor
 
-    Peter
+    peter
 
-    Reece'
+    reece'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7da84a30242cedf4c8da7d1ab96a4272, type: 2}
   m_sharedMaterial: {fileID: 6761431631774637074, guid: 7da84a30242cedf4c8da7d1ab96a4272, type: 2}
