@@ -23,9 +23,9 @@ The game was made using Unity2D, utilizing the Astar pathfinding project as its 
 
 ## Made by:
 
-Nikita Garbovsky
-Esteri Morph
-Connor Maguigan
-Peter Salonga
-Myrna Reid
+Nikita Garbovsky,
+Esteri Morph,
+Connor Maguigan,
+Peter Salonga,
+Myrna Reid,
 Reece Smith
